@@ -1,315 +1,514 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jose Zuniga | Technical Program Manager | Engineering Manager | SRE & Automation Leader</title>
+<title>Jose Zuniga | Technical Program Manager | Engineering Manager | SRE & Automation Architect</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+:root{
+    --bg:#0b1220;
+    --bg2:#111c33;
+    --panel:#0f172a;
+    --text:#e8eef7;
+    --muted:#a9b7d0;
+    --accent:#4ea1ff;
+    --border:rgba(255,255,255,0.08);
+}
+
+*{
+    box-sizing:border-box;
+}
+
 body{
     margin:0;
-    font-family: "Segoe UI", Tahoma, sans-serif;
-    background:#0b1220;
-    color:#e8eef7;
+    font-family:"Segoe UI",Tahoma,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
 }
 
 /* HERO */
+
 .hero{
-    padding:60px 40px;
+    padding:70px 50px;
     background:linear-gradient(135deg,#0b1220,#111c33);
-    border-bottom:1px solid rgba(255,255,255,0.08);
+    border-bottom:1px solid var(--border);
 }
 
 .hero h1{
     margin:0;
-    font-size:42px;
+    font-size:48px;
 }
 
 .hero h2{
-    margin-top:10px;
-    font-size:16px;
+    margin-top:12px;
+    font-size:18px;
+    color:var(--muted);
     font-weight:400;
-    color:#a9b7d0;
+    max-width:1100px;
+}
+
+.hero-summary{
+    margin-top:20px;
+    max-width:1100px;
+    color:#c7d4e8;
+}
+
+.links{
+    margin-top:25px;
 }
 
 .links a{
-    color:#4ea1ff;
-    margin-right:15px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--accent);
     text-decoration:none;
+    margin-right:18px;
+    margin-bottom:10px;
+    font-weight:500;
 }
 
-/* GRID */
+.links a:hover{
+    opacity:.85;
+}
+
+/* LAYOUT */
+
 .container{
     display:grid;
-    grid-template-columns: 2.2fr 1.3fr;
+    grid-template-columns:2.3fr 1.2fr;
 }
 
-/* MAIN */
 .main{
     padding:40px;
 }
 
+.sidebar{
+    background:var(--panel);
+    border-left:1px solid var(--border);
+    padding:35px;
+}
+
+/* SECTIONS */
+
 .section-title{
-    font-size:20px;
+    font-size:22px;
     margin-top:40px;
-    border-left:4px solid #4ea1ff;
-    padding-left:10px;
-    color:white;
+    margin-bottom:15px;
+    border-left:4px solid var(--accent);
+    padding-left:12px;
 }
 
 .card{
-    background:#111c33;
-    padding:18px;
-    margin-top:15px;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,0.06);
+    background:var(--bg2);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:12px;
+    padding:22px;
+    margin-bottom:18px;
 }
 
 .card h3{
     margin-top:0;
+    color:white;
+}
+
+.card ul{
+    margin:0;
+    padding-left:20px;
+}
+
+.card li{
+    margin-bottom:8px;
 }
 
 /* SIDEBAR */
-.sidebar{
-    padding:30px;
-    background:#0f172a;
-    border-left:1px solid rgba(255,255,255,0.08);
+
+.sidebar-section{
+    margin-bottom:35px;
+}
+
+.sidebar-section h3{
+    color:white;
+    margin-bottom:10px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    padding-bottom:8px;
 }
 
 .tag{
     display:inline-block;
-    padding:4px 10px;
-    margin:3px;
+    background:rgba(78,161,255,.15);
+    color:var(--accent);
+    padding:5px 10px;
+    margin:4px;
     border-radius:6px;
     font-size:12px;
-    background:rgba(78,161,255,0.15);
-    color:#4ea1ff;
 }
 
-/* METRIC BOX */
 .metric{
-    color:#4ea1ff;
-    font-weight:bold;
+    color:var(--accent);
+    font-weight:700;
 }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-.container{grid-template-columns:1fr;}
+.timeline-role{
+    color:var(--accent);
+    font-weight:600;
+}
+
+.timeline-company{
+    color:white;
+    font-weight:600;
+}
+
+.footer{
+    text-align:center;
+    color:var(--muted);
+    padding:40px;
+    border-top:1px solid var(--border);
+}
+
+@media(max-width:1000px){
+
+.container{
+    grid-template-columns:1fr;
+}
+
+.sidebar{
+    border-left:none;
+    border-top:1px solid var(--border);
+}
+
+.hero{
+    padding:40px 25px;
+}
+
+.main,
+.sidebar{
+    padding:25px;
+}
+
+.hero h1{
+    font-size:36px;
+}
 }
 </style>
+
 </head>
 
 <body>
 
 <!-- HERO -->
-<div class="hero">
-<h1>Jose Zuniga</h1>
-<h2>Technical Program Manager | Engineering Manager (Hands-on) | SRE & Automation Architect | Delivery Intelligence Systems Builder</h2>
 
-<div class="links" style="margin-top:15px;">
-<a href="https://wa.me/50688975841">WhatsApp</a>
-<a href="mailto:josean.111@gmail.com">Email</a>
-<a href="https://linkedin.com/in/jose-azuniga">LinkedIn</a>
-<a href="https://calendar.app.google/YegybKZoepgHuMCa8">Book 30-min Session</a>
+<section class="hero">
+
+<h1>Jose Zuniga</h1>
+
+<h2>
+Technical Program Manager | Engineering Manager (Hands-on) |
+SRE & Automation Architect | Atlassian Platform Engineer |
+Workflow & Delivery Intelligence Systems Builder
+</h2>
+
+<div class="hero-summary">
+Senior technical leader with 15+ years of experience leading enterprise technology initiatives across
+Technical Program Management, Engineering Leadership, Agile Delivery, Site Reliability Engineering,
+Observability, Platform Engineering, Workflow Automation, Incident Management, and Delivery Intelligence Systems.
+Combines executive-level program leadership with hands-on engineering expertise across automation, APIs,
+cloud platforms, reliability engineering, and enterprise-scale operational excellence.
 </div>
+
+<div class="links">
+<a href="https://wa.me/50688975841"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+<a href="mailto:josean.111@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+<a href="https://linkedin.com/in/jose-azuniga"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+<a href="https://calendar.app.google/YegybKZoepgHuMCa8"><i class="fa-regular fa-calendar"></i> Schedule a Session</a>
 </div>
+
+</section>
 
 <div class="container">
 
-<!-- ===================== MAIN ===================== -->
+<!-- MAIN -->
+
 <div class="main">
 
-<!-- SUMMARY -->
 <div class="section-title">Executive Summary</div>
+
 <div class="card">
 <p>
-Technical Program Manager and Engineering Leader with 15+ years of experience across Agile delivery, SRE, DevOps, and enterprise automation systems.
+Senior Technical Program Manager and Engineering Leader with extensive experience spanning Agile delivery,
+platform engineering, reliability engineering, DevOps, observability, incident management, and enterprise automation.
 </p>
 
 <p>
-Combines hands-on engineering capability (Python, APIs, Bash, JavaScript) with leadership across Scrum teams, production systems, and platform engineering environments.
+Throughout a career that evolved from technical support and operations into technical program leadership,
+Jose has consistently built systems that improve delivery visibility, operational efficiency, engineering productivity,
+and production reliability.
 </p>
 
 <p>
-Specialized in building internal delivery intelligence systems across Jira, observability platforms, and automation pipelines that improve visibility, reduce operational friction, and increase engineering throughput.
-</p>
-
-<p>
-Open to TPM, Engineering Manager, and Senior Platform/Delivery leadership roles.
+Known for bridging executive stakeholders, engineering teams, operations organizations, and platform initiatives while
+remaining hands-on with automation, scripting, APIs, reporting systems, workflow governance, and operational intelligence.
 </p>
 </div>
 
-<!-- DELIVERY LEADERSHIP -->
-<div class="section-title">Delivery Leadership & Agile Execution</div>
+<div class="section-title">Career Highlights</div>
+
 <div class="card">
 <ul>
-<li>Led Scrum and Agile delivery across distributed engineering, QA, and operations teams</li>
-<li>Acted as Product Owner for internal platforms, automation systems, and reporting tools</li>
-<li>Managed sprint planning, backlog refinement, and cross-team dependency alignment</li>
-<li>Coordinated release planning across high-availability enterprise environments</li>
-<li>Supported PI-style planning and multi-team coordination in complex delivery ecosystems</li>
-<li>Improved delivery predictability through structured reporting and automation systems</li>
+<li>15+ years leading enterprise technology, delivery, and operational excellence initiatives</li>
+<li>Managed Agile delivery across engineering, QA, operations, and support organizations</li>
+<li>Built Jira delivery intelligence systems analyzing 3,000+ work items and changelog events</li>
+<li>Designed automation platforms reducing manual reporting effort by an estimated 60–80%</li>
+<li>Led reliability, observability, and incident management programs across enterprise environments</li>
+<li>Implemented RCA, PIR, escalation, and operational readiness frameworks</li>
+<li>Hands-on contributor across Python, JavaScript, SQL, Bash, Groovy, REST APIs, and automation pipelines</li>
+<li>Worked across AWS, Azure, GCP, IBM Cloud, Kubernetes, Docker, and enterprise SaaS ecosystems</li>
 </ul>
 </div>
 
-<!-- TECHNICAL LEADERSHIP -->
-<div class="section-title">Technical & Engineering Leadership</div>
+<div class="section-title">Technical Program & Engineering Leadership</div>
+
 <div class="card">
 <ul>
-<li>Hands-on technical manager across automation, APIs, scripting, and production systems</li>
-<li>Built internal tools for workflow automation and operational intelligence</li>
-<li>Designed systems integrating Jira, observability tools, and external reporting platforms</li>
-<li>Led engineering decisions in reliability, automation, and delivery optimization initiatives</li>
-<li>Bridged engineering, operations, and business stakeholders in high-impact environments</li>
+<li>Led cross-functional engineering, QA, support, and operations teams across global organizations</li>
+<li>Managed delivery governance, execution planning, risk management, and stakeholder alignment</li>
+<li>Directed complex technical initiatives spanning cloud, automation, observability, and platform modernization</li>
+<li>Facilitated executive reporting and engineering performance visibility</li>
+<li>Balanced business priorities with technical execution and operational realities</li>
+<li>Served as technical bridge between leadership teams and engineering organizations</li>
 </ul>
 </div>
 
-<!-- SRE -->
-<div class="section-title">SRE & Production Reliability</div>
+<div class="section-title">Agile Delivery & Product Ownership</div>
+
 <div class="card">
 <ul>
-<li>Led incident response and production recovery across enterprise systems</li>
-<li>Owned RCA processes and implemented recurring failure prevention workflows</li>
-<li>Built observability systems using Datadog, Prometheus, ELK, Grafana</li>
-<li>Improved MTTR by streamlining incident escalation and response workflows <span class="metric">(20–40% estimated improvement)</span></li>
-<li>Automated operational tasks reducing manual intervention during incidents</li>
+<li>Scrum Master, Product Owner, and Technical Program Manager across multiple enterprise environments</li>
+<li>Facilitated sprint planning, backlog refinement, retrospectives, and sprint reviews</li>
+<li>Managed roadmap execution, prioritization, and stakeholder expectations</li>
+<li>Improved delivery predictability through automation, reporting, and governance frameworks</li>
+<li>Coordinated dependencies across distributed engineering organizations</li>
+<li>Supported SAFe and multi-team planning initiatives</li>
 </ul>
 </div>
 
+<div class="section-title">Enterprise Incident Management</div>
+
+<div class="card">
+<ul>
+<li>Built and managed incident management, escalation, and response processes</li>
+<li>Implemented severity classification and operational readiness frameworks</li>
+<li>Facilitated Post Incident Reviews (PIRs) and Root Cause Analysis (RCA) programs</li>
+<li>Coordinated enterprise production incidents across engineering and operations teams</li>
+<li>Improved MTTR through workflow optimization and response standardization</li>
+<li>Developed notification and escalation workflows supporting rapid issue resolution</li>
+</ul>
 </div>
 
-<!-- ===================== SIDEBAR ===================== -->
-<div class="sidebar">
+<div class="section-title">Observability & Reliability Engineering</div>
 
-<!-- IMPACT METRICS -->
+<div class="card">
+<ul>
+<li>Site Reliability Engineering leadership focused on production stability and operational excellence</li>
+<li>Designed monitoring, alerting, and observability strategies for enterprise environments</li>
+<li>Worked extensively with Datadog, Grafana, Prometheus, ELK, CloudWatch, Azure Monitor, Instana, Dynatrace, and New Relic</li>
+<li>Performed trend analysis, reliability assessments, release readiness reviews, and incident reporting</li>
+<li>Implemented operational automation to reduce manual intervention and accelerate recovery efforts</li>
+</ul>
+</div>
+
+<div class="section-title">Automation Engineering</div>
+
+<div class="card">
+<ul>
+<li>Built Python automation solutions for reporting, data extraction, archival, retention, and operational maintenance</li>
+<li>Developed Bash automation for Linux administration, maintenance, cleanup, and scheduling</li>
+<li>Created JavaScript and REST API integrations connecting Jira and external reporting systems</li>
+<li>Built recurring reporting pipelines, notification engines, and workflow automation services</li>
+<li>Automated data processing, changelog analysis, and engineering performance reporting</li>
+<li>Designed systems reducing manual effort while improving visibility and governance</li>
+</ul>
+</div>
+
+<div class="section-title">Atlassian Platform Engineering & Delivery Intelligence</div>
+
+<div class="card">
+<h3>Workflow Governance</h3>
+<ul>
+<li>Validators, Conditions, Post Functions, ScriptRunner, Groovy, Jira APIs</li>
+<li>Workflow controls, governance standards, and process automation</li>
+</ul>
+
+<h3>Delivery Intelligence Systems</h3>
+<ul>
+<li>Sprint analytics, velocity correction, forecasting, scope change detection</li>
+<li>Delivery health metrics, executive dashboards, portfolio reporting</li>
+<li>Engineering productivity and throughput analysis</li>
+</ul>
+
+<h3>Platform Integrations</h3>
+<ul>
+<li>Slack, Microsoft Teams, Email, Tempo Timesheets, REST APIs</li>
+<li>Escalation engines and operational notification systems</li>
+</ul>
+</div>
+
+<div class="section-title">Career Journey</div>
+
+<div class="card">
+<p><span class="timeline-company">HP</span> — <span class="timeline-role">Technical Support Engineer</span> (2008–2010)</p>
+<p>Enterprise application support, troubleshooting, incident handling, root cause analysis, and operational support.</p>
+
+<hr>
+
+<p><span class="timeline-company">Equifax</span> — <span class="timeline-role">Technical Support Team Lead</span> (2010–2012)</p>
+<p>Led support operations, escalation management, reporting systems, workflow improvements, and early automation initiatives.</p>
+
+<hr>
+
+<p><span class="timeline-company">Equifax</span> — <span class="timeline-role">Technical Project Manager</span> (2012–2015)</p>
+<p>Managed infrastructure initiatives, Agile delivery, engineering coordination, reporting automation, and platform projects.</p>
+
+<hr>
+
+<p><span class="timeline-company">Equifax</span> — <span class="timeline-role">Engineering Project Manager</span> (2015–2019)</p>
+<p>Cloud transformation, CI/CD modernization, automation initiatives, API integrations, and engineering optimization programs.</p>
+
+<hr>
+
+<p><span class="timeline-company">Optiva</span> — <span class="timeline-role">Scrum Master / Engineering Project Manager</span> (2019–2021)</p>
+<p>Agile leadership, delivery management, incident coordination, platform stability, and operational excellence.</p>
+
+<hr>
+
+<p><span class="timeline-company">IBM</span> — <span class="timeline-role">Site Reliability Engineer</span> (2021–2024)</p>
+<p>Reliability engineering, observability, production support, incident management, automation, and operational intelligence.</p>
+
+<hr>
+
+<p><span class="timeline-company">iTree Training</span> — <span class="timeline-role">Senior Program Agile Manager / Product Owner</span> (2024–Present)</p>
+<p>Program leadership, Jira intelligence systems, automation, executive reporting, Agile governance, and delivery analytics.</p>
+</div>
+
+</div>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<div class="sidebar-section">
 <h3>Impact Snapshot</h3>
 <ul>
-<li>~3000+ Jira tickets processed/analyzed via automation pipelines</li>
-<li>~60–80% reduction in manual reporting effort (estimated)</li>
-<li>~20–40% MTTR improvement via incident workflow optimization (estimated)</li>
-<li>Multiple enterprise reporting systems replaced spreadsheet workflows</li>
-<li>Cross-team delivery visibility improvements across global teams</li>
+<li><span class="metric">15+ years</span> enterprise technology leadership</li>
+<li><span class="metric">3000+</span> Jira work items analyzed</li>
+<li><span class="metric">60–80%</span> manual reporting reduction</li>
+<li><span class="metric">20–40%</span> estimated MTTR improvement</li>
+<li>Multiple enterprise reporting platforms delivered</li>
+<li>Global engineering and operations leadership experience</li>
 </ul>
-
-<!-- JIRA SYSTEMS -->
-<h3>Atlassian / Jira Systems</h3>
-<div>
-<span class="tag">Jira Cloud</span>
-<span class="tag">Jira DC</span>
-<span class="tag">ScriptRunner</span>
-<span class="tag">Groovy</span>
-<span class="tag">Tempo</span>
-<span class="tag">REST APIs</span>
 </div>
 
-<!-- CLOUD -->
-<h3>Cloud & DevOps</h3>
-<div>
-<span class="tag">AWS</span>
-<span class="tag">Azure</span>
-<span class="tag">GCP</span>
-<span class="tag">IBM Cloud</span>
-<span class="tag">Docker</span>
-<span class="tag">Kubernetes</span>
+<div class="sidebar-section">
+<h3>Certifications</h3>
+<div class="tag">CSM</div>
+<div class="tag">SPOC</div>
+<div class="tag">PMI-ACP</div>
+<div class="tag">SAFe Practitioner</div>
+<div class="tag">AWS Cloud Practitioner</div>
 </div>
 
-<!-- LANGUAGES -->
+<div class="sidebar-section">
+<h3>Education</h3>
+<ul>
+<li>Master's in Project Management (Cum Laude)</li>
+<li>MBA (Cum Laude)</li>
+<li>Bachelor's in Computer Science</li>
+</ul>
+</div>
+
+<div class="sidebar-section">
+<h3>Programming & Automation</h3>
+<div class="tag">Python</div>
+<div class="tag">Java</div>
+<div class="tag">JavaScript</div>
+<div class="tag">Node.js</div>
+<div class="tag">SQL</div>
+<div class="tag">Bash</div>
+<div class="tag">Groovy</div>
+</div>
+
+<div class="sidebar-section">
+<h3>Cloud & Infrastructure</h3>
+<div class="tag">AWS</div>
+<div class="tag">Azure</div>
+<div class="tag">GCP</div>
+<div class="tag">IBM Cloud</div>
+<div class="tag">Docker</div>
+<div class="tag">Kubernetes</div>
+<div class="tag">Terraform</div>
+</div>
+
+<div class="sidebar-section">
+<h3>Observability</h3>
+<div class="tag">Datadog</div>
+<div class="tag">Prometheus</div>
+<div class="tag">Grafana</div>
+<div class="tag">ELK</div>
+<div class="tag">CloudWatch</div>
+<div class="tag">Azure Monitor</div>
+<div class="tag">Instana</div>
+<div class="tag">Dynatrace</div>
+<div class="tag">New Relic</div>
+</div>
+
+<div class="sidebar-section">
+<h3>Platforms & Tools</h3>
+<div class="tag">Jira</div>
+<div class="tag">Confluence</div>
+<div class="tag">Bitbucket</div>
+<div class="tag">GitHub</div>
+<div class="tag">GitLab</div>
+<div class="tag">ServiceNow</div>
+<div class="tag">PagerDuty</div>
+<div class="tag">Tempo</div>
+</div>
+
+<div class="sidebar-section">
+<h3>Testing & QA</h3>
+<div class="tag">Selenium</div>
+<div class="tag">JUnit</div>
+<div class="tag">Postman</div>
+</div>
+
+<div class="sidebar-section">
+<h3>AI & Productivity</h3>
+<div class="tag">ChatGPT</div>
+<div class="tag">GitHub Copilot</div>
+<div class="tag">Azure OpenAI</div>
+<div class="tag">CodeWhisperer</div>
+<div class="tag">Atlassian Rovo</div>
+</div>
+
+<div class="sidebar-section">
 <h3>Languages</h3>
 <ul>
-<li>Spanish - Native</li>
-<li>English - C2</li>
-</ul>
-
-</div>
-</div>
-
-<!-- ===================== FULL WIDTH SECTIONS ===================== -->
-
-<div class="main">
-
-<div class="section-title">Workflow & Delivery Intelligence Systems (Atlassian Ecosystem)</div>
-<div class="card">
-<ul>
-<li>Built Jira-based delivery intelligence systems using ScriptRunner + REST APIs</li>
-<li>Developed sprint analytics models (velocity correction, forecasting, scope change detection)</li>
-<li>Automated detection of stale issues, blocked workflows, and delayed tickets</li>
-<li>Integrated Jira data with external reporting systems and dashboards</li>
-<li>Replaced manual reporting workflows with automated pipelines across teams</li>
+<li>Spanish — Native</li>
+<li>English — C2 / Bilingual</li>
 </ul>
 </div>
 
-<div class="section-title">Automation Engineering Projects</div>
-<div class="card">
-<ul>
-<li>Python log archival system for automated cleanup and retention</li>
-<li>Linux Bash automation scripts for server maintenance and system hygiene</li>
-<li>JavaScript API integrations for external reporting systems</li>
-<li>Built recurring data pipelines reducing operational manual effort significantly</li>
-</ul>
-</div>
-
-<div class="section-title">Professional Experience</div>
-
-<div class="card">
-<h3>iTree Training — Senior Agile Program Manager / TPM (Hands-on)</h3>
-<ul>
-<li>Led Agile delivery across engineering + QA + operations teams</li>
-<li>Built Jira automation pipelines and reporting systems</li>
-<li>Owned sprint tracking, delivery visibility, and operational reporting</li>
-<li>Designed internal automation reducing manual reporting workload significantly</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>IBM — Site Reliability Engineer</h3>
-<ul>
-<li>Incident response and production system recovery</li>
-<li>Observability engineering (Datadog, ELK, Grafana, Prometheus)</li>
-<li>Root cause analysis and system reliability improvements</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Optiva — Scrum Master / Engineering Project Manager</h3>
-<ul>
-<li>Agile delivery leadership for distributed engineering teams</li>
-<li>Production incident coordination and escalation management</li>
-<li>Jira workflow optimization and reporting systems</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Equifax — Engineering Project Manager / Automation Lead</h3>
-<ul>
-<li>Cloud migration and CI/CD modernization programs</li>
-<li>API-based automation and reporting pipelines</li>
-<li>Jira reporting systems and delivery analytics</li>
-</ul>
-</div>
-
-<!-- EDUCATION -->
-<div class="section-title">Education</div>
-<div class="card">
-<ul>
-<li>Master’s in Project Management (Cum Laude) - Spain</li>
-<li>Master’s in Business Administration (Cum Laude) - Spain</li>
-<li>Bachelor’s in Computer Science - ULACIT Costa Rica</li>
-</ul>
-</div>
-
-<!-- CERTIFICATIONS -->
-<div class="section-title">Certifications</div>
-<div class="card">
-<ul>
-<li>Certified Scrum Master (CSM)</li>
-<li>Scrum Product Owner (SPOC)</li>
-<li>PMI Agile Certified Practitioner (PMI-ACP)</li>
-<li>SAFe 4 Practitioner</li>
-<li>AWS Cloud Practitioner</li>
-</ul>
-</div>
+</aside>
 
 </div>
+
+<footer class="footer">
+Jose Zuniga • Technical Program Manager • Engineering Leader • SRE & Automation Architect
+</footer>
 
 </body>
 </html>
