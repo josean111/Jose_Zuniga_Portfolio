@@ -13,7 +13,6 @@ body {
     color: #e8eef7;
 }
 
-/* HERO */
 .hero {
     padding: 60px 40px;
     background: linear-gradient(135deg, #0b1220, #111c33);
@@ -23,31 +22,33 @@ body {
 .hero h1 {
     font-size: 42px;
     margin: 0;
-    color: #ffffff;
 }
 
 .hero h2 {
     font-size: 18px;
-    font-weight: normal;
     color: #a9b7d0;
-    margin-top: 10px;
+    font-weight: normal;
 }
 
 .links a {
     color: #4ea1ff;
-    margin-right: 15px;
+    margin-right: 12px;
     text-decoration: none;
 }
 
-/* GRID */
 .container {
     display: grid;
-    grid-template-columns: 3fr 1.2fr;
+    grid-template-columns: 3fr 1.3fr;
 }
 
-/* MAIN */
 .main {
     padding: 40px;
+}
+
+.sidebar {
+    background: #0f172a;
+    padding: 30px;
+    border-left: 1px solid rgba(255,255,255,0.08);
 }
 
 .section-title {
@@ -55,20 +56,18 @@ body {
     margin-top: 40px;
     border-left: 4px solid #4ea1ff;
     padding-left: 10px;
-    color: #ffffff;
 }
 
 .card {
     background: #111c33;
-    padding: 20px;
+    padding: 18px;
     margin-top: 15px;
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.06);
 }
 
-.card h3 {
-    margin-top: 0;
-    color: #ffffff;
+h3 {
+    margin: 0 0 8px 0;
 }
 
 ul {
@@ -80,47 +79,29 @@ li {
     color: #cdd6e5;
 }
 
-/* SIDEBAR */
-.sidebar {
-    background: #0f172a;
-    padding: 30px;
-    border-left: 1px solid rgba(255,255,255,0.08);
-}
-
-.sidebar h3 {
-    color: #ffffff;
-    margin-top: 25px;
-}
-
-.sidebar li {
-    color: #b8c4dd;
-}
-
-/* TAGS */
 .tag {
     display: inline-block;
-    background: rgba(78,161,255,0.15);
+    background: rgba(78,161,255,0.12);
     color: #4ea1ff;
-    padding: 4px 10px;
-    margin: 3px;
+    padding: 4px 8px;
     border-radius: 6px;
+    margin: 3px;
     font-size: 12px;
 }
 
 @media(max-width:900px){
-.container { grid-template-columns: 1fr; }
+.container{grid-template-columns:1fr;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
     <h1>Jose Zuniga</h1>
-    <h2>Technical Program Manager | Atlassian Platform Engineer | Automation Architect | SRE & DevOps-Enabled Delivery Leader</h2>
+    <h2>Technical Program Manager | Atlassian Platform Engineer | Automation Architect | SRE & DevOps Delivery Leader</h2>
 
-    <div class="links" style="margin-top:15px;">
+    <div class="links">
         <a href="https://wa.me/50688975841">WhatsApp</a>
         <a href="mailto:josean.111@gmail.com">Email</a>
         <a href="https://linkedin.com/in/jose-azuniga">LinkedIn</a>
@@ -130,114 +111,107 @@ li {
 
 <div class="container">
 
-<!-- MAIN -->
 <div class="main">
 
-<!-- SUMMARY -->
 <div class="section-title">Professional Summary</div>
 <div class="card">
-<p>
-Technical operations, Agile delivery, and Atlassian platform engineering professional with 15+ years of experience supporting enterprise engineering organizations across cloud, DevOps, reliability, and software delivery environments.
-</p>
+<p>Technical operations and delivery professional with experience supporting cloud platforms, DevOps environments, incident management, workflow automation, and Agile delivery across distributed engineering teams.</p>
 
-<p>
-Combines hands-on engineering capability with leadership experience across Jira administration, ScriptRunner development, Groovy automation, REST APIs, workflow governance, Tempo analytics, observability, incident management, and enterprise reporting systems.
-</p>
+<p>Background includes operational reliability, observability, production support, release coordination, Jira/API automation, reporting systems, and cross-functional execution in high-availability environments.</p>
 
-<p>
-Specialized in building internal platforms that transform Jira into a delivery intelligence system including sprint analytics, velocity correction models, workflow governance engines, automation frameworks, and cross-system reporting architectures.
-</p>
+<p>Hands-on with automation and operational improvement using Python, APIs, dashboards, SQL, cloud tooling, and AI-assisted workflows.</p>
+
+<p>Focused on improving delivery visibility, reducing operational friction, automating repetitive work, and helping teams operate more effectively in production environments.</p>
 </div>
 
-<!-- JIRA PORTFOLIO -->
-<div class="section-title">Enterprise Jira & Automation Engineering Portfolio</div>
+<!-- JIRA / AUTOMATION -->
+<div class="section-title">Enterprise Jira, Automation & Platform Engineering (FULL SCOPE)</div>
 
 <div class="card">
-<h3>Sprint Integrity & Velocity Analytics Engine</h3>
+<h3>Sprint Integrity, Velocity & Agile Data Engineering</h3>
 <ul>
-<li>Changelog-based sprint behavior analysis</li>
-<li>Detection of sprint scope creep and retroactive changes</li>
-<li>Multi-sprint assignment detection and correction</li>
-<li>Velocity inflation and phantom story point detection</li>
-<li>Corrected Agile forecasting models</li>
-<li>Executive-level delivery dashboards</li>
+<li>Changelog-based sprint reconstruction and analysis</li>
+<li>Detection of sprint scope manipulation and multi-sprint assignment issues</li>
+<li>Velocity correction models and forecasting accuracy improvements</li>
+<li>Story point inflation detection ("phantom points")</li>
+<li>Advanced Agile reporting for leadership visibility</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Workflow Governance & Business Rules Engine (ScriptRunner / Groovy)</h3>
+<h3>ScriptRunner / Groovy / JavaScript Workflow Engineering</h3>
 <ul>
 <li>Custom workflow validators and conditions</li>
-<li>Post-function automation logic</li>
-<li>Business rule enforcement across Jira workflows</li>
-<li>Release readiness validation frameworks</li>
-<li>Dependency enforcement and transition control</li>
+<li>Workflow post-functions automation</li>
+<li>Complex transition logic and business rules</li>
+<li>Jira field-level automation and calculations</li>
+<li>Governance rules enforcement across projects</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Tempo Timesheets & Productivity Intelligence System</h3>
+<h3>Tempo Timesheets & Workforce Intelligence</h3>
 <ul>
-<li>Active vs inactive work time analysis</li>
-<li>Context switching detection</li>
-<li>Team utilization and capacity metrics</li>
-<li>Engineering productivity dashboards</li>
-<li>Time allocation intelligence per issue</li>
+<li>Time tracking analytics across teams and issues</li>
+<li>Active vs inactive work classification</li>
+<li>Workload distribution and capacity modeling</li>
+<li>Inactivity detection and productivity signals</li>
+<li>Day-level engineering effort reconstruction</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Enterprise Notification & Escalation Framework</h3>
+<h3>Enterprise Notifications & Workflow Enforcement</h3>
 <ul>
-<li>Slack + Microsoft Teams automation</li>
-<li>Email-based escalation workflows</li>
-<li>Delayed ticket detection and alerts</li>
-<li>Blocked dependency notifications</li>
-<li>Workflow-driven incident escalation logic</li>
+<li>Slack, Microsoft Teams, email automation</li>
+<li>Delayed ticket alerts and escalation systems</li>
+<li>Blocked workflow prevention rules</li>
+<li>Custom notification engines based on Jira state</li>
+<li>Operational risk alerts and dependency tracking</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Jira REST API Reporting & Data Platform</h3>
+<h3>Jira REST API & Data Platform Engineering</h3>
 <ul>
-<li>Full issue and changelog extraction pipelines</li>
-<li>Sprint history reconstruction</li>
-<li>Portfolio-level reporting dashboards</li>
-<li>External system data integration</li>
-<li>Automated executive reporting pipelines</li>
+<li>Full Jira issue + changelog extraction pipelines</li>
+<li>Sprint history reconstruction across boards</li>
+<li>External reporting system integration</li>
+<li>Executive dashboards and analytics pipelines</li>
+<li>Cross-project data aggregation systems</li>
 </ul>
 </div>
 
 <!-- ENGINEERING PROJECTS -->
-<div class="section-title">Engineering & Automation Projects</div>
+<div class="section-title">Engineering, Scripting & Automation Systems</div>
 
 <div class="card">
-<h3>Python Log Archival & Retention Automation</h3>
+<h3>Python Log Management & Archival System</h3>
 <ul>
-<li>Automated log cleanup and archival processes</li>
-<li>Compression and retention policy enforcement</li>
-<li>Scheduled execution for enterprise systems</li>
-<li>Reduced manual infrastructure maintenance overhead</li>
+<li>Automated log cleanup and archival</li>
+<li>Retention policy enforcement</li>
+<li>Compression and storage optimization</li>
+<li>Production system maintenance automation</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Linux Bash Automation & Server Maintenance Framework</h3>
+<h3>Linux Bash Server Automation Framework</h3>
 <ul>
-<li>Cron-based log rotation and cleanup</li>
-<li>Disk optimization automation</li>
-<li>Production server maintenance scripts</li>
-<li>Standardized operational housekeeping tasks</li>
+<li>System-level log rotation scripts</li>
+<li>Disk cleanup and optimization automation</li>
+<li>Cron-based maintenance workflows</li>
+<li>Operational server health scripts</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>JavaScript API Integration & External Reporting System</h3>
+<h3>JavaScript API Integration & Reporting Engine</h3>
 <ul>
-<li>Jira REST API data extraction</li>
-<li>External system reporting integration</li>
-<li>Data transformation pipelines</li>
-<li>Automated reporting synchronization workflows</li>
+<li>External system data integration via APIs</li>
+<li>Jira REST API extraction and transformation</li>
+<li>Automated reporting pipelines</li>
+<li>Cross-system synchronization workflows</li>
 </ul>
 </div>
 
@@ -247,44 +221,45 @@ Specialized in building internal platforms that transform Jira into a delivery i
 <div class="card">
 <h3>iTree Training — Senior Program Agile Manager / Jira Platform Engineer</h3>
 <ul>
-<li>Enterprise Jira administration (Cloud, DC, Server)</li>
-<li>ScriptRunner automation using Groovy and JavaScript</li>
-<li>Workflow governance and business rule design</li>
-<li>Sprint analytics and velocity correction models</li>
-<li>Tempo Timesheets reporting and analytics</li>
-<li>Jira REST API integrations and reporting pipelines</li>
-<li>Slack, Teams, and email automation frameworks</li>
-<li>Cross-team Agile delivery optimization</li>
+<li>Enterprise Jira administration (Cloud, Data Center, Server)</li>
+<li>ScriptRunner automation (Groovy, JavaScript)</li>
+<li>Workflow governance and business rules engine design</li>
+<li>Jira REST API reporting systems and dashboards</li>
+<li>Tempo Timesheets analytics and reporting</li>
+<li>Sprint velocity and Agile data engineering</li>
+<li>Slack, Teams, email automation systems</li>
+<li>Cross-functional Agile delivery leadership</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>IBM — Site Reliability Engineer</h3>
+<h3>IBM — Site Reliability Engineer (Data & Observability)</h3>
 <ul>
 <li>Incident response and production recovery</li>
-<li>Observability systems (Datadog, ELK, Grafana, Prometheus)</li>
-<li>Root cause analysis and incident prevention</li>
-<li>Operational automation and monitoring improvements</li>
+<li>Observability systems (Datadog, Prometheus, ELK, Grafana)</li>
+<li>Root cause analysis (RCA) and automation improvements</li>
+<li>Production monitoring and alert optimization</li>
 </ul>
 </div>
 
 <div class="card">
 <h3>Optiva — Scrum Master / Engineering Project Manager</h3>
 <ul>
-<li>Agile delivery leadership across distributed teams</li>
-<li>Production incident coordination</li>
-<li>Jira workflow and reporting improvements</li>
-<li>Delivery risk visibility and planning alignment</li>
+<li>Agile delivery coordination across global teams</li>
+<li>Production incident coordination and escalation management</li>
+<li>Jira workflow and reporting optimization</li>
+<li>Delivery risk management and sprint planning alignment</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Equifax — Engineering Project Manager</h3>
+<h3>Equifax — Engineering Project Manager / Technical Project Manager</h3>
 <ul>
-<li>Cloud migration and CI/CD modernization</li>
+<li>Cloud migration programs and CI/CD modernization</li>
 <li>API-based automation and reporting systems</li>
-<li>Jira reporting and analytics frameworks</li>
-<li>Cross-team operational optimization</li>
+<li>Jira analytics and reporting frameworks</li>
+<li>Transition from manual reporting to automated pipelines</li>
+<li>Chatbot automation and support optimization systems</li>
 </ul>
 </div>
 
@@ -293,47 +268,78 @@ Specialized in building internal platforms that transform Jira into a delivery i
 <!-- SIDEBAR -->
 <div class="sidebar">
 
-<h3>Core Technologies</h3>
+<h3>Cloud & Infrastructure</h3>
 <div>
-<span class="tag">Jira Cloud</span>
-<span class="tag">Jira DC</span>
-<span class="tag">ScriptRunner</span>
-<span class="tag">Groovy</span>
-<span class="tag">JavaScript</span>
-<span class="tag">Python</span>
-<span class="tag">Bash</span>
-<span class="tag">REST APIs</span>
-<span class="tag">SQL</span>
-<span class="tag">Tempo</span>
-<span class="tag">Confluence</span>
 <span class="tag">AWS</span>
-<span class="tag">Azure</span>
 <span class="tag">GCP</span>
-<span class="tag">Docker</span>
+<span class="tag">Azure</span>
+<span class="tag">IBM Cloud</span>
 <span class="tag">Kubernetes</span>
+<span class="tag">Docker</span>
+<span class="tag">Terraform</span>
 </div>
 
-<h3>Leadership Areas</h3>
-<ul>
-<li>Technical Program Management</li>
-<li>Agile Delivery Leadership</li>
-<li>Incident Management</li>
-<li>Platform Engineering</li>
-<li>Workflow Governance</li>
-<li>Enterprise Reporting</li>
-</ul>
+<h3>Programming & Automation</h3>
+<div>
+<span class="tag">Python</span>
+<span class="tag">Java</span>
+<span class="tag">JavaScript</span>
+<span class="tag">Node.js</span>
+<span class="tag">Shell Script</span>
+<span class="tag">SQL</span>
+<span class="tag">REST APIs</span>
+<span class="tag">Groovy</span>
+</div>
+
+<h3>Monitoring & Observability</h3>
+<div>
+<span class="tag">Datadog</span>
+<span class="tag">Prometheus</span>
+<span class="tag">Grafana</span>
+<span class="tag">ELK</span>
+<span class="tag">CloudWatch</span>
+<span class="tag">Dynatrace</span>
+<span class="tag">New Relic</span>
+<span class="tag">Instana</span>
+</div>
+
+<h3>Atlassian Ecosystem</h3>
+<div>
+<span class="tag">Jira</span>
+<span class="tag">Confluence</span>
+<span class="tag">ScriptRunner</span>
+<span class="tag">Tempo</span>
+<span class="tag">Bitbucket</span>
+<span class="tag">Fisheye</span>
+<span class="tag">Crowd</span>
+</div>
+
+<h3>Incident & Ops</h3>
+<div>
+<span class="tag">PagerDuty</span>
+<span class="tag">ServiceNow</span>
+<span class="tag">Zendesk</span>
+</div>
+
+<h3>AI & Productivity</h3>
+<div>
+<span class="tag">ChatGPT</span>
+<span class="tag">Copilot</span>
+<span class="tag">Azure OpenAI</span>
+<span class="tag">Atlassian Rovo</span>
+</div>
 
 <h3>Education</h3>
 <ul>
 <li>MBA (Cum Laude)</li>
-<li>Master in Project Management (Cum Laude)</li>
+<li>Master Project Management (Cum Laude)</li>
 <li>BSc Computer Science</li>
 </ul>
 
 <h3>Languages</h3>
 <ul>
-<li>Spanish — Native</li>
-<li>English — C2</li>
+<li>Spanish (Native)</li>
+<li>English (C2)</li>
 </ul>
 
 </div>
