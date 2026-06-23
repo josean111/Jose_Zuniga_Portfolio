@@ -49,6 +49,14 @@ body {
     padding: 40px;
 }
 
+/* SIDEBAR */
+.sidebar {
+    background: #0f172a;
+    padding: 30px;
+    border-left: 1px solid rgba(255,255,255,0.08);
+}
+
+/* TITLES */
 .section-title {
     font-size: 20px;
     margin-top: 40px;
@@ -68,13 +76,6 @@ body {
     margin-top: 0;
 }
 
-/* SIDEBAR */
-.sidebar {
-    background: #0f172a;
-    padding: 30px;
-    border-left: 1px solid rgba(255,255,255,0.08);
-}
-
 .tag {
     display: inline-block;
     background: rgba(78,161,255,0.15);
@@ -84,6 +85,11 @@ body {
     border-radius: 6px;
     font-size: 12px;
 }
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.container { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 
@@ -92,7 +98,7 @@ body {
 <!-- HERO -->
 <div class="hero">
     <h1>Jose Zuniga</h1>
-    <h2>Technical Operations | Atlassian Platform Engineer | Technical Program Manager | SRE Automation Architect | Workflow & Delivery Intelligence Systems Builder</h2>
+    <h2>Technical Operations | Atlassian Platform Engineer | Technical Program Manager | SRE Automation Architect</h2>
 
     <div class="links" style="margin-top:15px;">
         <a href="https://wa.me/50688975841">WhatsApp</a>
@@ -104,278 +110,107 @@ body {
 
 <div class="container">
 
+<!-- ===================== MAIN ===================== -->
 <div class="main">
 
-<!-- ===================== SUMMARY ===================== -->
 <div class="section-title">Professional Summary</div>
 <div class="card">
-
 <p>Technical operations and delivery professional with experience supporting cloud platforms, DevOps environments, incident management, workflow automation, and Agile delivery across distributed engineering teams.</p>
-
 <p>Background includes operational reliability, observability, production support, release coordination, Jira/API automation, reporting systems, and cross-functional execution in high-availability environments.</p>
-
 <p>Hands-on with automation and operational improvement using Python, APIs, dashboards, SQL, cloud tooling, and AI-assisted workflows.</p>
-
-<p>Focused on improving delivery visibility, reducing operational friction, automating repetitive work, and helping teams operate more effectively in production environments.</p>
-
-<p>Open to full-time, contract, and technical operations opportunities.</p>
-
+<p>Focused on improving delivery visibility, reducing operational friction, automating repetitive work.</p>
 </div>
 
-<!-- ===================== KEY STRENGTHS ===================== -->
 <div class="section-title">Key Strengths</div>
 <div class="card">
 <ul>
-<li>Leadership across engineering, support, and operations in high-availability environments</li>
-<li>Strong background in technical support and production systems (incident handling, escalation, customer impact)</li>
-<li>DevOps and reliability mindset (SLOs, monitoring, incident management, operational readiness)</li>
-<li>Hands-on automation using APIs and scripting (Jira, reporting, workflow optimization)</li>
-<li>Agile delivery leadership (Scrum, Kanban, SAFe) focused on execution and outcomes</li>
-<li>Practical AI usage (chatbots, NLP workflows, automation for reporting and operations)</li>
-<li>MBA with strong focus on business alignment and decision-making</li>
+<li>Leadership across engineering, support, and operations</li>
+<li>Incident management & production systems</li>
+<li>DevOps & reliability mindset</li>
+<li>Jira automation & API engineering</li>
+<li>Agile delivery leadership</li>
 </ul>
 </div>
 
-<!-- ===================== CORE SKILLS ===================== -->
 <div class="section-title">Core Skills</div>
 <div class="card">
 <ul>
 <li>Agile Delivery (Scrum, Kanban, SAFe)</li>
-<li>Technical Program Management</li>
-<li>Incident Management & Operational Readiness</li>
-<li>Site Reliability & Observability (SLIs/SLOs, monitoring)</li>
-<li>Support Operations & Customer Experience</li>
-<li>Automation & Workflow Optimization (APIs, scripting)</li>
-<li>Cloud & Platform Environments (AWS, Kubernetes, CI/CD)</li>
-<li>Data Analysis & Reporting (SQL, dashboards, trends)</li>
-<li>Cross-Functional Leadership</li>
+<li>Incident Management & SRE</li>
+<li>Automation (Python, APIs, scripting)</li>
+<li>Cloud (AWS, Azure, GCP)</li>
+<li>Data & Reporting (SQL, dashboards)</li>
 </ul>
 </div>
 
-<!-- ===================== JIRA PLATFORM (ENHANCED BUT NO DATA REMOVED) ===================== -->
-<div class="section-title">Atlassian / Jira Platform Engineering (Expanded Capability Layer)</div>
-
-<div class="card">
-<h3>Enterprise Jira Delivery Intelligence Platform (ScriptRunner + APIs + Automation)</h3>
-<ul>
-<li>Built advanced Jira automation systems using ScriptRunner, Groovy, JavaScript, and REST APIs</li>
-<li>Designed workflow governance rules, validators, conditions, and post-functions for enterprise Jira environments</li>
-<li>Implemented custom logic for transitions, field validation, and lifecycle enforcement</li>
-<li>Developed sprint analytics models including velocity adjustment, forecasting correction, and delivery tracking</li>
-<li>Built reporting systems for executive visibility, sprint health, and portfolio-level analytics</li>
-<li>Integrated Jira data with external systems for enterprise reporting and operational intelligence</li>
-<li>Automated detection of delayed issues, stale tickets, blocked workflows, and missing updates</li>
-<li>Implemented Slack, Teams, and email notification automation for operational alerts</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Sprint Integrity, Velocity Analytics & Changelog Intelligence</h3>
-<ul>
-<li>Built systems analyzing Jira changelog history for sprint accuracy and delivery integrity</li>
-<li>Detected multi-sprint assignment patterns and sprint manipulation behavior</li>
-<li>Analyzed story point inflation and “phantom velocity” patterns</li>
-<li>Created corrected forecasting models for Agile planning accuracy</li>
-<li>Supported analysis across large-scale Jira datasets (enterprise-level issue histories and workflows)</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Tempo Timesheets & Productivity Intelligence System</h3>
-<ul>
-<li>Integrated Tempo Timesheets data with Jira workflow and changelog analysis</li>
-<li>Built models for active vs inactive work time estimation</li>
-<li>Improved capacity planning and utilization tracking</li>
-<li>Correlated time tracking with issue lifecycle events</li>
-<li>Enhanced delivery planning accuracy through historical behavioral analysis</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Enterprise Notification, Escalation & Workflow Control System</h3>
-<ul>
-<li>Automated Slack and Microsoft Teams notifications for workflow events</li>
-<li>Built escalation rules for delayed tickets and blocked dependencies</li>
-<li>Created alerting systems for stale or inactive issues</li>
-<li>Implemented workflow gating logic preventing progression when conditions not met</li>
-<li>Reduced manual follow-ups and improved SLA visibility</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Jira REST API Reporting & Data Engineering Layer</h3>
-<ul>
-<li>Built full Jira extraction pipelines (issues, sprints, changelogs, transitions)</li>
-<li>Created structured datasets for reporting and analytics systems</li>
-<li>Integrated Jira data with external reporting platforms</li>
-<li>Automated executive reporting (daily, sprint, weekly, monthly)</li>
-<li>Replaced manual reporting processes with automated pipelines</li>
-</ul>
-</div>
-
-<!-- ===================== AUTOMATION PROJECTS ===================== -->
-<div class="section-title">Automation & Engineering Systems</div>
-
-<div class="card">
-<h3>Python Log Cleanup & Archival Automation System</h3>
-<ul>
-<li>Built Python automation to remove and archive old logs</li>
-<li>Implemented log retention and compression workflows</li>
-<li>Reduced manual system maintenance effort</li>
-<li>Improved system storage efficiency and operational hygiene</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Linux Bash Automation & Server Operations Toolkit</h3>
-<ul>
-<li>Developed bash scripts for Linux server maintenance automation</li>
-<li>Implemented cron-based log rotation and cleanup systems</li>
-<li>Automated disk cleanup and system housekeeping tasks</li>
-<li>Standardized operational scripts across environments</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>JavaScript API Integration & External Reporting System</h3>
-<ul>
-<li>Built JavaScript-based API integrations with external reporting systems</li>
-<li>Extracted and transformed Jira data for external consumption</li>
-<li>Automated cross-system reporting synchronization</li>
-<li>Enabled real-time operational visibility across platforms</li>
-</ul>
-</div>
-
-<!-- ===================== EXPERIENCE ===================== -->
 <div class="section-title">Professional Experience</div>
 
 <div class="card">
-<h3>iTree Training — Senior Program Agile Manager / Atlassian Platform Engineer</h3>
+<h3>iTree Training — Senior Program Agile Manager</h3>
 <ul>
-<li>Enterprise Jira administration (Cloud, Data Center, Server)</li>
-<li>ScriptRunner automation (Groovy + JavaScript)</li>
-<li>Jira API reporting and data extraction systems</li>
-<li>Workflow governance and business rule enforcement</li>
-<li>Sprint analytics, velocity correction, and delivery forecasting</li>
-<li>Cross-team Agile delivery optimization</li>
+<li>Jira automation & ScriptRunner development</li>
+<li>Workflow governance & reporting systems</li>
+<li>Incident lifecycle management</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>IBM — Site Reliability Engineer</h3>
+<h3>IBM — SRE</h3>
 <ul>
-<li>Incident response and production recovery operations</li>
-<li>Observability tools: Datadog, ELK, Grafana, Prometheus</li>
-<li>Root cause analysis and system reliability improvements</li>
-<li>Operational automation and monitoring optimization</li>
+<li>Incident response & observability</li>
+<li>Datadog / ELK / Grafana / Prometheus</li>
 </ul>
 </div>
 
-<div class="card">
-<h3>Optiva — Scrum Master / Engineering Project Manager</h3>
-<ul>
-<li>Agile delivery leadership across distributed teams</li>
-<li>Production incident coordination and escalation management</li>
-<li>Jira workflow optimization and reporting improvements</li>
-<li>Delivery risk visibility and planning alignment</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Equifax — Engineering Project Manager</h3>
-<ul>
-<li>Cloud transformation and CI/CD modernization</li>
-<li>API-based automation and reporting systems</li>
-<li>Enterprise Jira reporting frameworks</li>
-<li>Cross-team operational optimization initiatives</li>
-</ul>
 </div>
 
 <!-- ===================== SIDEBAR ===================== -->
 <div class="sidebar">
 
-<h3>Cloud & Infrastructure</h3>
+<h3>Cloud & DevOps</h3>
 <div>
 <span class="tag">AWS</span>
-<span class="tag">GCP</span>
 <span class="tag">Azure</span>
-<span class="tag">IBM Cloud</span>
-<span class="tag">Docker</span>
+<span class="tag">GCP</span>
 <span class="tag">Kubernetes</span>
-<span class="tag">Terraform</span>
 </div>
 
-<h3>Programming & Automation</h3>
-<div>
-<span class="tag">Python</span>
-<span class="tag">Java</span>
-<span class="tag">JavaScript</span>
-<span class="tag">Node.js</span>
-<span class="tag">Bash</span>
-<span class="tag">SQL</span>
-</div>
-
-<h3>Observability & Ops</h3>
-<div>
-<span class="tag">Prometheus</span>
-<span class="tag">Grafana</span>
-<span class="tag">ELK</span>
-<span class="tag">Datadog</span>
-<span class="tag">New Relic</span>
-<span class="tag">Dynatrace</span>
-</div>
-
-<h3>Atlassian Ecosystem</h3>
+<h3>Atlassian</h3>
 <div>
 <span class="tag">Jira</span>
 <span class="tag">ScriptRunner</span>
-<span class="tag">Confluence</span>
 <span class="tag">Tempo</span>
-<span class="tag">Bitbucket</span>
 </div>
 
-<h3>Enterprise Tools</h3>
+<h3>Automation</h3>
 <div>
-<span class="tag">ServiceNow</span>
-<span class="tag">Zendesk</span>
-<span class="tag">PagerDuty</span>
-<span class="tag">Slack</span>
-<span class="tag">Teams</span>
+<span class="tag">Python</span>
+<span class="tag">JavaScript</span>
+<span class="tag">Bash</span>
+<span class="tag">REST APIs</span>
 </div>
 
-</div>
-
-    
-<!-- ===================== EDUCATION ===================== -->
-<div class="section-title">Education</div>
-<div class="card">
+<!-- 🔥 EDUCATION MOVED CORRECTLY -->
+<h3>Education</h3>
 <ul>
-<li>Master’s in Project Management, Cum Laude - Spain</li>
-<li>Master’s in Business Administration, Cum Laude - Spain</li>
-<li>Bachelor’s in Computer Science, ULACIT - Costa Rica</li>
+<li>MBA Cum Laude</li>
+<li>Master Project Management</li>
+<li>BSc Computer Science</li>
 </ul>
-</div>
 
-<!-- ===================== CERTIFICATIONS ===================== -->
-<div class="section-title">Certifications</div>
-<div class="card">
+<h3>Certifications</h3>
 <ul>
-<li>Certified Scrum Master (CSM)</li>
-<li>Scrum Product Owner Certified (SPOC)</li>
-<li>Agile Certified Practitioner (PMI-ACP)</li>
-<li>SAFe 4 Practitioner</li>
+<li>CSM</li>
+<li>PMI-ACP</li>
+<li>SAFe</li>
 <li>AWS Cloud Practitioner</li>
 </ul>
-</div>
 
-<!-- ===================== LANGUAGES ===================== -->
-<div class="section-title">Languages</div>
-<div class="card">
+<h3>Languages</h3>
 <ul>
-<li>Spanish - Native</li>
-<li>English - C2 (Bilingual)</li>
+<li>Spanish (Native)</li>
+<li>English (C2)</li>
 </ul>
-</div>
 
 </div>
 
