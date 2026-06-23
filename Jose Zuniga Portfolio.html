@@ -1,300 +1,414 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Jose Zuniga Resume</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jose Zuniga | Technical Program Manager & Atlassian Platform Engineer</title>
+
 <style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; padding: 0; color: #333;
-    background: #fff;
-  }
-  .container {
-    max-width: 900px;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    background: #fff;
-  }
-  .main-column {
-    padding: 30px 40px;
-  }
-  .side-column {
-    background-color: #254263;
-    color: white;
-    padding: 30px 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* reduced gap from 30px */
-  }
-  h1, h2, h3 {
+body {
     margin: 0;
-  }
-  h1 {
-    font-size: 28px;
-    font-weight: 900;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,.08);
+}
+
+.main {
+    padding: 35px;
+}
+
+.sidebar {
+    background: #254263;
+    color: white;
+    padding: 30px;
+}
+
+h1 {
     color: #254263;
-    margin-bottom: 10px;
-  }
-  h2 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
     font-size: 18px;
-    font-weight: 700;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 4px;  /* reduced from 6px */
-    margin-bottom: 8px;   /* reduced from 12px */
-  }
-  h3 {
-    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+h2 {
     color: #254263;
-    margin-top: 10px;     /* reduced from 14px */
-    margin-bottom: 4px;   /* reduced from 6px */
-  }
-  .contact-info {
-    font-size: 14px;
-    margin-bottom: 25px;  /* reduced from 30px */
-    color: #444;
-  }
-  a {
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.sidebar h2 {
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,.4);
+}
+
+h3 {
+    color: #254263;
+    margin-bottom: 5px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+ul {
+    margin-top: 5px;
+}
+
+li {
+    margin-bottom: 6px;
+    line-height: 1.45;
+}
+
+.contact {
+    margin-bottom: 25px;
+}
+
+.contact a {
     color: #1a73e8;
     text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  .section {
-    margin-bottom: 16px; /* reduced from 28px */
-  }
-  p, li {
-    font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 4px;
-    text-align: justify;
-    text-justify: inter-word;
-  }
-  ul {
-    padding-left: 20px;
-    margin-top: 4px;  /* reduced from 6px */
-  }
-  li {
-    margin-bottom: 4px; /* reduced from 7px */
-  }
-  /* Sidebar section titles */
-  .side-column h2 {
-    border-color: rgba(255,255,255,0.4);
-    color: white;
-  }
-  /* Sidebar lists */
-  .side-column ul {
+}
+
+.card {
+    border-left: 4px solid #254263;
+    background: #f8fafc;
+    padding: 15px;
+    margin-bottom: 18px;
+}
+
+.tech-grid {
+    columns: 2;
+}
+
+.sidebar ul {
     padding-left: 18px;
-  }
-  .side-column li {
-    margin-bottom: 6px; /* reduced from 8px */
-    font-size: 14px;
-    color: #d6dbdf;
-  }
-  .achievements li {
-    color: white;
-  }
-  /* Language dots */
-  .lang-level {
-    display: inline-block;
-    margin-left: 8px;
-  }
-  .dot {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 4px;
-  }
-  .dot.filled {
-    background-color: #1a73e8;
-  }
-  .dot.empty {
-    background-color: #bbb;
-  }
-  /* Responsive */
-  @media (max-width: 700px) {
-    .container {
-      grid-template-columns: 1fr;
-    }
-    .side-column {
-      display: block;
-      padding: 20px 30px;
-    }
-  }
+}
+
+.sidebar li {
+    color: #dce4ec;
+}
+
+@media(max-width:900px){
+.container{
+grid-template-columns:1fr;
+}
+}
 </style>
 
 </head>
+
 <body>
-  <div class="container">
-    <div class="main-column">
-      <h1>Jose Zuniga</h1>
-      <div class="contact-info">
-        Phone: +506 8897 5841 | Email: josean.111@gmail.com | Heredia, Costa Rica<br />
-        LinkedIn: <a href="https://www.linkedin.com/in/jose-azuniga" target="_blank" rel="noopener noreferrer">linkedin.com/in/jose-azuniga</a><br />
-        Portfolio: <a href="https://josean111.github.io/jose-zuniga-portfolio-/" target="_blank" rel="noopener noreferrer">josean111.github.io/jose-zuniga-portfolio-/</a>
-      </div>
 
-      <div class="section experience">
-        <h2>Work Experience</h2>
+<div class="container">
 
-        <div>
-          <h3>iTree Training | Senior Program Agile Manager</h3>
-          <p><em>2022 – 2025</em></p>
-          <p>iTree is a global technology company that provides innovative training programs to enhance organizational efficiency and productivity.</p>
-          <p><strong>Role Description:</strong> Led several Agile projects, closely working with cross-functional teams to meet business goals, while ensuring alignment with company priorities. Managed resources, capacity planning, and Agile ceremonies, all while driving business value through the implementation of Scrum and SAFe methodologies.</p>
-          <ul>
-            <li>Led cross-functional teams across Agile projects, including planning, execution, and delivery using Scrum and SAFe methodologies.</li>
-            <li>Increased productivity by 35% and reduced time-to-market by 40% through the successful adoption of Agile practices.</li>
-            <li>Improved sprint planning and backlog refinement, reducing delivery delays by 25% and increasing on-time project delivery by 30%.</li>
-            <li>Established strong relationships with key stakeholders, resulting in 20% higher stakeholder satisfaction through transparency, regular reporting, and better risk management.</li>
-          </ul>
-        </div>
+<div class="main">
 
-        <div>
-          <h3>IBM | Site Reliability Engineer</h3>
-          <p><em>2021 – 2024</em></p>
-          <p>IBM is a global leader in cloud computing, artificial intelligence, and business technology, delivering cutting-edge solutions to businesses across industries.</p>
-          <p><strong>Role Description:</strong> Focused on maintaining system uptime, reliability, and continuous improvement through proactive strategies. Led the monitoring of systems, designed disaster recovery plans, and implemented machine learning-driven predictive maintenance.</p>
-          <ul>
-            <li>Monitored and maintained production systems, ensuring optimal reliability and performance in line with Service Level Objectives (SLOs) and Service Level Indicators (SLIs).</li>
-            <li>Reduced unplanned outages by 6% through predictive maintenance and utilizing machine learning models and sensor data.</li>
-            <li>Designed capacity planning strategies that led to a 7% reduction in provisioning costs, ensuring efficient infrastructure scalability.</li>
-            <li>Enhanced disaster recovery processes, improving recovery success rates by 12% during peak traffic events.</li>
-          </ul>
-        </div>
+<h1>Jose Zuniga</h1>
 
-        <div>
-          <h3>Optiva | Scrum Master / Engineering Project Manager</h3>
-          <p><em>2019 – 2021</em></p>
-          <p>Optiva is a leading provider of business support systems (BSS) solutions for communication service providers worldwide.</p>
-          <p><strong>Role Description:</strong> Led teams transitioning to Agile methodologies while managing complex engineering projects. Worked closely with various departments, facilitating communication and aligning project deliverables with customer and stakeholder needs.</p>
-          <ul>
-            <li>Coordinated cross-functional teams across time zones, ensuring alignment and meeting SLAs for project execution.</li>
-            <li>Delivered 95% of projects on time over a 3-year period, cutting project delays by 20% through effective scheduling and risk management.</li>
-            <li>Managed budgets totaling $50M+, achieving cost savings of 10-12% through resource optimization and cost control.</li>
-            <li>Facilitated collaboration across engineering, R&D, and manufacturing teams, reducing interdepartmental delays by 30%.</li>
-          </ul>
-        </div>
+<div class="subtitle">
+Technical Program Manager | Atlassian Platform Engineer | Agile Delivery Leader | Automation & Reporting Specialist
+</div>
 
-        <div>
-          <h3>Equifax | Engineering Project Manager</h3>
-          <p><em>2015 – 2019</em></p>
-          <p>Equifax is a global data, analytics, and technology company, providing businesses and individuals with trusted insights to make informed decisions.</p>
-          <p><strong>Role Description:</strong> Managed projects focused on cloud migration and CI/CD pipelines while enhancing the company's software delivery lifecycle. Served as Scrum Master during the Agile transition phase.</p>
-          <ul>
-            <li>Increased team productivity by 20% through the adoption of Scrum methodologies, improving SDLC processes and ensuring timely delivery of updates.</li>
-            <li>Improved cross-functional workflow efficiency by 20% by standardizing the CI/CD pipeline.</li>
-            <li>Automated build and deployment processes, speeding up deployment cycles by 50% and eliminating bottlenecks.</li>
-          </ul>
-        </div>
+<div class="contact">
+Phone: +506 8897 5841 |
+Email: josean.111@gmail.com |
+Heredia, Costa Rica<br>
 
-        <div>
-          <h3>Equifax | Technical Project Manager</h3>
-          <p><em>2012 – 2015</em></p>
-          <p><strong>Role Description:</strong> Led infrastructure upgrades, managed internal tools development, and integrated APIs to enhance operational efficiency.</p>
-          <ul>
-            <li>Managed a $600K IT infrastructure upgrade, improving system performance by 40% and reducing downtime by 2 hours per month.</li>
-            <li>Led the cloud migration of 9 enterprise tools, resulting in 22% cost savings in operational expenses and enhanced system scalability.</li>
-            <li>Introduced Agile practices across 14 teams, improving delivery speed by 30% and reducing project cycle times by 50%.</li>
-          </ul>
-        </div>
+LinkedIn:
+https://linkedin.com/in/jose-azuniga
 
-      </div>
+</div>
 
-    </div>
+<section class="section">
+<h2>Professional Summary</h2>
 
-    <div class="side-column">
+<p>
+Technical operations, Agile delivery, and Atlassian platform professional with 15+ years of experience supporting enterprise engineering organizations, cloud platforms, DevOps environments, software delivery teams, and operational support functions.
+</p>
 
-     <div class="section summary">
-        <h2>Professional Summary</h2>
-        <p>
-          A results-driven Senior Project Manager and Scrum Master with over 16 years of experience leading cross-functional teams in dynamic environments across diverse industries. Adept at applying Agile methodologies, including Scrum, Kanban, and SAFe, to manage complex projects and programs from concept to successful delivery. Proven ability to drive business value by optimizing workflows, improving team collaboration, risk mitigation, resource planning, and ensuring timely, high-quality project outcomes.
-        </p>
-      </div>
-      
-      <div class="section achievements">
-        <h2>Key Achievements</h2>
-        <ul>
-          <li>Boosted cross-department efficiency (>30%) at Optiva</li>
-          <li>Automated deployments (50% faster cycles, Equifax)</li>
-          <li>Reduced costs and improved system reliability (IBM, iTree)</li>
-        </ul>
-      </div>
+<p>
+Combines leadership experience across Program Management, Agile Delivery, Technical Operations, Incident Management, Reliability Engineering, and stakeholder engagement with hands-on expertise in Jira administration, ScriptRunner development, Groovy automation, REST APIs, workflow engineering, enterprise reporting, Tempo analytics, and platform governance.
+</p>
 
-      <div class="section skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>Agile (Scrum, Kanban, SAFe, Lean)</li>
-          <li>Cloud Platforms: AWS, Google Cloud, IBM Cloud, Azure</li>
-          <li>DevOps Tools: Kubernetes, Docker, Terraform, Jenkins</li>
-          <li>Programming: Python, JavaScript, Node.js, Shell Script</li>
-          <li>Project Management Tools: Jira, Confluence, Trello, Asana</li>
-        </ul>
-      </div>
+<p>
+Proven ability to bridge business objectives and technical implementation by designing scalable operational processes, workflow automation, governance controls, executive reporting platforms, delivery analytics, and engineering productivity solutions.
+</p>
+</section>
 
-      <div class="section certifications">
-        <h2>Certifications</h2>
-        <ul>
-          <li>Certified Scrum Master (CSM) (ID: 561348)</li>
-          <li>Agile Certified Practitioner (PMI-ACP)</li>
-          <li>SAFe® 4 Certified Practitioner (Scaled Agile, Inc.)</li>
-          <li>Amazon Web Services Cloud Practitioner</li>
-        </ul>
-      </div>
+<section class="section">
+<h2>Enterprise Jira & Automation Solutions Portfolio</h2>
 
-      <div class="section courses">
-        <h2>Courses</h2>
-        <ul>
-          <li>Technical: Introduction to Monitoring Kubernetes, Kubernetes Fundamentals, Monitoring a Kubernetes Cluster, Terraform on IBM Cloud</li>
-          <li>Soft Skills: 7 Habits for Effective Managers, SMART Goals for Managers</li>
-        </ul>
-      </div>
+<div class="card">
+<h3>Sprint Integrity & Velocity Analytics Platform</h3>
 
-      <div class="section languages">
-        <h2>Languages</h2>
-        <p>Spanish
-          <span class="lang-level">
-            <span class="dot filled"></span>
-            <span class="dot filled"></span>
-            <span class="dot filled"></span>
-            <span class="dot filled"></span>
-            <span class="dot filled"></span>
-          </span>
-        </p>
-        <p>English
-          <span class="lang-level">
-            <span class="dot filled"></span>
-            <span class="dot filled"></span>
-            <span class="dot filled"></span>
-            <span class="dot filled"></span>
-            <span class="dot filled"></span>
-          </span>
-        </p>
-      </div>
+<p>
+Designed a custom reporting framework using ScriptRunner, Groovy, JavaScript, Jira APIs, and changelog analysis to overcome limitations of native Jira reporting.
+</p>
 
-      <div class="section additional-info">
-        <h2>Additional Information</h2>
-        <ul>
-          <li>Leadership: Coaching and mentoring teams to improve productivity and performance</li>
-          <li>Collaboration: Expertise in cross-functional teamwork and stakeholder management</li>
-          <li>Problem Solving: Adept at handling critical incidents and providing proactive solutions</li>
-        </ul>
-      </div>
+<ul>
+<li>Detected sprint scope creep and sprint inflation.</li>
+<li>Identified tickets added after sprint start.</li>
+<li>Detected tickets moved between active sprints.</li>
+<li>Flagged multi-sprint assignments.</li>
+<li>Identified phantom story points and velocity manipulation.</li>
+<li>Generated corrected velocity calculations.</li>
+<li>Produced executive forecasting dashboards.</li>
+<li>Automated daily, weekly, sprint, and monthly reporting.</li>
+</ul>
+</div>
 
-      <div class="section education">
-        <h2>Education</h2>
-        <ul>
-          <li>Master's Degree in Project Management &nbsp;|&nbsp; Master Cum Laude &nbsp;|&nbsp; Spain</li>
-          <li>Master's Degree in Business Administration &nbsp;|&nbsp; Master Cum Laude &nbsp;|&nbsp; Spain</li>
-          <li>Bachelor's Degree in Computer Science &nbsp;|&nbsp; ULACIT, Costa Rica</li>
-        </ul>
-      </div>
-      
-    </div>
-  </div>
+<div class="card">
+<h3>Workflow Governance & Business Rules Engine</h3>
+
+<ul>
+<li>Built custom workflow validators.</li>
+<li>Created workflow conditions and post-functions.</li>
+<li>Implemented governance controls.</li>
+<li>Enforced release readiness requirements.</li>
+<li>Prevented workflow bypasses.</li>
+<li>Created dependency validation controls.</li>
+<li>Implemented dynamic approvals.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Dynamic Story Point & Capacity Planning Framework</h3>
+
+<ul>
+<li>Formula-driven custom fields.</li>
+<li>Dynamic planning calculations.</li>
+<li>Capacity-based forecasting.</li>
+<li>Story point governance.</li>
+<li>Sprint planning optimization.</li>
+<li>Portfolio-level planning visibility.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Enterprise Notification & Escalation Framework</h3>
+
+<ul>
+<li>Slack integrations.</li>
+<li>Microsoft Teams integrations.</li>
+<li>Google Workspace notifications.</li>
+<li>Email automation.</li>
+<li>Delayed ticket detection.</li>
+<li>Inactive ticket monitoring.</li>
+<li>Blocked dependency escalation.</li>
+<li>SLA enforcement workflows.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Tempo Productivity Intelligence Platform</h3>
+
+<ul>
+<li>Tempo Timesheet analytics.</li>
+<li>Active work calculations.</li>
+<li>Inactivity tracking.</li>
+<li>Context-switching analysis.</li>
+<li>Utilization reporting.</li>
+<li>Engineering effort visibility.</li>
+<li>Team productivity dashboards.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Jira API Reporting & Data Integration Platform</h3>
+
+<ul>
+<li>Full issue extraction.</li>
+<li>Changelog extraction.</li>
+<li>Sprint history analysis.</li>
+<li>Story point analytics.</li>
+<li>Cross-project reporting.</li>
+<li>Executive dashboards.</li>
+<li>Portfolio visibility reporting.</li>
+<li>External platform integrations.</li>
+</ul>
+</div>
+</section>
+
+<section class="section">
+<h2>Professional Experience</h2>
+
+<h3>iTree Training | Senior Program Agile Manager / Product Owner</h3>
+<p><em>2024 – Present</em></p>
+
+<ul>
+<li>Lead Agile delivery and operational improvement initiatives across engineering, QA, DevOps, and operations teams.</li>
+<li>Administer enterprise Jira environments supporting engineering organizations.</li>
+<li>Develop advanced ScriptRunner solutions using Groovy and JavaScript.</li>
+<li>Create custom workflow validators, conditions, and post-functions.</li>
+<li>Build Jira API integrations and reporting frameworks.</li>
+<li>Develop sprint analytics, velocity reporting, and forecasting models.</li>
+<li>Implement Slack, Teams, Google Workspace, and email automation.</li>
+<li>Develop Tempo Timesheet reporting and utilization analytics.</li>
+<li>Standardize workflows, governance controls, and Agile reporting practices.</li>
+<li>Support migration, automation, and platform modernization initiatives.</li>
+</ul>
+
+<h3>IBM | Site Reliability Engineer</h3>
+<p><em>2021 – 2024</em></p>
+
+<ul>
+<li>Led incident response and operational recovery activities.</li>
+<li>Performed root cause analysis and production troubleshooting.</li>
+<li>Built observability solutions using Datadog, ELK, Grafana, and Prometheus.</li>
+<li>Automated operational workflows and monitoring processes.</li>
+<li>Improved reporting and operational readiness practices.</li>
+</ul>
+
+<h3>Optiva | Scrum Master / Engineering Project Manager</h3>
+<p><em>2019 – 2021</em></p>
+
+<ul>
+<li>Led Agile delivery and platform reliability initiatives.</li>
+<li>Managed Jira governance, reporting, and workflow improvements.</li>
+<li>Coordinated production incident management activities.</li>
+<li>Improved delivery visibility and stakeholder reporting.</li>
+</ul>
+
+<h3>Equifax | Engineering Project Manager</h3>
+<p><em>2015 – 2019</em></p>
+
+<ul>
+<li>Built automation and reporting solutions using APIs and scripting.</li>
+<li>Developed custom Jira reporting frameworks.</li>
+<li>Supported cloud migration and CI/CD transformation programs.</li>
+<li>Improved operational reporting and delivery visibility.</li>
+</ul>
+
+<h3>Equifax | Technical Project Manager</h3>
+<p><em>2012 – 2015</em></p>
+
+<ul>
+<li>Led infrastructure and platform modernization initiatives.</li>
+<li>Introduced Agile delivery processes and structured reporting.</li>
+<li>Implemented workflow automation and governance improvements.</li>
+</ul>
+
+<h3>Equifax | Technical Support Team Lead</h3>
+<p><em>2010 – 2012</em></p>
+
+<ul>
+<li>Led 24/7 support operations.</li>
+<li>Managed incidents, escalations, and service improvements.</li>
+<li>Built reporting and knowledge management frameworks.</li>
+</ul>
+
+<h3>HP | Technical Support Engineer</h3>
+<p><em>2008 – 2010</em></p>
+
+<ul>
+<li>Provided enterprise application support and troubleshooting.</li>
+<li>Performed root cause analysis and issue resolution.</li>
+</ul>
+
+</section>
+
+</div>
+
+<div class="sidebar">
+
+<section class="section">
+<h2>Key Strengths</h2>
+
+<ul>
+<li>Technical Program Management</li>
+<li>Enterprise Jira Administration</li>
+<li>Atlassian Platform Engineering</li>
+<li>ScriptRunner Development</li>
+<li>Workflow Governance</li>
+<li>Agile Delivery Leadership</li>
+<li>Reporting & Analytics</li>
+<li>Tempo Timesheets</li>
+<li>REST API Integrations</li>
+<li>Incident Management</li>
+<li>Site Reliability</li>
+<li>Observability</li>
+</ul>
+</section>
+
+<section class="section">
+<h2>Core Technologies</h2>
+
+<ul>
+<li>Jira Cloud</li>
+<li>Jira Data Center</li>
+<li>Jira Server</li>
+<li>Confluence</li>
+<li>Tempo Timesheets</li>
+<li>Advanced Roadmaps</li>
+<li>ScriptRunner</li>
+<li>Groovy</li>
+<li>JavaScript</li>
+<li>Python</li>
+<li>REST APIs</li>
+<li>SQL</li>
+<li>AWS</li>
+<li>Azure</li>
+<li>GCP</li>
+<li>Kubernetes</li>
+<li>Docker</li>
+<li>Terraform</li>
+<li>Datadog</li>
+<li>Grafana</li>
+<li>ELK</li>
+<li>Prometheus</li>
+</ul>
+</section>
+
+<section class="section">
+<h2>Certifications</h2>
+
+<ul>
+<li>Certified Scrum Master (CSM)</li>
+<li>Scrum Product Owner Certified (SPOC)</li>
+<li>PMI-ACP</li>
+<li>SAFe Practitioner</li>
+<li>AWS Cloud Practitioner</li>
+</ul>
+</section>
+
+<section class="section">
+<h2>Education</h2>
+
+<ul>
+<li>MBA (Cum Laude) – Spain</li>
+<li>Master's in Project Management (Cum Laude) – Spain</li>
+<li>Bachelor's in Computer Science – ULACIT</li>
+</ul>
+</section>
+
+<section class="section">
+<h2>Languages</h2>
+
+<ul>
+<li>Spanish – Native</li>
+<li>English – C2 / Bilingual</li>
+</ul>
+</section>
+
+</div>
+
+</div>
+
 </body>
 </html>
