@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jose Zuniga | SRE • TPM • Engineering Manager • Scrum Master • Enterprise Trainer</title>
+
+<title>Jose Zuniga | Executive TPM | SRE Leader | Automation & Delivery Intelligence Architect</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -19,7 +20,7 @@
     --border:rgba(255,255,255,.08);
 }
 
-*{box-sizing:border-box;}
+*{box-sizing:border-box; scroll-behavior:smooth;}
 
 body{
     margin:0;
@@ -29,34 +30,53 @@ body{
     line-height:1.65;
 }
 
-a{color:var(--accent);}
-
+/* HERO */
 .hero{
-    padding:70px 50px;
-    background:linear-gradient(135deg,#0b1220,#111c33);
+    background:
+    radial-gradient(circle at top right, rgba(78,161,255,.18), transparent 25%),
+    linear-gradient(135deg,#0b1220,#111c33);
+    padding:80px 50px;
     border-bottom:1px solid var(--border);
 }
 
 .hero-grid{
     display:grid;
-    grid-template-columns:160px 1fr;
+    grid-template-columns:180px 1fr;
     gap:30px;
     align-items:center;
 }
 
 .profile-photo{
-    width:160px;height:160px;border-radius:50%;
+    width:180px;
+    height:180px;
+    border-radius:50%;
     border:4px solid rgba(255,255,255,.1);
     object-fit:cover;
 }
 
-h1{margin:0;font-size:52px;}
-h2{color:var(--muted);font-weight:400;font-size:18px;}
+h1{
+    margin:0;
+    font-size:54px;
+    line-height:1.1;
+}
+
+h2{
+    margin:15px 0;
+    font-weight:400;
+    color:var(--muted);
+    font-size:18px;
+}
 
 .hero-summary{
-    margin-top:10px;
-    color:#d4deed;
     max-width:1100px;
+    color:#d4deed;
+}
+
+.links a{
+    margin-right:18px;
+    text-decoration:none;
+    font-weight:600;
+    color:var(--accent);
 }
 
 .metrics{
@@ -66,73 +86,64 @@ h2{color:var(--muted);font-weight:400;font-size:18px;}
     margin-top:35px;
 }
 
-.metric{
+.metric-box{
     background:rgba(255,255,255,.04);
-    padding:18px;
+    border:1px solid rgba(255,255,255,.06);
     border-radius:12px;
+    padding:18px;
     text-align:center;
 }
 
-.metric-number{font-size:28px;color:var(--accent);font-weight:700;}
-.metric-label{color:var(--muted);font-size:13px;}
+.metric-number{
+    font-size:28px;
+    font-weight:700;
+    color:var(--accent);
+}
 
+.metric-label{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* LAYOUT */
 .container{
     display:grid;
-    grid-template-columns:2.2fr 1.2fr;
+    grid-template-columns:2.2fr 1.1fr;
 }
 
 .main{padding:40px;}
 .sidebar{
-    padding:35px;
     background:var(--sidebar);
     border-left:1px solid var(--border);
+    padding:35px;
 }
 
 /* SECTION */
 .section-title{
-    border-left:4px solid var(--accent);
-    padding-left:12px;
     margin-top:40px;
+    margin-bottom:15px;
+    padding-left:12px;
+    border-left:4px solid var(--accent);
     font-size:24px;
 }
 
 .card{
     background:var(--panel);
     border:1px solid rgba(255,255,255,.06);
-    padding:24px;
     border-radius:12px;
-    margin-top:15px;
+    padding:24px;
+    margin-bottom:18px;
 }
 
+/* TAGS */
 .tag{
     display:inline-block;
     margin:4px;
     padding:5px 10px;
-    font-size:12px;
     border-radius:6px;
+    font-size:12px;
     background:rgba(78,161,255,.15);
     color:var(--accent);
-}
-
-/* TRAINING CORE BLOCK */
-.training-block{
-    background:linear-gradient(135deg,rgba(78,161,255,.12),rgba(99,179,255,.05));
-    border:1px solid rgba(78,161,255,.25);
-    padding:18px;
-    border-radius:12px;
-}
-
-.role-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:15px;
-}
-
-.role-card{
-    background:var(--panel);
-    padding:18px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,.06);
 }
 
 .footer{
@@ -143,18 +154,20 @@ h2{color:var(--muted);font-weight:400;font-size:18px;}
 }
 
 @media(max-width:1000px){
+.hero-grid{grid-template-columns:1fr; text-align:center;}
 .container{grid-template-columns:1fr;}
-.hero-grid{grid-template-columns:1fr;text-align:center;}
-.metrics{grid-template-columns:1fr 1fr;}
+.sidebar{border-left:none; border-top:1px solid var(--border);}
+.metrics{grid-template-columns:repeat(2,1fr);}
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
-
 <div class="hero-grid">
+
 <img src="Profile.jpeg" class="profile-photo">
 
 <div>
@@ -162,39 +175,37 @@ h2{color:var(--muted);font-weight:400;font-size:18px;}
 <h1>Jose Zuniga</h1>
 
 <h2>
-SRE • Technical Program Manager • Engineering Manager • Scrum Master • Product Owner • Enterprise Trainer & Coach
+Executive Technical Program Manager • Site Reliability Engineering Leader • Automation & AI Delivery Architect • Agile Transformation Coach • Enterprise Platform Engineer
 </h2>
 
 <div class="hero-summary">
-Multi-disciplinary engineering leader operating across Site Reliability Engineering, enterprise program delivery, Agile leadership, and global technical training.
-Proven capability to execute production engineering responsibilities while simultaneously leading delivery governance, Scrum execution, product ownership, and large-scale technical enablement across global organizations and time zones.
+Senior cross-domain technology leader operating at the intersection of enterprise engineering, reliability systems, Agile delivery, and automation architecture.
+<br><br>
+Experienced in building and leading:
+<ul>
+<li>Enterprise delivery intelligence systems</li>
+<li>Production reliability & SRE operating models</li>
+<li>Automation ecosystems using APIs, scripting, and AI</li>
+<li>Global Agile delivery frameworks across time zones (Americas, Europe, Asia)</li>
+<li>Executive-level reporting and engineering performance systems</li>
+</ul>
+</div>
+
+<div class="links">
+<a href="https://wa.me/50688975841"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+<a href="mailto:josean.111@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+<a href="https://linkedin.com/in/jose-azuniga"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+<a href="resume.pdf"><i class="fa-solid fa-file-pdf"></i> Resume</a>
 </div>
 
 </div>
 </div>
 
 <div class="metrics">
-
-<div class="metric">
-<div class="metric-number">15+</div>
-<div class="metric-label">Years Engineering & Delivery</div>
-</div>
-
-<div class="metric">
-<div class="metric-number">5000+</div>
-<div class="metric-label">Training Hours Delivered</div>
-</div>
-
-<div class="metric">
-<div class="metric-number">40+</div>
-<div class="metric-label">Enterprise IBM Courses Delivered</div>
-</div>
-
-<div class="metric">
-<div class="metric-number">Global</div>
-<div class="metric-label">AMER • EMEA • APAC Delivery</div>
-</div>
-
+<div class="metric-box"><div class="metric-number">15+</div><div class="metric-label">Years Experience</div></div>
+<div class="metric-box"><div class="metric-number">SRE + TPM</div><div class="metric-label">Dual Domain Leadership</div></div>
+<div class="metric-box"><div class="metric-number">Global</div><div class="metric-label">Multi-Timezone Delivery</div></div>
+<div class="metric-box"><div class="metric-number">Automation</div><div class="metric-label">API + AI Driven Systems</div></div>
 </div>
 
 </section>
@@ -203,270 +214,290 @@ Proven capability to execute production engineering responsibilities while simul
 
 <main class="main">
 
+<!-- EXECUTIVE SUMMARY -->
 <section>
-<h2 class="section-title">Professional Identity Overview</h2>
-
-<div class="card">
-<p>
-Engineer-first leader combining Site Reliability Engineering, Technical Program Management, Scrum Mastery, Product Ownership, and Enterprise Training delivery into a unified execution profile.
-</p>
-
-<p>
-This profile is intentionally broad because the operational environments worked in require end-to-end ownership: from production systems and incident response to Agile delivery and global technical enablement.
-</p>
-</div>
-</section>
-
-<!-- TRAINING SECTION REBUILT (NO LOSS OF DEPTH) -->
-<section>
-<h2 class="section-title">Global Technical Training & Engineering Enablement (2020–2026)</h2>
-
+<h2 class="section-title">Executive Summary</h2>
 <div class="card">
 
-<div class="training-block">
-
 <p>
-Delivered enterprise-grade technical training programs as part of operational and engineering responsibilities, spanning IBM middleware, cloud platforms, security, data engineering, and enterprise systems administration.
+Multi-disciplinary engineering leader combining Site Reliability Engineering, Technical Program Management, Agile coaching, and automation architecture into unified enterprise delivery systems.
 </p>
 
 <p>
-Training execution included live instructor-led sessions, remote global classrooms, hands-on labs, certification preparation, and enterprise onboarding programs.
+Specialized in transforming fragmented operational environments into structured, measurable, automated ecosystems with strong emphasis on reliability, observability, and delivery intelligence.
 </p>
 
 <p>
-Global delivery footprint includes Europe (Spain, Czech Republic, Lithuania, Hungary), India, and distributed Americas/APAC audiences, operating across multiple time zones and organizational cultures.
+Experienced across enterprise IBM ecosystems, cloud platforms, DevOps environments, and large-scale Agile organizations spanning global time zones.
 </p>
-
-</div>
-
-<br>
-
-<div class="training-block">
-
-<strong>Core Technology Coverage (Preserved Full Scope)</strong><br><br>
-
-IBM Middleware & Integration:<br>
-MQ • WebSphere Application Server • DataPower • App Connect • API Connect<br><br>
-
-IBM Data & Analytics:<br>
-Db2 • Cognos Analytics • Planning Analytics • DataStage • InfoSphere<br><br>
-
-IBM Security:<br>
-Guardium • QRadar SIEM • Identity Management<br><br>
-
-IBM Content & Workflow Systems:<br>
-FileNet • Datacap • Business Automation Workflow • Enterprise Records<br><br>
-
-IBM Systems & Infrastructure:<br>
-IBM i (AS/400) • Spectrum Protect • Storage • Spectrum Scale<br><br>
-
-Operating Model:<br>
-• 2020–2026 continuous training delivery<br>
-• ~5000+ instructor-led hours<br>
-• 40+ enterprise-level technical courses<br>
-• Production-adjacent lab environments<br>
-• Multi-timezone global scheduling (AMER / EMEA / APAC)<br>
-
-</div>
 
 </div>
 </section>
 
+<!-- NEW SECTION: ENTERPRISE LEARNING FOOTPRINT -->
 <section>
-<h2 class="section-title">Engineering & Leadership Roles Combined</h2>
+<h2 class="section-title">Enterprise Learning & Technology Mastery (IBM + Global Programs 2020–2026)</h2>
 
-<div class="role-grid">
+<div class="card">
 
-<div class="role-card">
-<strong>SRE / Reliability Engineer</strong>
-<p>Production support, observability, incident response, RCA, MTTR reduction, monitoring systems.</p>
-</div>
+<p>
+This section represents continuous enterprise-level technical development across IBM, cloud, security, automation, and enterprise systems.
+It reflects hands-on exposure to production technologies, certifications, and advanced engineering training across multiple domains.
+</p>
 
-<div class="role-card">
-<strong>Technical Program Manager</strong>
-<p>Cross-team delivery governance, dependency management, execution tracking, enterprise programs.</p>
-</div>
+<ul>
+<li><b>Enterprise Systems & Middleware:</b> IBM MQ, WebSphere, DataPower, FileNet, Business Automation Workflow, API Connect</li>
+<li><b>Data & Analytics:</b> DB2, DataStage, Cognos, Planning Analytics, Data Replication, SQL-based enterprise analytics</li>
+<li><b>Security & Observability:</b> QRadar SIEM, Guardium, Instana, Spectrum Protect, Cloud Pack for AIOps</li>
+<li><b>Cloud & Infrastructure:</b> AWS, IBM Cloud, VMware, Linux/Unix systems administration, virtualization platforms</li>
+<li><b>Automation & Integration:</b> App Connect Enterprise, Sterling B2B, Workload Scheduler, Datacap</li>
+<li><b>IBM i Ecosystem:</b> RPG IV, System Operator, Performance Tuning, Control Language (CL), Storage & OS administration</li>
+<li><b>Modern Engineering Practices:</b> CI/CD, API-based automation, observability pipelines, SRE practices</li>
+</ul>
 
-<div class="role-card">
-<strong>Scrum Master / Agile Coach</strong>
-<p>Sprint execution, Agile ceremonies, flow optimization, team coaching, delivery alignment.</p>
-</div>
-
-<div class="role-card">
-<strong>Product Owner</strong>
-<p>Backlog prioritization, stakeholder alignment, roadmap execution, value-driven delivery.</p>
-</div>
-
-<div class="role-card">
-<strong>Enterprise Trainer / Coach</strong>
-<p>Global technical training delivery, onboarding programs, certification training, enablement.</p>
-</div>
+<p>
+This experience complements production roles by providing deep technical grounding in enterprise systems, integration architectures, and operational engineering.
+</p>
 
 </div>
 </section>
 
-</main>
-<!-- CONTINUATION FROM PART 1 -->
-
+<!-- CAREER HIGHLIGHTS (IMPROVED) -->
 <section>
 <h2 class="section-title">Career Highlights</h2>
 
 <div class="card">
 <ul>
-<li>Led enterprise engineering programs across SRE, DevOps, and cloud transformation initiatives</li>
-<li>Delivered global technical training programs across IBM middleware, security, and data platforms</li>
-<li>Built observability and incident management frameworks improving operational stability and MTTR</li>
-<li>Owned Agile delivery execution across distributed engineering and product teams</li>
-<li>Designed automation systems for reporting, operational workflows, and engineering productivity</li>
-<li>Acted across multiple roles: SRE, TPM, Scrum Master, Product Owner, and Technical Trainer</li>
+<li>Built enterprise-scale delivery intelligence systems integrating Jira APIs, analytics, and executive reporting</li>
+<li>Led SRE and incident management programs across global production environments</li>
+<li>Designed automation ecosystems reducing manual operational workload and improving MTTR</li>
+<li>Coached Agile teams across Scrum, Kanban, and SAFe environments</li>
+<li>Managed cross-functional engineering delivery across distributed global teams (Americas, Europe, Asia)</li>
+<li>Implemented observability and reliability frameworks for production systems</li>
+</ul>
+</div>
+
+</section>
+
+    
+<!-- CONTINUATION FROM PART 1 -->
+
+<!-- CAREER JOURNEY (REWRITTEN - EXECUTIVE LEVEL) -->
+<section>
+<h2 class="section-title">Career Journey (Enterprise Leadership & Engineering Evolution)</h2>
+
+<div class="card">
+
+<div class="timeline-item">
+<div class="company">iTree Training</div>
+<div class="role">Senior Agile Program Manager / Product Owner (2024 - Present)</div>
+<p>
+Executive-level delivery leadership across Agile transformation, automation architecture, and enterprise reporting systems.
+</p>
+<p>
+Designed and operated delivery intelligence platforms integrating Jira APIs, sprint analytics, and executive reporting dashboards.
+Led incident management frameworks aligned with SRE principles, improving visibility, accountability, and operational flow.
+</p>
+</div>
+
+<div class="timeline-item">
+<div class="company">IBM</div>
+<div class="role">Site Reliability Engineer (2021 - 2024)</div>
+<p>
+Production reliability engineering across enterprise systems focusing on observability, incident response, and operational automation.
+</p>
+<p>
+Built monitoring and alerting ecosystems (Datadog, ELK, Prometheus), improved MTTR, and automated repetitive operational workflows.
+Led RCA programs and contributed to system resilience improvements across distributed cloud environments.
+</p>
+</div>
+
+<div class="timeline-item">
+<div class="company">Optiva</div>
+<div class="role">Scrum Master / Engineering Project Manager (2019 - 2021)</div>
+<p>
+Agile delivery leadership for global engineering teams supporting high-availability telecom platforms.
+</p>
+<p>
+Improved incident communication models, aligned sprint execution with operational constraints, and strengthened delivery predictability in production environments.
+</p>
+</div>
+
+<div class="timeline-item">
+<div class="company">Equifax</div>
+<div class="role">Engineering Project Manager (2015 - 2019)</div>
+<p>
+Led cloud transformation and CI/CD modernization initiatives across enterprise systems.
+</p>
+<p>
+Introduced automation using APIs (Jira, reporting systems), built structured delivery reporting frameworks, and improved deployment reliability through CI/CD enhancements.
+</p>
+</div>
+
+<div class="timeline-item">
+<div class="company">Equifax</div>
+<div class="role">Technical Project Manager (2012 - 2015)</div>
+<p>
+Infrastructure and platform delivery leadership during enterprise modernization initiatives.
+</p>
+<p>
+Introduced structured Agile delivery models, early automation concepts, and transitioned teams from manual tracking to structured delivery systems.
+</p>
+</div>
+
+<div class="timeline-item">
+<div class="company">Equifax</div>
+<div class="role">Technical Support Team Lead (2010 - 2012)</div>
+<p>
+Led production support operations, escalation management, and incident tracking systems.
+</p>
+<p>
+Built early operational reporting systems and introduced structured incident classification and resolution workflows.
+</p>
+</div>
+
+<div class="timeline-item">
+<div class="company">HP</div>
+<div class="role">Technical Support Engineer (2008 - 2010)</div>
+<p>
+Enterprise support engineering focused on production systems, troubleshooting, and incident resolution.
+</p>
+<p>
+Developed foundational expertise in system behavior, failure patterns, and production support operations.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- NEW SECTION: OPERATING MODEL -->
+<section>
+<h2 class="section-title">Engineering Operating Model Expertise</h2>
+
+<div class="card">
+<ul>
+<li>Design of SRE-aligned operational models (SLIs, SLOs, error budgets)</li>
+<li>Incident lifecycle architecture (Detection → Response → RCA → Prevention)</li>
+<li>Agile delivery governance across distributed engineering teams</li>
+<li>Cross-functional execution models across Dev, Ops, QA, and Business</li>
+<li>Enterprise workflow optimization and automation architecture</li>
+<li>Executive reporting systems for engineering performance and delivery health</li>
 </ul>
 </div>
 </section>
 
+<!-- NEW SECTION: AUTOMATION STACK -->
 <section>
-<h2 class="section-title">Career Journey</h2>
+<h2 class="section-title">Automation & Engineering Intelligence Stack</h2>
 
 <div class="card">
-
-<p><strong>HP</strong> — Technical Support Engineer</p>
-<p>Enterprise support, production troubleshooting, incident response, and root cause analysis.</p>
-
-<br>
-
-<p><strong>Equifax</strong> — Support Lead → Technical Project Manager → Engineering Project Manager</p>
-<p>Led support operations, Agile delivery transformation, infrastructure programs, CI/CD modernization, and automation initiatives.</p>
-
-<br>
-
-<p><strong>Optiva</strong> — Scrum Master / Engineering PM</p>
-<p>Agile execution, sprint governance, production coordination, and delivery alignment across engineering teams.</p>
-
-<br>
-
-<p><strong>IBM</strong> — Site Reliability Engineer</p>
-<p>Observability, production support, incident management, enterprise monitoring, reliability engineering, and operational intelligence.</p>
-
-<br>
-
-<p><strong>iTree Training</strong> — Senior Agile Program Manager / Product Owner</p>
-<p>Enterprise delivery governance, Jira intelligence systems, automation pipelines, executive reporting, and global training alignment.</p>
-
+<ul>
+<li>API-driven automation (Jira, ServiceNow, internal systems)</li>
+<li>Python & JavaScript workflow automation engines</li>
+<li>SQL-based analytics and reporting pipelines</li>
+<li>CI/CD pipeline optimization and deployment automation</li>
+<li>Observability tooling integration (Datadog, ELK, Prometheus)</li>
+<li>AI-assisted operational workflows (ChatGPT, Copilot, Azure OpenAI)</li>
+<li>Event-driven incident notification and escalation systems</li>
+</ul>
 </div>
 </section>
 
-</main>
-
+<!-- UPDATED SIDEBAR (MORE BALANCED + STRATEGIC) -->
 <aside class="sidebar">
 
 <div class="sidebar-section">
-<h3>Core Engineering Stack</h3>
-<span class="tag">SRE</span>
-<span class="tag">DevOps</span>
-<span class="tag">Automation</span>
-<span class="tag">APIs</span>
-<span class="tag">Observability</span>
-<span class="tag">Cloud</span>
-<span class="tag">Incident Mgmt</span>
-<span class="tag">RCA</span>
+<h3>Executive Identity</h3>
+<div class="tag">TPM + SRE Hybrid Leader</div>
+<div class="tag">Automation Architect</div>
+<div class="tag">Agile Transformation Coach</div>
+<div class="tag">Enterprise Systems Engineer</div>
+<div class="tag">Delivery Intelligence Designer</div>
 </div>
 
 <div class="sidebar-section">
-<h3>Agile & Delivery Leadership</h3>
-<span class="tag">Scrum Master</span>
-<span class="tag">Product Owner</span>
-<span class="tag">Agile Coaching</span>
-<span class="tag">SAFe</span>
-<span class="tag">Jira</span>
-<span class="tag">Confluence</span>
-<span class="tag">Backlog Mgmt</span>
+<h3>Global Delivery Scope</h3>
+<div class="tag">Americas</div>
+<div class="tag">Europe</div>
+<div class="tag">Asia</div>
+<div class="tag">24/7 Operations</div>
+<div class="tag">Distributed Engineering Teams</div>
 </div>
 
 <div class="sidebar-section">
-<h3>Enterprise Training Expertise</h3>
-<span class="tag">IBM MQ</span>
-<span class="tag">WebSphere</span>
-<span class="tag">DataPower</span>
-<span class="tag">Db2</span>
-<span class="tag">FileNet</span>
-<span class="tag">Datacap</span>
-<span class="tag">QRadar</span>
-<span class="tag">IBM i</span>
-<span class="tag">Cognos</span>
-<span class="tag">Planning Analytics</span>
-<span class="tag">Guardium</span>
-
-<div class="training-block" style="margin-top:12px;">
-Global instructor-led delivery across AMER, EMEA, APAC<br>
-5000+ training hours (2020–2026)<br>
-Enterprise certification & onboarding programs
-</div>
-
+<h3>Core Leadership Domains</h3>
+<div class="tag">Technical Program Management</div>
+<div class="tag">SRE & Reliability Engineering</div>
+<div class="tag">Agile Coaching (Scrum / SAFe)</div>
+<div class="tag">Incident & Crisis Management</div>
+<div class="tag">Platform Engineering</div>
+<div class="tag">Engineering Operations</div>
 </div>
 
 <div class="sidebar-section">
-<h3>Cloud & Infrastructure</h3>
-<span class="tag">AWS</span>
-<span class="tag">Azure</span>
-<span class="tag">GCP</span>
-<span class="tag">IBM Cloud</span>
-<span class="tag">Linux</span>
-<span class="tag">Windows</span>
+<h3>Automation & Engineering</h3>
+<div class="tag">Python</div>
+<div class="tag">JavaScript</div>
+<div class="tag">APIs</div>
+<div class="tag">SQL</div>
+<div class="tag">CI/CD</div>
+<div class="tag">Jira Automation</div>
+<div class="tag">Workflow Engines</div>
 </div>
 
 <div class="sidebar-section">
-<h3>Observability & Monitoring</h3>
-<span class="tag">Prometheus</span>
-<span class="tag">Grafana</span>
-<span class="tag">ELK</span>
-<span class="tag">Datadog</span>
-<span class="tag">Dynatrace</span>
-<span class="tag">New Relic</span>
-<span class="tag">Instana</span>
+<h3>Observability & Reliability</h3>
+<div class="tag">Datadog</div>
+<div class="tag">ELK</div>
+<div class="tag">Prometheus</div>
+<div class="tag">Grafana</div>
+<div class="tag">Instana</div>
+<div class="tag">PagerDuty</div>
+<div class="tag">MTTR Optimization</div>
 </div>
 
 <div class="sidebar-section">
-<h3>Automation & Development</h3>
-<span class="tag">Python</span>
-<span class="tag">Java</span>
-<span class="tag">JavaScript</span>
-<span class="tag">Bash</span>
-<span class="tag">SQL</span>
-<span class="tag">Groovy</span>
-<span class="tag">REST APIs</span>
+<h3>Enterprise Platforms</h3>
+<div class="tag">IBM MQ</div>
+<div class="tag">WebSphere</div>
+<div class="tag">DataPower</div>
+<div class="tag">FileNet</div>
+<div class="tag">DB2</div>
+<div class="tag">API Connect</div>
+<div class="tag">Sterling</div>
 </div>
 
 <div class="sidebar-section">
-<h3>Incident & Support Systems</h3>
-<span class="tag">ServiceNow</span>
-<span class="tag">PagerDuty</span>
-<span class="tag">Zendesk</span>
-<span class="tag">OpsGenie</span>
+<h3>Agile & Delivery Tools</h3>
+<div class="tag">Jira</div>
+<div class="tag">Confluence</div>
+<div class="tag">SAFe</div>
+<div class="tag">Kanban</div>
+<div class="tag">Scrum</div>
+<div class="tag">Bitbucket</div>
 </div>
 
 <div class="sidebar-section">
-<h3>Collaboration Tools</h3>
-<span class="tag">GitHub</span>
-<span class="tag">GitLab</span>
-<span class="tag">Bitbucket</span>
-<span class="tag">Slack</span>
-<span class="tag">Teams</span>
-<span class="tag">Zoom</span>
+<h3>AI & Modern Tooling</h3>
+<div class="tag">ChatGPT</div>
+<div class="tag">GitHub Copilot</div>
+<div class="tag">Azure OpenAI</div>
+<div class="tag">Automation Design</div>
 </div>
 
 <div class="sidebar-section">
-<h3>Operating Systems</h3>
-<span class="tag">Linux</span>
-<span class="tag">Unix</span>
-<span class="tag">Windows Server</span>
-<span class="tag">IBM i</span>
+<h3>Languages</h3>
+<div class="tag">Spanish (Native)</div>
+<div class="tag">English (C2)</div>
 </div>
 
 </aside>
 
 </div>
 
+<!-- FOOTER -->
 <footer class="footer">
-Jose Zuniga • SRE • Technical Program Manager • Scrum Master • Product Owner • Enterprise Training & Coaching Leader
+Jose Zuniga • Executive TPM • SRE Leader • Automation Architect • Agile Transformation Coach • Enterprise Systems Engineer
 </footer>
 
 </body>
