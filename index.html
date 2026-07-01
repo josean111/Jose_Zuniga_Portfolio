@@ -1,355 +1,554 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-Jose Zuniga | Senior Technical Program Manager | Engineering Leader | Site Reliability Engineering | Platform Engineering | Agile Executive
-</title>
+<title>Jose Zuniga | Enterprise Technology Leader</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <style>
 
 :root{
 
---bg:#08111f;
---panel:#111c33;
---panel2:#152340;
---sidebar:#0d1628;
+--bg:#071320;
 
---text:#eef4ff;
---muted:#b7c6df;
+--bg2:#0d2036;
 
---accent:#56a8ff;
---accent2:#84c2ff;
+--card:rgba(17,32,56,.70);
 
 --border:rgba(255,255,255,.08);
 
---success:#29d391;
+--text:#edf5ff;
+
+--muted:#b7c4d9;
+
+--primary:#3da5ff;
+
+--primary2:#65c4ff;
+
+--success:#41d18d;
+
+--shadow:0 20px 60px rgba(0,0,0,.35);
+
+--radius:22px;
+
 }
 
 *{
+
 margin:0;
+
 padding:0;
+
 box-sizing:border-box;
+
 scroll-behavior:smooth;
+
 }
 
 body{
 
-background:var(--bg);
+font-family:'Inter',sans-serif;
+
+background:
+
+radial-gradient(circle at top right,#194b92 0%,transparent 35%),
+
+radial-gradient(circle at bottom left,#10315c 0%,transparent 30%),
+
+linear-gradient(135deg,#071320,#0b1c31,#08111f);
+
 color:var(--text);
-font-family:"Segoe UI",Tahoma,sans-serif;
-line-height:1.7;
+
+overflow-x:hidden;
 
 }
 
 a{
 
-color:var(--accent);
 text-decoration:none;
 
-}
-
-.hero{
-
-padding:70px 60px;
-
-background:
-radial-gradient(circle at top right,
-rgba(86,168,255,.18),
-transparent 30%),
-
-linear-gradient(135deg,#09111f,#152340);
-
-border-bottom:1px solid var(--border);
+color:inherit;
 
 }
 
-.hero-grid{
+.container{
 
-display:grid;
-grid-template-columns:170px 1fr;
-gap:35px;
+width:min(1350px,92%);
+
+margin:auto;
+
+}
+
+nav{
+
+position:fixed;
+
+top:20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:min(1300px,94%);
+
+height:72px;
+
+display:flex;
+
 align-items:center;
 
-}
+justify-content:space-between;
 
-.profile-photo{
+padding:0 30px;
 
-width:170px;
-height:170px;
+background:rgba(12,24,43,.55);
 
-border-radius:50%;
-object-fit:cover;
+backdrop-filter:blur(18px);
 
-border:5px solid rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.08);
 
-background:#1b2947;
+border-radius:18px;
 
-}
+z-index:999;
 
-.hero h1{
-
-font-size:56px;
-line-height:1.1;
+box-shadow:0 10px 40px rgba(0,0,0,.30);
 
 }
 
-.hero h2{
+.logo{
 
-margin-top:12px;
 font-size:20px;
-font-weight:400;
-color:var(--muted);
+
+font-weight:800;
+
+letter-spacing:.5px;
 
 }
 
-.hero-summary{
+.logo span{
 
-margin-top:25px;
-max-width:1200px;
-font-size:17px;
-color:#dce7f7;
+color:#5bb7ff;
 
 }
 
-.links{
+.menu{
 
-margin-top:30px;
+display:flex;
 
-}
+gap:28px;
 
-.links a{
-
-display:inline-flex;
-align-items:center;
-gap:8px;
-
-margin-right:20px;
-margin-bottom:12px;
+font-size:14px;
 
 font-weight:600;
 
 }
 
-.metrics{
+.menu a{
 
-display:grid;
+opacity:.8;
 
-grid-template-columns:repeat(6,1fr);
-
-gap:18px;
-
-margin-top:45px;
+transition:.25s;
 
 }
 
-.metric-box{
+.menu a:hover{
 
-background:rgba(255,255,255,.05);
+opacity:1;
 
-padding:20px;
-
-border-radius:14px;
-
-border:1px solid rgba(255,255,255,.05);
-
-text-align:center;
+color:#7dc8ff;
 
 }
 
-.metric-number{
+.switchButton{
 
-font-size:30px;
+padding:12px 20px;
 
-font-weight:700;
+background:linear-gradient(135deg,#2196f3,#0d6efd);
 
-color:var(--accent);
-
-}
-
-.metric-label{
+border-radius:999px;
 
 font-size:13px;
 
-margin-top:5px;
+font-weight:700;
 
-color:var(--muted);
+cursor:pointer;
+
+box-shadow:0 10px 30px rgba(0,140,255,.25);
+
+transition:.3s;
 
 }
 
-.container{
+.switchButton:hover{
+
+transform:translateY(-2px);
+
+}
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+padding-top:120px;
+
+}
+
+.heroGrid{
 
 display:grid;
 
-grid-template-columns:2.4fr 1fr;
+grid-template-columns:1.5fr .9fr;
+
+gap:60px;
+
+align-items:center;
 
 }
 
-.main{
+.kicker{
 
-padding:45px;
+display:inline-flex;
 
-}
+gap:10px;
 
-.sidebar{
+align-items:center;
 
-background:var(--sidebar);
+padding:8px 16px;
 
-padding:40px;
+border-radius:999px;
 
-border-left:1px solid var(--border);
+background:rgba(61,165,255,.12);
 
-}
+border:1px solid rgba(61,165,255,.35);
 
-.section-title{
+color:#8fd0ff;
 
-margin-top:50px;
-margin-bottom:20px;
+font-size:13px;
 
-font-size:28px;
+font-weight:700;
 
-padding-left:14px;
-
-border-left:5px solid var(--accent);
+margin-bottom:24px;
 
 }
 
-.card{
+.hero h1{
 
-background:var(--panel);
+font-size:68px;
 
-border-radius:14px;
+line-height:1.02;
 
-padding:28px;
-
-margin-bottom:22px;
-
-border:1px solid rgba(255,255,255,.05);
-
-}
-
-.card p{
+font-weight:800;
 
 margin-bottom:18px;
 
 }
 
-.project-grid{
+.hero h1 span{
 
-display:grid;
+background:linear-gradient(90deg,#73c8ff,#ffffff);
 
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+-webkit-background-clip:text;
 
-gap:20px;
-
-}
-
-.project{
-
-background:var(--panel);
-
-padding:24px;
-
-border-radius:14px;
-
-border:1px solid rgba(255,255,255,.05);
+-webkit-text-fill-color:transparent;
 
 }
 
-.project h3{
+.subtitle{
 
-color:var(--accent2);
+font-size:24px;
 
-margin-bottom:15px;
+color:#8fc7ff;
 
-}
+font-weight:600;
 
-.tag{
-
-display:inline-block;
-
-margin:5px;
-
-padding:6px 12px;
-
-background:rgba(86,168,255,.14);
-
-color:var(--accent);
-
-border-radius:8px;
-
-font-size:12px;
+margin-bottom:25px;
 
 }
 
-.sidebar-section{
+.summary{
 
-margin-bottom:34px;
+font-size:18px;
 
-}
-
-.sidebar-section h3{
-
-padding-bottom:10px;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-margin-bottom:14px;
-
-}
-
-.footer{
-
-text-align:center;
-
-padding:35px;
+line-height:1.8;
 
 color:var(--muted);
 
-border-top:1px solid var(--border);
+max-width:760px;
+
+margin-bottom:40px;
 
 }
 
-@media(max-width:1100px){
+.contactBar{
 
-.container{
+display:flex;
 
-grid-template-columns:1fr;
+flex-wrap:wrap;
+
+gap:18px;
+
+margin-bottom:50px;
 
 }
 
-.sidebar{
+.contactItem{
 
-border-left:none;
+width:58px;
 
-border-top:1px solid var(--border);
+height:58px;
+
+border-radius:18px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:23px;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+box-shadow:var(--shadow);
+
+}
+
+.contactItem:hover{
+
+transform:translateY(-8px);
+
+background:#1791ff;
+
+}
+
+.heroButtons{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.primary{
+
+padding:18px 34px;
+
+border-radius:16px;
+
+background:linear-gradient(135deg,#1d9bf0,#0f6eff);
+
+font-weight:700;
+
+box-shadow:0 15px 35px rgba(0,130,255,.35);
+
+}
+
+.secondary{
+
+padding:18px 34px;
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,.15);
+
+background:rgba(255,255,255,.05);
+
+font-weight:700;
+
+}
+
+.profileCard{
+
+background:var(--card);
+
+border:1px solid var(--border);
+
+border-radius:30px;
+
+padding:35px;
+
+backdrop-filter:blur(18px);
+
+box-shadow:var(--shadow);
+
+position:relative;
+
+}
+
+.profileImage{
+
+width:270px;
+
+height:270px;
+
+margin:auto;
+
+border-radius:50%;
+
+padding:8px;
+
+background:linear-gradient(135deg,#3fa7ff,#6fd2ff,#184d8b);
+
+animation:spin 12s linear infinite;
+
+}
+
+.profileImage img{
+
+width:100%;
+
+height:100%;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:8px solid #091626;
+
+animation:spinReverse 12s linear infinite;
+
+}
+
+@keyframes spin{
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes spinReverse{
+
+to{
+
+transform:rotate(-360deg);
+
+}
+
+}
+
+.executiveCard{
+
+margin-top:30px;
+
+padding:22px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.03);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.executiveCard h3{
+
+margin-bottom:14px;
+
+font-size:20px;
+
+}
+
+.executiveCard p{
+
+line-height:1.8;
+
+color:var(--muted);
 
 }
 
 .metrics{
 
-grid-template-columns:repeat(2,1fr);
+margin-top:40px;
+
+display:grid;
+
+grid-template-columns:repeat(6,1fr);
+
+gap:20px;
 
 }
 
-.hero-grid{
+.metric{
+
+background:rgba(255,255,255,.05);
+
+padding:26px;
+
+border-radius:22px;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+}
+
+.metric:hover{
+
+transform:translateY(-10px);
+
+background:rgba(61,165,255,.12);
+
+}
+
+.metric h2{
+
+font-size:42px;
+
+margin-bottom:12px;
+
+color:#72c6ff;
+
+}
+
+.metric p{
+
+color:#bfcde0;
+
+font-size:15px;
+
+line-height:1.6;
+
+}
+
+@media(max-width:1200px){
+
+.metrics{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+.heroGrid{
 
 grid-template-columns:1fr;
 
-text-align:center;
-
 }
 
-.profile-photo{
+.hero h1{
 
-margin:auto;
+font-size:52px;
 
 }
 
@@ -359,19 +558,19 @@ margin:auto;
 
 .metrics{
 
-grid-template-columns:1fr;
-
-}
-
-.hero{
-
-padding:40px 25px;
+grid-template-columns:repeat(2,1fr);
 
 }
 
 .hero h1{
 
-font-size:38px;
+font-size:42px;
+
+}
+
+.menu{
+
+display:none;
 
 }
 
@@ -383,72 +582,121 @@ font-size:38px;
 
 <body>
 
-<section class="hero">
+<nav>
 
-<div class="hero-grid">
+<div class="logo">
 
-<img src="Profile.jpeg"
-alt="Jose Zuniga"
-class="profile-photo">
-
-<div>
-
-<h1>Jose Zuniga</h1>
-
-<h2>
-
-Senior Technical Program Manager • Engineering Manager • Site Reliability Engineering Leader •
-Platform Engineering • Agile Executive • Product Owner • Scrum Master • Enterprise Automation Architect
-
-</h2>
-
-<div class="hero-summary">
-
-I help organizations improve engineering performance, delivery execution, operational reliability,
-and technical leadership by combining executive program management with deep hands-on engineering.
-
-Across more than <strong>15 years</strong> of experience, I have led cloud modernization,
-enterprise transformations, Site Reliability Engineering initiatives, DevOps adoption,
-Agile organizations, automation platforms, executive reporting systems,
-production operations, incident management programs,
-engineering enablement, AI-assisted workflows,
-technical coaching, and global instructor-led technical education.
-
-Unlike traditional Technical Program Managers, I remain highly technical building Python automations, integrating enterprise APIs,
-designing Jira intelligence platforms,
-creating executive dashboards,
-developing AI solutions,
-improving engineering metrics,
-and leading distributed organizations across multiple continents.
+Jose <span>Zuniga</span>
 
 </div>
 
-<div class="links">
+<div class="menu">
 
-<a href="mailto:josean.111@gmail.com">
-<i class="fa-solid fa-envelope"></i>
-Email
-</a>
+<a href="#">Home</a>
 
-<a href="https://linkedin.com/in/jose-azuniga">
-<i class="fa-brands fa-linkedin"></i>
-LinkedIn
-</a>
+<a href="#">Impact</a>
 
-<a href="resume.pdf">
-<i class="fa-solid fa-file-pdf"></i>
-Resume
-</a>
+<a href="#">Career</a>
 
-<a href="https://calendar.app.google/YegybKZoepgHuMCa8">
-<i class="fa-regular fa-calendar"></i>
-Schedule Meeting
-</a>
+<a href="#">Projects</a>
 
-<a href="https://wa.me/50688975841">
-<i class="fa-brands fa-whatsapp"></i>
-WhatsApp
-</a>
+<a href="#">Skills</a>
+
+<a href="#">Training</a>
+
+<a href="#">Contact</a>
+
+</div>
+
+<div class="switchButton">
+
+Executive View
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="heroGrid">
+
+<div>
+
+<div class="kicker">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Available for Executive Leadership Opportunities
+
+</div>
+
+<h1>
+
+Enterprise
+
+<span>Technology Leader</span>
+
+</h1>
+
+<div class="subtitle">
+
+Technical Program Management • AI • Cloud • SRE • Enterprise Software
+
+</div>
+
+<p class="summary">
+
+Helping organizations transform strategy into execution by delivering complex enterprise programs, cloud modernization initiatives, AI adoption, engineering excellence, DevOps transformation, automation, and executive stakeholder alignment across global organizations.
+
+</p>
+
+<div class="contactBar">
+
+<a class="contactItem" href="mailto:josean.111@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+<a class="contactItem" href="https://linkedin.com/in/jose-azuniga" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+
+<a class="contactItem" href="resume.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
+
+<a class="contactItem" href="https://calendar.app.google/YegybKZoepgHuMCa8" target="_blank"><i class="fa-solid fa-calendar-days"></i></a>
+
+<a class="contactItem" href="https://wa.me/50688975841" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+<div class="heroButtons">
+
+<a class="primary" href="#">Explore Executive Profile</a>
+
+<a class="secondary" href="#">Technical Portfolio</a>
+
+</div>
+
+</div>
+
+<div>
+
+<div class="profileCard">
+
+<div class="profileImage">
+
+<img src="Profile.jpeg">
+
+</div>
+
+<div class="executiveCard">
+
+<h3>Executive Snapshot</h3>
+
+<p>
+
+15+ years leading enterprise technology programs across Fortune 500 organizations including IBM, Equifax, HP and Optiva. Experienced in executive communication, engineering leadership, cloud transformation, AI initiatives, DevOps, Site Reliability Engineering and Agile delivery.
+
+</p>
+
+</div>
 
 </div>
 
@@ -458,664 +706,1593 @@ WhatsApp
 
 <div class="metrics">
 
-<div class="metric-box">
-<div class="metric-number">15+</div>
-<div class="metric-label">Years Leading Technology</div>
+<div class="metric">
+
+<h2>15+</h2>
+
+<p>Years Leading Technology Programs</p>
+
 </div>
 
-<div class="metric-box">
-<div class="metric-number">7</div>
-<div class="metric-label">Enterprise Organizations</div>
+<div class="metric">
+
+<h2>500+</h2>
+
+<p>Enterprise Deliverables & Strategic Initiatives</p>
+
 </div>
 
-<div class="metric-box">
-<div class="metric-number">50+</div>
-<div class="metric-label">Global Technical Courses Delivered</div>
+<div class="metric">
+
+<h2>300+</h2>
+
+<p>Professional Technical Trainings</p>
+
 </div>
 
-<div class="metric-box">
-<div class="metric-number">2000+</div>
-<div class="metric-label">Instructor-Led Training Hours</div>
+<div class="metric">
+
+<h2>80%</h2>
+
+<p>Reporting Automation Improvement</p>
+
 </div>
 
-<div class="metric-box">
-<div class="metric-number">3000+</div>
-<div class="metric-label">Jira Issues Analyzed Through Automation</div>
+<div class="metric">
+
+<h2>40+</h2>
+
+<p>Enterprise Platforms & Technologies</p>
+
 </div>
 
-<div class="metric-box">
-<div class="metric-number">80%</div>
-<div class="metric-label">Manual Reporting Eliminated</div>
+<div class="metric">
+
+<h2>Global</h2>
+
+<p>Leadership Across AMER, EMEA & APAC</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- END OF CHUNK 1 -->
+    <!-- ========================= -->
+<!-- CHUNK 2 - INSERT IMMEDIATELY AFTER -->
+<!-- </section> OF THE HERO -->
+<!-- ========================= -->
+
+<section id="impact" class="container" style="padding:30px 0 80px;">
+
+<div style="text-align:center;margin-bottom:60px;">
+
+<span class="kicker">
+<i class="fa-solid fa-star"></i>
+Executive Value Proposition
+</span>
+
+<h2 style="font-size:46px;font-weight:800;margin-top:18px;">
+Why Organizations Hire Me
+</h2>
+
+<p style="max-width:900px;margin:25px auto 0;color:var(--muted);font-size:18px;line-height:1.8;">
+I combine executive program leadership with deep engineering experience, allowing me to communicate effectively with executives while earning the trust of architects, developers, SREs and infrastructure teams.
+</p>
+
+</div>
+
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;">
+
+<div class="metric">
+<i class="fa-solid fa-diagram-project" style="font-size:42px;color:#6ec7ff;margin-bottom:18px;"></i>
+
+<h3 style="margin-bottom:16px;">
+Technical Program Leadership
+</h3>
+
+<p>
+Lead multi-million dollar enterprise initiatives from planning through delivery while balancing scope, budget, executive expectations and engineering priorities.
+</p>
+
+</div>
+
+
+<div class="metric">
+
+<i class="fa-solid fa-cloud" style="font-size:42px;color:#6ec7ff;margin-bottom:18px;"></i>
+
+<h3 style="margin-bottom:16px;">
+Cloud Transformation
+</h3>
+
+<p>
+Deliver cloud migration strategies across AWS, Azure, IBM Cloud and hybrid enterprise environments while reducing operational complexity.
+</p>
+
+</div>
+
+
+<div class="metric">
+
+<i class="fa-solid fa-robot" style="font-size:42px;color:#6ec7ff;margin-bottom:18px;"></i>
+
+<h3 style="margin-bottom:16px;">
+AI Enablement
+</h3>
+
+<p>
+Drive adoption of AI solutions including Copilot, ChatGPT, Azure OpenAI and workflow automation to improve engineering productivity.
+</p>
+
+</div>
+
+
+<div class="metric">
+
+<i class="fa-solid fa-server" style="font-size:42px;color:#6ec7ff;margin-bottom:18px;"></i>
+
+<h3 style="margin-bottom:16px;">
+Engineering Leadership
+</h3>
+
+<p>
+Partner with engineering managers and architects to improve delivery, operational excellence, DevOps maturity and platform reliability.
+</p>
+
+</div>
+
+
+<div class="metric">
+
+<i class="fa-solid fa-chart-line" style="font-size:42px;color:#6ec7ff;margin-bottom:18px;"></i>
+
+<h3 style="margin-bottom:16px;">
+Executive Reporting
+</h3>
+
+<p>
+Transform complex technical initiatives into executive dashboards that support strategic decision making and portfolio governance.
+</p>
+
+</div>
+
+
+<div class="metric">
+
+<i class="fa-solid fa-users" style="font-size:42px;color:#6ec7ff;margin-bottom:18px;"></i>
+
+<h3 style="margin-bottom:16px;">
+Stakeholder Management
+</h3>
+
+<p>
+Influence directors, VPs, engineering teams, product owners and business leaders across geographically distributed organizations.
+</p>
+
 </div>
 
 </div>
 
 </section>
 
-<div class="container">
 
-<main class="main">
 
-    <section>
 
-<h2 class="section-title">Executive Summary</h2>
 
-<div class="card">
+<section id="companies" class="container" style="padding-bottom:90px;">
 
-<p>
-Senior Technology Leader operating at the intersection of
-<strong>Site Reliability Engineering, Technical Program Management, Platform Engineering, and Enterprise Automation</strong>.
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:45px;">
+
+<div>
+
+<span class="kicker">
+
+<i class="fa-solid fa-building"></i>
+
+Career Journey
+
+</span>
+
+<h2 style="font-size:44px;margin-top:15px;">
+
+Organizations I've Helped Transform
+
+</h2>
+
+</div>
+
+</div>
+
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;">
+
+
+<div class="profileCard">
+
+<h2 style="font-size:26px;margin-bottom:18px;">
+
+IBM
+
+</h2>
+
+<p style="color:var(--muted);line-height:1.8;">
+
+Site Reliability Engineering
+
+<br>
+
+Enterprise Automation
+
+<br>
+
+Executive Reporting
+
+<br>
+
+Cloud Operations
+
+<br>
+
+Agile Leadership
+
 </p>
 
-<p>
-I specialize in transforming engineering organizations by improving reliability, delivery predictability, and operational intelligence through a combination of:
-automation engineering, observability systems, Agile execution, and executive-level program governance.
+</div>
+
+
+
+<div class="profileCard">
+
+<h2 style="font-size:26px;margin-bottom:18px;">
+
+Equifax
+
+</h2>
+
+<p style="color:var(--muted);line-height:1.8;">
+
+Engineering Project Management
+
+<br>
+
+Enterprise Software
+
+<br>
+
+Platform Delivery
+
+<br>
+
+Release Governance
+
 </p>
 
-<p>
-My leadership approach is grounded in hands-on technical execution-building systems that directly improve:
-incident response, CI/CD reliability, engineering productivity, and decision-making visibility.
+</div>
+
+
+
+<div class="profileCard">
+
+<h2 style="font-size:26px;margin-bottom:18px;">
+
+Optiva
+
+</h2>
+
+<p style="color:var(--muted);line-height:1.8;">
+
+Engineering Program Management
+
+<br>
+
+Telecommunications
+
+<br>
+
+Agile Transformation
+
+<br>
+
+Global Engineering Teams
+
 </p>
+
+</div>
+
+
+
+
+<div class="profileCard">
+
+<h2 style="font-size:26px;margin-bottom:18px;">
+
+HP
+
+</h2>
+
+<p style="color:var(--muted);line-height:1.8;">
+
+Software Engineering
+
+<br>
+
+Cloud Operations
+
+<br>
+
+Enterprise Platforms
+
+<br>
+
+Global Delivery
+
+</p>
+
+</div>
 
 </div>
 
 </section>
 
-<section>
 
-<h2 class="section-title">Executive Impact</h2>
 
-<div class="card">
 
-<ul>
 
-<li><strong>Enterprise Reliability:</strong> Designed and improved incident management systems reducing MTTR and improving operational clarity across global teams</li>
 
-<li><strong>Delivery Intelligence:</strong> Built Jira-based automation platforms that extract, structure, and visualize delivery performance at executive level</li>
+<section id="timeline" class="container" style="padding-bottom:100px;">
 
-<li><strong>Automation Engineering:</strong> Replaced manual reporting processes with API-driven pipelines using Python, JavaScript, and SQL</li>
+<div style="text-align:center;margin-bottom:60px;">
 
-<li><strong>Observability Leadership:</strong> Implemented monitoring and alerting strategies using Datadog, Prometheus, ELK, and cloud-native tools</li>
+<span class="kicker">
 
-<li><strong>Agile Transformation:</strong> Led Scrum, SAFe, and Kanban adoption across engineering and product organizations</li>
+<i class="fa-solid fa-timeline"></i>
 
-<li><strong>Global Leadership:</strong> Coordinated distributed teams across Americas, Europe, and Asia in 24/7 operational environments</li>
+Career Timeline
+
+</span>
+
+<h2 style="font-size:46px;margin-top:20px;">
+
+Executive Career Progression
+
+</h2>
+
+</div>
+
+
+<div style="position:relative;border-left:3px solid rgba(61,165,255,.35);margin-left:22px;padding-left:45px;">
+
+
+<div style="margin-bottom:70px;position:relative;">
+
+<div style="position:absolute;width:18px;height:18px;background:#3da5ff;border-radius:50%;left:-55px;top:10px;"></div>
+
+<h2>
+
+Senior Program Agile Manager
+
+</h2>
+
+<h4 style="color:#79c8ff;margin:10px 0;">
+
+iTree Training
+
+</h4>
+
+<p style="color:var(--muted);line-height:1.8;">
+
+Leading enterprise Agile initiatives, executive coaching, AI enablement, training strategy and program delivery.
+
+</p>
+
+</div>
+
+
+
+
+<div style="margin-bottom:70px;position:relative;">
+
+<div style="position:absolute;width:18px;height:18px;background:#3da5ff;border-radius:50%;left:-55px;top:10px;"></div>
+
+<h2>
+
+Site Reliability Engineer
+
+</h2>
+
+<h4 style="color:#79c8ff;margin:10px 0;">
+
+IBM
+
+</h4>
+
+<p style="color:var(--muted);line-height:1.8;">
+
+Executive reporting automation, Python solutions, observability, cloud operations and enterprise reliability.
+
+</p>
+
+</div>
+
+
+
+
+<div style="margin-bottom:70px;position:relative;">
+
+<div style="position:absolute;width:18px;height:18px;background:#3da5ff;border-radius:50%;left:-55px;top:10px;"></div>
+
+<h2>
+
+Engineering Project Manager
+
+</h2>
+
+<h4 style="color:#79c8ff;margin:10px 0;">
+
+Optiva
+
+</h4>
+
+<p style="color:var(--muted);line-height:1.8;">
+
+Global telecommunications software delivery, Agile transformation and engineering execution.
+
+</p>
+
+</div>
+
+
+
+
+<div style="margin-bottom:70px;position:relative;">
+
+<div style="position:absolute;width:18px;height:18px;background:#3da5ff;border-radius:50%;left:-55px;top:10px;"></div>
+
+<h2>
+
+Engineering Project Manager
+
+</h2>
+
+<h4 style="color:#79c8ff;margin:10px 0;">
+
+Equifax
+
+</h4>
+
+<p style="color:var(--muted);line-height:1.8;">
+
+Platform modernization, enterprise governance and software delivery programs.
+
+</p>
+
+</div>
+
+
+
+
+<div style="position:relative;">
+
+<div style="position:absolute;width:18px;height:18px;background:#3da5ff;border-radius:50%;left:-55px;top:10px;"></div>
+
+<h2>
+
+Software Engineer
+
+</h2>
+
+<h4 style="color:#79c8ff;margin:10px 0;">
+
+HP
+
+</h4>
+
+<p style="color:var(--muted);line-height:1.8;">
+
+Early career building enterprise software solutions while developing technical leadership foundations.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- END OF CHUNK 2 -->
+<!-- ========================================================= -->
+<!-- CHUNK 3 -->
+<!-- INSERT IMMEDIATELY AFTER CHUNK 2 -->
+<!-- ========================================================= -->
+
+<section id="projects" class="container" style="padding:30px 0 110px;">
+
+<div style="text-align:center;margin-bottom:60px;">
+
+<span class="kicker">
+<i class="fa-solid fa-rocket"></i>
+Featured Impact
+</span>
+
+<h2 style="font-size:46px;font-weight:800;margin-top:18px;">
+Projects & Business Outcomes
+</h2>
+
+<p style="max-width:900px;margin:25px auto 0;color:var(--muted);font-size:18px;line-height:1.8;">
+A selection of initiatives demonstrating my ability to connect executive strategy with engineering execution while delivering measurable business value.
+</p>
+
+</div>
+
+
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:28px;">
+
+<div class="profileCard">
+
+<div style="display:flex;align-items:center;gap:18px;margin-bottom:22px;">
+
+<div style="width:70px;height:70px;border-radius:20px;background:rgba(61,165,255,.15);display:flex;align-items:center;justify-content:center;font-size:30px;color:#6cc8ff;">
+
+<i class="fa-solid fa-chart-column"></i>
+
+</div>
+
+<div>
+
+<h3>Executive Reporting Automation</h3>
+
+<p style="color:#7cc9ff;">IBM</p>
+
+</div>
+
+</div>
+
+<p style="line-height:1.8;color:var(--muted);margin-bottom:22px;">
+
+Designed automated executive dashboards using Python, APIs and reporting pipelines that dramatically reduced manual reporting effort while improving data accuracy and executive visibility.
+
+</p>
+
+<div style="display:flex;flex-wrap:wrap;gap:10px;">
+
+<span class="kicker">Python</span>
+<span class="kicker">REST APIs</span>
+<span class="kicker">Automation</span>
+<span class="kicker">Executive Dashboards</span>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="profileCard">
+
+<div style="display:flex;align-items:center;gap:18px;margin-bottom:22px;">
+
+<div style="width:70px;height:70px;border-radius:20px;background:rgba(61,165,255,.15);display:flex;align-items:center;justify-content:center;font-size:30px;color:#6cc8ff;">
+
+<i class="fa-solid fa-cloud-arrow-up"></i>
+
+</div>
+
+<div>
+
+<h3>Cloud Transformation</h3>
+
+<p style="color:#7cc9ff;">Enterprise Programs</p>
+
+</div>
+
+</div>
+
+<p style="line-height:1.8;color:var(--muted);margin-bottom:22px;">
+
+Managed cloud modernization initiatives involving infrastructure, engineering, operations, governance and executive stakeholders across distributed global teams.
+
+</p>
+
+<div style="display:flex;flex-wrap:wrap;gap:10px;">
+
+<span class="kicker">AWS</span>
+<span class="kicker">Azure</span>
+<span class="kicker">IBM Cloud</span>
+<span class="kicker">DevOps</span>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="profileCard">
+
+<div style="display:flex;align-items:center;gap:18px;margin-bottom:22px;">
+
+<div style="width:70px;height:70px;border-radius:20px;background:rgba(61,165,255,.15);display:flex;align-items:center;justify-content:center;font-size:30px;color:#6cc8ff;">
+
+<i class="fa-solid fa-robot"></i>
+
+</div>
+
+<div>
+
+<h3>AI Adoption</h3>
+
+<p style="color:#7cc9ff;">Engineering Productivity</p>
+
+</div>
+
+</div>
+
+<p style="line-height:1.8;color:var(--muted);margin-bottom:22px;">
+
+Driving adoption of AI-powered workflows, copilots and automation strategies that increase engineering productivity while maintaining governance and security.
+
+</p>
+
+<div style="display:flex;flex-wrap:wrap;gap:10px;">
+
+<span class="kicker">ChatGPT</span>
+<span class="kicker">Copilot</span>
+<span class="kicker">Azure OpenAI</span>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="profileCard">
+
+<div style="display:flex;align-items:center;gap:18px;margin-bottom:22px;">
+
+<div style="width:70px;height:70px;border-radius:20px;background:rgba(61,165,255,.15);display:flex;align-items:center;justify-content:center;font-size:30px;color:#6cc8ff;">
+
+<i class="fa-solid fa-server"></i>
+
+</div>
+
+<div>
+
+<h3>Platform Reliability</h3>
+
+<p style="color:#7cc9ff;">SRE</p>
+
+</div>
+
+</div>
+
+<p style="line-height:1.8;color:var(--muted);margin-bottom:22px;">
+
+Partnering with engineering organizations to improve observability, reliability, incident response, release quality and operational excellence.
+
+</p>
+
+<div style="display:flex;flex-wrap:wrap;gap:10px;">
+
+<span class="kicker">SRE</span>
+<span class="kicker">Observability</span>
+<span class="kicker">Incident Management</span>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="profileCard">
+
+<div style="display:flex;align-items:center;gap:18px;margin-bottom:22px;">
+
+<div style="width:70px;height:70px;border-radius:20px;background:rgba(61,165,255,.15);display:flex;align-items:center;justify-content:center;font-size:30px;color:#6cc8ff;">
+
+<i class="fa-solid fa-users-gear"></i>
+
+</div>
+
+<div>
+
+<h3>Global Delivery</h3>
+
+<p style="color:#7cc9ff;">Engineering Leadership</p>
+
+</div>
+
+</div>
+
+<p style="line-height:1.8;color:var(--muted);margin-bottom:22px;">
+
+Coordinating engineering teams across multiple regions while aligning business priorities, technical execution and executive expectations.
+
+</p>
+
+<div style="display:flex;flex-wrap:wrap;gap:10px;">
+
+<span class="kicker">Agile</span>
+<span class="kicker">Scrum</span>
+<span class="kicker">SAFe</span>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="profileCard">
+
+<div style="display:flex;align-items:center;gap:18px;margin-bottom:22px;">
+
+<div style="width:70px;height:70px;border-radius:20px;background:rgba(61,165,255,.15);display:flex;align-items:center;justify-content:center;font-size:30px;color:#6cc8ff;">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+</div>
+
+<div>
+
+<h3>Enterprise Training</h3>
+
+<p style="color:#7cc9ff;">Technical Instructor</p>
+
+</div>
+
+</div>
+
+<p style="line-height:1.8;color:var(--muted);margin-bottom:22px;">
+
+Designed and delivered enterprise technical training, Agile coaching and leadership workshops supporting organizational transformation and engineering excellence.
+
+</p>
+
+<div style="display:flex;flex-wrap:wrap;gap:10px;">
+
+<span class="kicker">Coaching</span>
+<span class="kicker">Training</span>
+<span class="kicker">Leadership</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+<section id="skills" class="container" style="padding-bottom:110px;">
+
+<div style="text-align:center;margin-bottom:60px;">
+
+<span class="kicker">
+
+<i class="fa-solid fa-layer-group"></i>
+
+Core Competencies
+
+</span>
+
+<h2 style="font-size:46px;font-weight:800;margin-top:18px;">
+
+Technology Portfolio
+
+</h2>
+
+</div>
+
+
+
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;">
+
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:20px;">
+☁ Cloud Platforms
+</h3>
+
+<ul style="line-height:2;color:var(--muted);padding-left:18px;">
+
+<li>AWS</li>
+<li>Microsoft Azure</li>
+<li>IBM Cloud</li>
+<li>Google Cloud</li>
+<li>Hybrid Cloud</li>
 
 </ul>
 
 </div>
 
-</section>
 
-<section>
 
-<h2 class="section-title">Core Leadership Pillars</h2>
 
-<div class="card">
+<div class="profileCard">
 
-<ul>
+<h3 style="margin-bottom:20px;">
+⚙ DevOps
+</h3>
 
-<li>Technical Program Management (TPM) at enterprise scale</li>
-<li>Site Reliability Engineering (SRE) & production operations leadership</li>
-<li>Platform engineering & CI/CD modernization</li>
-<li>Incident management design (RCA, PIR, escalation models)</li>
-<li>Agile transformation (Scrum Master / Product Owner / SAFe)</li>
-<li>Engineering automation & workflow optimization</li>
-<li>Executive reporting & delivery intelligence systems</li>
-<li>AI-assisted engineering productivity & automation</li>
+<ul style="line-height:2;color:var(--muted);padding-left:18px;">
+
+<li>Docker</li>
+<li>Kubernetes</li>
+<li>Terraform</li>
+<li>GitHub</li>
+<li>CI/CD</li>
 
 </ul>
 
 </div>
 
-</section>
 
-<section>
 
-<h2 class="section-title">Enterprise Platforms & Systems Built</h2>
 
-<div class="project-grid">
+<div class="profileCard">
 
-<div class="project">
+<h3 style="margin-bottom:20px;">
+📊 Monitoring
+</h3>
 
-<h3>Jira Delivery Intelligence Platform</h3>
+<ul style="line-height:2;color:var(--muted);padding-left:18px;">
 
-<p>
-API-driven system that extracts Jira workflows, sprint data, and issue lifecycle patterns
-to generate executive-level delivery insights, velocity analytics, and forecasting models.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Incident Lifecycle Engineering System</h3>
-
-<p>
-Structured incident framework covering detection, escalation, severity classification,
-communication protocols, RCA workflows, and post-incident review automation.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Enterprise Observability Stack</h3>
-
-<p>
-Integrated monitoring ecosystem using Datadog, Prometheus, ELK, CloudWatch,
-Azure Monitor, and Dynatrace to improve system visibility and reduce downtime.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Automation & AI Engineering Layer</h3>
-
-<p>
-Automation framework built using Python, JavaScript, SQL, APIs, and AI tools
-to eliminate manual reporting, optimize workflows, and improve engineering efficiency.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Technical & Leadership Philosophy</h2>
-
-<div class="card">
-
-<p>
-I operate with a dual mindset:
-</p>
-
-<ul>
-
-<li><strong>Executive Perspective:</strong> Align engineering execution with business outcomes, risk management, and delivery predictability</li>
-
-<li><strong>Engineering Perspective:</strong> Build systems that reduce operational friction and increase reliability through automation and observability</li>
+<li>Datadog</li>
+<li>Grafana</li>
+<li>Prometheus</li>
+<li>ELK</li>
 
 </ul>
 
-<p>
-My strongest value comes from bridging leadership and engineering execution-ensuring that strategy is not abstract,
-but implemented through real systems, real automation, and measurable operational improvements.
-</p>
+</div>
+
+
+
+
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:20px;">
+🤖 Artificial Intelligence
+</h3>
+
+<ul style="line-height:2;color:var(--muted);padding-left:18px;">
+
+<li>ChatGPT</li>
+<li>Copilot</li>
+<li>Azure OpenAI</li>
+<li>AI Automation</li>
+
+</ul>
+
+</div>
+
+
+
+
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:20px;">
+💻 Programming
+</h3>
+
+<ul style="line-height:2;color:var(--muted);padding-left:18px;">
+
+<li>Python</li>
+<li>Java</li>
+<li>JavaScript</li>
+<li>SQL</li>
+
+</ul>
+
+</div>
+
+
+
+
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:20px;">
+📈 Leadership
+</h3>
+
+<ul style="line-height:2;color:var(--muted);padding-left:18px;">
+
+<li>Technical Program Management</li>
+<li>Portfolio Management</li>
+<li>Agile Delivery</li>
+<li>Executive Communication</li>
+<li>Engineering Leadership</li>
+
+</ul>
+
+</div>
 
 </div>
 
 </section>
 
-<aside class="sidebar">
+<!-- END OF CHUNK 3 -->
+<!-- ========================================================= -->
+<!-- CHUNK 4 -->
+<!-- INSERT IMMEDIATELY AFTER CHUNK 3 -->
+<!-- ========================================================= -->
 
-<div class="sidebar-section">
+<section id="certifications" class="container" style="padding:20px 0 110px;">
 
-<h3>Executive Identity Snapshot</h3>
+<div style="text-align:center;margin-bottom:60px;">
 
-<div class="tag">TPM + SRE Hybrid Leader</div>
-<div class="tag">Enterprise Automation Architect</div>
-<div class="tag">Agile Transformation Lead</div>
-<div class="tag">Platform Engineering Strategist</div>
-<div class="tag">Incident & Reliability Systems Designer</div>
-<div class="tag">Global Instructor / Technical Trainer</div>
-<div class="tag">Executive-Level Delivery Intelligence Builder</div>
+<span class="kicker">
+<i class="fa-solid fa-award"></i>
+Professional Credentials
+</span>
 
-</div>
+<h2 style="font-size:46px;font-weight:800;margin-top:18px;">
+Education & Certifications
+</h2>
 
-<div class="sidebar-section">
-
-<h3>Global Delivery & Timezone Coverage</h3>
-
-<div class="tag">AMER (US / LATAM)</div>
-<div class="tag">EMEA (Europe)</div>
-<div class="tag">APAC (Asia-Pacific)</div>
-<div class="tag">IST / India Standard Time</div>
-<div class="tag">24/7 Production Operations Alignment</div>
-<div class="tag">Distributed Team Coordination</div>
+<p style="max-width:850px;margin:25px auto 0;color:var(--muted);font-size:18px;line-height:1.8;">
+A combination of graduate education, professional certifications and continuous learning supporting executive technology leadership.
+</p>
 
 </div>
 
-<div class="sidebar-section">
 
-<h3>Training & Instructor Portfolio Summary</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;">
 
-<div class="tag">300+ Instructor-Led Sessions</div>
-<div class="tag">2000+ Training Hours Delivered</div>
-<div class="tag">Enterprise IBM Certification Programs</div>
-<div class="tag">Walmart Global Engineering Bootcamps</div>
-<div class="tag">Cross-Regional Virtual Training (NA / LATAM / EMEA / APAC)</div>
-<div class="tag">Technical Curriculum Delivery (SRE / MQ / DB2 / DOORS / Cloud)</div>
-<div class="tag">Hands-on Lab Facilitation (Live Production Simulations)</div>
-<div class="tag">Corporate Enablement & Upskilling Programs</div>
 
-</div>
+<div class="profileCard">
 
-<div class="sidebar-section">
+<h3 style="margin-bottom:25px;">
+🎓 Education
+</h3>
 
-<h3>Core Engineering Stack</h3>
+<div style="border-left:3px solid rgba(61,165,255,.35);padding-left:25px;display:flex;flex-direction:column;gap:30px;">
 
-<div class="tag">Python</div>
-<div class="tag">Java</div>
-<div class="tag">JavaScript</div>
-<div class="tag">SQL</div>
-<div class="tag">Bash</div>
-<div class="tag">REST APIs</div>
+<div>
 
-<div class="tag">AWS</div>
-<div class="tag">Azure</div>
-<div class="tag">GCP</div>
-<div class="tag">IBM Cloud</div>
+<h4>Master of Business Administration (MBA)</h4>
 
-<div class="tag">Kubernetes</div>
-<div class="tag">Docker</div>
-<div class="tag">Terraform</div>
+<p style="color:var(--muted);line-height:1.8;">
+Business strategy, finance, leadership, organizational management and executive decision making.
+</p>
 
 </div>
 
-<div class="sidebar-section">
 
-<h3>Observability & Reliability Tools</h3>
+<div>
 
-<div class="tag">Datadog</div>
-<div class="tag">Prometheus</div>
-<div class="tag">Grafana</div>
-<div class="tag">ELK Stack</div>
-<div class="tag">Dynatrace</div>
-<div class="tag">New Relic</div>
-<div class="tag">CloudWatch</div>
-<div class="tag">Azure Monitor</div>
+<h4>Master in Project Management</h4>
 
-<div class="tag">PagerDuty</div>
-<div class="tag">ServiceNow</div>
-<div class="tag">Zendesk</div>
+<p style="color:var(--muted);line-height:1.8;">
+Enterprise portfolio management, Agile governance, risk management, stakeholder communication and program execution.
+</p>
 
 </div>
 
-<div class="sidebar-section">
 
-<h3>Agile & Delivery Systems</h3>
+<div>
 
-<div class="tag">Jira (Advanced)</div>
-<div class="tag">Jira Service Management</div>
-<div class="tag">Confluence</div>
-<div class="tag">Bitbucket</div>
-<div class="tag">GitHub</div>
-<div class="tag">GitLab</div>
-<div class="tag">SAFe</div>
-<div class="tag">Scrum / Kanban</div>
+<h4>Bachelor's Degree in Computer Science</h4>
+
+<p style="color:var(--muted);line-height:1.8;">
+Software engineering, databases, programming, operating systems and enterprise architecture.
+</p>
 
 </div>
 
-<div class="sidebar-section">
-
-<h3>Enterprise Learning Domains Delivered</h3>
-
-<div class="tag">IBM MQ Administration</div>
-<div class="tag">IBM App Connect Enterprise</div>
-<div class="tag">IBM DOORS Requirements</div>
-<div class="tag">IBM Db2 & Data Systems</div>
-<div class="tag">IBM QRadar SIEM / SOAR</div>
-<div class="tag">IBM i System Operations</div>
-<div class="tag">Cloud & Container Fundamentals</div>
-<div class="tag">Enterprise Security & Observability</div>
+</div>
 
 </div>
 
-<div class="sidebar-section">
 
-<h3>AI & Automation Layer</h3>
 
-<div class="tag">ChatGPT Integration</div>
-<div class="tag">Azure OpenAI</div>
-<div class="tag">GitHub Copilot</div>
-<div class="tag">Amazon CodeWhisperer</div>
-<div class="tag">Workflow Automation Design</div>
-<div class="tag">Jira API Engineering</div>
 
-</div>
+<div class="profileCard">
 
-<div class="sidebar-section">
+<h3 style="margin-bottom:25px;">
+🏅 Professional Certifications
+</h3>
 
-<h3>Languages</h3>
+<div style="display:grid;gap:18px;">
 
-<div class="tag">Spanish (Native)</div>
-<div class="tag">English (C2 / Bilingual)</div>
+<div class="metric">
+
+<h4>Certified Scrum Master (CSM)</h4>
+
+<p>Scrum Alliance</p>
 
 </div>
 
-</aside>
+<div class="metric">
 
-</div> <!-- closes container -->
+<h4>PMI Agile Certified Practitioner</h4>
 
-<footer class="footer">
+<p>PMI-ACP</p>
 
-Jose Zuniga • Senior TPM • SRE Leader • Platform Engineering Architect • Agile Executive • Global Instructor • Automation Engineer
+</div>
+
+<div class="metric">
+
+<h4>SAFe Certified Practitioner</h4>
+
+<p>Scaled Agile Framework</p>
+
+</div>
+
+<div class="metric">
+
+<h4>AWS Cloud Practitioner</h4>
+
+<p>Amazon Web Services</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<section id="technical" class="container" style="padding-bottom:110px;">
+
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:50px;">
+
+<div>
+
+<span class="kicker">
+
+<i class="fa-solid fa-code"></i>
+
+Technical Deep Dive
+
+</span>
+
+<h2 style="font-size:46px;font-weight:800;margin-top:18px;">
+Engineering Experience
+</h2>
+
+</div>
+
+<div>
+
+<button id="toggleTechnical"
+style="
+padding:16px 26px;
+border:none;
+border-radius:16px;
+cursor:pointer;
+font-weight:700;
+background:linear-gradient(135deg,#1f9eff,#0b74ff);
+color:white;
+box-shadow:0 10px 25px rgba(0,120,255,.25);">
+
+Switch Executive / Technical
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<div id="technicalContent" style="display:none;">
+
+
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:30px;">
+
+
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:20px;">
+Cloud & Infrastructure
+</h3>
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+
+<span class="kicker">AWS</span>
+<span class="kicker">Azure</span>
+<span class="kicker">IBM Cloud</span>
+<span class="kicker">Google Cloud</span>
+<span class="kicker">Linux</span>
+<span class="kicker">Windows Server</span>
+<span class="kicker">Virtualization</span>
+
+</div>
+
+</div>
+
+
+
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:20px;">
+Containers & DevOps
+</h3>
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+
+<span class="kicker">Docker</span>
+<span class="kicker">Kubernetes</span>
+<span class="kicker">Terraform</span>
+<span class="kicker">GitHub</span>
+<span class="kicker">CI/CD</span>
+<span class="kicker">Jenkins</span>
+
+</div>
+
+</div>
+
+
+
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:20px;">
+Programming
+</h3>
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+
+<span class="kicker">Python</span>
+<span class="kicker">Java</span>
+<span class="kicker">JavaScript</span>
+<span class="kicker">SQL</span>
+<span class="kicker">Shell</span>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:20px;">
+Monitoring & SRE
+</h3>
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+
+<span class="kicker">Datadog</span>
+<span class="kicker">Grafana</span>
+<span class="kicker">Prometheus</span>
+<span class="kicker">ELK</span>
+<span class="kicker">Splunk</span>
+<span class="kicker">Observability</span>
+
+</div>
+
+</div>
+
+
+
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:20px;">
+Enterprise Tools
+</h3>
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+
+<span class="kicker">Jira</span>
+<span class="kicker">Confluence</span>
+<span class="kicker">Azure DevOps</span>
+<span class="kicker">ServiceNow</span>
+<span class="kicker">GitHub</span>
+
+</div>
+
+</div>
+
+
+
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:20px;">
+Artificial Intelligence
+</h3>
+
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+
+<span class="kicker">ChatGPT</span>
+<span class="kicker">Copilot</span>
+<span class="kicker">Azure OpenAI</span>
+<span class="kicker">Prompt Engineering</span>
+<span class="kicker">AI Automation</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const btn=document.getElementById("toggleTechnical");
+
+const tech=document.getElementById("technicalContent");
+
+btn.addEventListener("click",function(){
+
+if(tech.style.display==="none"){
+
+tech.style.display="block";
+
+btn.innerHTML="Back to Executive View";
+
+}
+
+else{
+
+tech.style.display="none";
+
+btn.innerHTML="Switch Executive / Technical";
+
+}
+
+});
+
+</script>
+
+<!-- END OF CHUNK 4 -->
+<!-- ========================================================= -->
+<!-- CHUNK 5 -->
+<!-- INSERT IMMEDIATELY AFTER CHUNK 4 -->
+<!-- ========================================================= -->
+
+<section id="executive" class="container" style="padding:20px 0 110px;">
+
+<div style="text-align:center;margin-bottom:60px;">
+
+<span class="kicker">
+<i class="fa-solid fa-briefcase"></i>
+Executive Leadership
+</span>
+
+<h2 style="font-size:46px;font-weight:800;margin-top:18px;">
+Executive Value Delivered
+</h2>
+
+<p style="max-width:900px;margin:25px auto 0;color:var(--muted);font-size:18px;line-height:1.8;">
+Beyond managing projects, I help organizations translate strategic vision into measurable execution by aligning executives, engineering leaders and delivery organizations around common business outcomes.
+</p>
+
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:28px;">
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:18px;">
+Executive Communication
+</h3>
+
+<p style="line-height:1.9;color:var(--muted);">
+Produce executive dashboards, steering committee material, KPI reporting and strategic presentations that simplify complex technical initiatives into business language.
+</p>
+
+</div>
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:18px;">
+Enterprise Governance
+</h3>
+
+<p style="line-height:1.9;color:var(--muted);">
+Establish governance models, delivery standards, portfolio visibility, RAID management and executive decision frameworks for enterprise initiatives.
+</p>
+
+</div>
+
+<div class="profileCard">
+
+<h3 style="margin-bottom:18px;">
+Engineering Partnership
+</h3>
+
+<p style="line-height:1.9;color:var(--muted);">
+Work directly with architects, SREs, software engineers, QA, security teams and infrastructure leaders while maintaining executive alignment.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<section id="highlights" class="container" style="padding-bottom:110px;">
+
+<div style="text-align:center;margin-bottom:60px;">
+
+<span class="kicker">
+<i class="fa-solid fa-chart-simple"></i>
+Career Highlights
+</span>
+
+<h2 style="font-size:46px;font-weight:800;margin-top:18px;">
+Selected Business Results
+</h2>
+
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;">
+
+<div class="metric">
+<h2>80%</h2>
+<p>Reduction in reporting effort through automation and API integrations.</p>
+</div>
+
+<div class="metric">
+<h2>15+</h2>
+<p>Years delivering enterprise software, infrastructure and cloud initiatives.</p>
+</div>
+
+<div class="metric">
+<h2>300+</h2>
+<p>Enterprise technical courses completed across IBM, cloud and leadership domains.</p>
+</div>
+
+<div class="metric">
+<h2>Fortune 500</h2>
+<p>Leadership experience supporting IBM, HP, Equifax and multinational organizations.</p>
+</div>
+
+<div class="metric">
+<h2>Global</h2>
+<p>Programs delivered across AMER, EMEA and APAC engineering organizations.</p>
+</div>
+
+<div class="metric">
+<h2>AI</h2>
+<p>Driving practical adoption of Generative AI and engineering automation.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<section id="contact" class="container" style="padding-bottom:120px;">
+
+<div class="profileCard" style="padding:55px;">
+
+<div style="display:grid;grid-template-columns:2fr 1fr;gap:50px;align-items:center;">
+
+<div>
+
+<h2 style="font-size:42px;margin-bottom:20px;">
+Let's Build Something Exceptional
+</h2>
+
+<p style="font-size:18px;color:var(--muted);line-height:1.9;margin-bottom:35px;max-width:700px;">
+
+Whether you are scaling engineering organizations, modernizing cloud platforms, implementing AI initiatives or leading enterprise transformation programs, I'd welcome the opportunity to discuss how I can help your organization deliver measurable business outcomes.
+
+</p>
+
+<div class="contactBar">
+
+<a class="contactItem"
+href="mailto:josean.111@gmail.com"
+title="Email">
+<i class="fa-solid fa-envelope"></i>
+</a>
+
+<a class="contactItem"
+href="https://linkedin.com/in/jose-azuniga"
+target="_blank"
+title="LinkedIn">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+<a class="contactItem"
+href="resume.pdf"
+target="_blank"
+title="Resume">
+<i class="fa-solid fa-file-pdf"></i>
+</a>
+
+<a class="contactItem"
+href="https://calendar.app.google/YegybKZoepgHuMCa8"
+target="_blank"
+title="Schedule Meeting">
+<i class="fa-solid fa-calendar-days"></i>
+</a>
+
+<a class="contactItem"
+href="https://wa.me/50688975841"
+target="_blank"
+title="WhatsApp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+</div>
+
+<div>
+
+<div class="executiveCard">
+
+<h3 style="margin-bottom:20px;">
+Executive Snapshot
+</h3>
+
+<p style="line-height:2;color:var(--muted);">
+
+📍 Costa Rica<br>
+
+🌎 Open to Remote & Global Opportunities<br>
+
+💼 Senior Leadership Roles<br>
+
+☁ Cloud, AI & Enterprise Software<br>
+
+🤝 Executive Stakeholder Management<br>
+
+📈 Technical Program Leadership
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer style="padding:35px 0;border-top:1px solid rgba(255,255,255,.08);">
+
+<div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+
+<div style="color:var(--muted);">
+© 2026 Jose Zuniga • Enterprise Technology Leader
+</div>
+
+<div style="display:flex;gap:18px;font-size:14px;color:var(--muted);">
+
+<span>Technical Program Management</span>
+
+<span>•</span>
+
+<span>Engineering Leadership</span>
+
+<span>•</span>
+
+<span>Cloud</span>
+
+<span>•</span>
+
+<span>AI</span>
+
+<span>•</span>
+
+<span>Enterprise Delivery</span>
+
+</div>
+
+</div>
 
 </footer>
 
+<script>
+
+// Smooth reveal animation
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.animate([
+{opacity:0,transform:"translateY(30px)"},
+{opacity:1,transform:"translateY(0)"}
+],{
+duration:700,
+fill:"forwards",
+easing:"ease-out"
+});
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+},{
+threshold:.15
+});
+
+document.querySelectorAll(".profileCard,.metric").forEach(card=>observer.observe(card));
+
+
+// Executive / Technical Toggle (placeholder for future expansion)
+
+document.querySelector(".switchButton").addEventListener("click",function(){
+
+if(this.innerText==="Executive View"){
+
+this.innerText="Technical Portfolio";
+
+alert("Technical Portfolio mode will be expanded in the next version.");
+
+}else{
+
+this.innerText="Executive View";
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+});
+
+</script>
+
 </body>
+
 </html>
-<section>
 
-<h2 class="section-title">Global Engineering & Training Impact Dashboard</h2>
-
-<div class="card">
-
-<p>
-This section summarizes 15+ years of technical execution, instructor-led training, and enterprise engineering enablement across global regions, timezones, and organizations.
-</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Training Delivery Footprint (Executive Summary)</h2>
-
-<div class="card">
-
-<ul>
-
-<li><strong>Total Instructor-Led Training:</strong> 300+ sessions delivered across enterprise environments</li>
-
-<li><strong>Total Training Hours:</strong> 2,000+ structured instructor-led hours</li>
-
-<li><strong>Global Coverage:</strong> AMER, EMEA, APAC, and IST regions</li>
-
-<li><strong>Delivery Formats:</strong> Virtual instructor-led training (VILT), hands-on labs, bootcamps, certification programs</li>
-
-<li><strong>Enterprise Clients:</strong> IBM, Walmart, Hixny, and global partner ecosystems</li>
-
-<li><strong>Domains Delivered:</strong> SRE, Messaging Systems, Integration, Databases, Security, Systems Operations, and Agile Engineering Tools</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Timezone & Global Delivery Distribution</h2>
-
-<div class="card">
-
-<p>
-Training and engineering collaboration delivered across multiple global time zones:
-</p>
-
-<ul>
-
-<li><strong>AMER (US / LATAM):</strong> Primary delivery region for enterprise IBM and Walmart bootcamps</li>
-
-<li><strong>EST / CST / PST Coverage:</strong> Continuous alignment with North American engineering organizations</li>
-
-<li><strong>EMEA:</strong> Europe-based engineering enablement and observability training sessions</li>
-
-<li><strong>APAC / IST:</strong> India-based distributed engineering teams and Walmart global cohorts</li>
-
-<li><strong>24/7 Operational Alignment:</strong> Experience working in always-on production support and incident environments</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Career Evolution Through Technical Domains</h2>
-
-<div class="card">
-
-<ul>
-
-<li><strong>Phase 1 - Support Engineering (HP / Early Career):</strong> Incident handling, troubleshooting, and production support foundations</li>
-
-<li><strong>Phase 2 - Enterprise Support Leadership (Equifax):</strong> Escalation management, reporting systems, and early automation</li>
-
-<li><strong>Phase 3 - Program & Platform Engineering:</strong> Infrastructure delivery, Agile transformation, CI/CD modernization</li>
-
-<li><strong>Phase 4 - Site Reliability Engineering:</strong> Observability, incident response, MTTR optimization, RCA systems</li>
-
-<li><strong>Phase 5 - Enterprise Automation Architect:</strong> API-driven reporting systems, Jira intelligence platforms, workflow automation</li>
-
-<li><strong>Phase 6 - Global Instructor & TPM Leader:</strong> IBM + Walmart training programs, engineering enablement, executive delivery systems</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Enterprise Training Domains (Structured Portfolio)</h2>
-
-<div class="project-grid">
-
-<div class="project">
-
-<h3>Systems & Integration Engineering</h3>
-<p>
-IBM MQ, App Connect Enterprise, Sterling File Gateway, integration patterns,
-and enterprise messaging systems for distributed architectures.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Data Platforms & Databases</h3>
-<p>
-Db2, DataStage, SQL systems, relational database administration,
-and enterprise data pipeline fundamentals.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Security & Observability</h3>
-<p>
-IBM QRadar SIEM/SOAR, Guardium Data Protection,
-enterprise monitoring systems, and operational security frameworks.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Systems Operations & Reliability</h3>
-<p>
-IBM i system operations, Linux-based administration,
-incident response, production support, and reliability engineering practices.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Strategic Positioning Summary</h2>
-
-<div class="card">
-
-<p>
-This profile represents a rare combination of:
-</p>
-
-<ul>
-
-<li>Hands-on engineering capability (automation, APIs, scripting, cloud)</li>
-<li>Enterprise program leadership (TPM, Agile, delivery governance)</li>
-<li>Production reliability ownership (SRE, incident management, observability)</li>
-<li>Global instructor-level technical enablement</li>
-<li>Executive communication and reporting systems design</li>
-
-</ul>
-
-<p>
-The result is a leader who not only manages delivery-but builds the systems that make delivery measurable, predictable, and scalable.
-</p>
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2 class="section-title">Executive Systems & Architecture Contributions</h2>
-
-<div class="card">
-
-<p>
-Beyond delivery and leadership, I design and implement internal engineering systems that improve how organizations operate.
-These systems focus on visibility, automation, reliability, and decision-making at scale.
-</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Core Engineering Systems I Have Built or Led</h2>
-
-<div class="project-grid">
-
-<div class="project">
-
-<h3>Delivery Intelligence Engine</h3>
-
-<p>
-Jira API-based system that extracts workflow, sprint, and issue lifecycle data
-to generate executive dashboards, velocity analysis, forecasting models,
-and delivery risk indicators.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Incident Lifecycle Automation Platform</h3>
-
-<p>
-Structured incident management framework including severity classification,
-on-call escalation routing, RCA generation workflows,
-and post-incident review tracking systems.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Observability & Reliability Layer</h3>
-
-<p>
-Cross-platform monitoring strategy integrating Datadog, Prometheus, ELK,
-CloudWatch, Dynatrace, and Azure Monitor into a unified operational visibility model.
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Engineering Automation Framework</h3>
-
-<p>
-Reusable automation layer built with Python, JavaScript, SQL, and REST APIs
-to eliminate manual reporting, streamline workflows, and optimize engineering operations.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Quantified Engineering & Leadership Impact</h2>
-
-<div class="card">
-
-<ul>
-
-<li><strong>15+ years</strong> leading enterprise engineering, support, and platform operations</li>
-
-<li><strong>2,000+ hours</strong> of instructor-led technical training delivered globally</li>
-
-<li><strong>3000+ Jira issues</strong> analyzed through automated pipelines and reporting systems</li>
-
-<li><strong>80% reduction</strong> in manual reporting via API-driven automation systems</li>
-
-<li><strong>20–40% MTTR improvement</strong> through incident workflow redesign and operational governance</li>
-
-<li><strong>Global execution:</strong> Teams across AMER, EMEA, APAC, and IST timezones</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Professional Identity (Final Positioning)</h2>
-
-<div class="card">
-
-<p>
-I operate at the intersection of:
-</p>
-
-<ul>
-
-<li>Technical Program Management (strategy, execution, governance)</li>
-<li>Site Reliability Engineering (production systems, incidents, observability)</li>
-<li>Platform Engineering (automation, APIs, CI/CD, tooling)</li>
-<li>Agile Leadership (Scrum, SAFe, Product Ownership)</li>
-<li>Enterprise Enablement (global training and engineering education)</li>
-
-</ul>
-
-<p>
-This combination enables me to bridge executive leadership and hands-on engineering execution,
-ensuring that strategy is implemented through real systems-not documentation alone.
-</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Closing Statement</h2>
-
-<div class="card">
-
-<p>
-My career is defined by a consistent pattern:
-identify operational complexity → design systems to reduce it → implement automation →
-and scale improvements across global engineering organizations.
-</p>
-
-<p>
-This portfolio reflects not only experience, but a system-building mindset applied across
-enterprise engineering, reliability, and delivery ecosystems.
-</p>
-
-</div>
-
-</section>
+<!-- ========================= -->
+<!-- END OF VERSION 1 -->
+<!-- ========================= -->
