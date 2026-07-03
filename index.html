@@ -15,980 +15,578 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <style>
-
 :root{
-
---bg:#071320;
-
---bg2:#0d2036;
-
---card:rgba(17,32,56,.70);
-
---border:rgba(255,255,255,.08);
-
---text:#edf5ff;
-
---muted:#b7c4d9;
-
---primary:#3da5ff;
-
---primary2:#65c4ff;
-
---success:#41d18d;
-
---shadow:0 20px 60px rgba(0,0,0,.35);
-
---radius:22px;
-
+  --bg:#071320;
+  --bg2:#0d2036;
+  --card:rgba(17,32,56,.70);
+  --border:rgba(255,255,255,.08);
+  --text:#edf5ff;
+  --muted:#b7c4d9;
+  --primary:#3da5ff;
+  --primary2:#65c4ff;
+  --success:#41d18d;
+  --shadow:0 20px 60px rgba(0,0,0,.35);
+  --radius:22px;
 }
 
 *{
-
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
-scroll-behavior:smooth;
-
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 
 body{
-
-font-family:'Inter',sans-serif;
-
-background:
-
-radial-gradient(circle at top right,#194b92 0%,transparent 35%),
-
-radial-gradient(circle at bottom left,#10315c 0%,transparent 30%),
-
-linear-gradient(135deg,#071320,#0b1c31,#08111f);
-
-color:var(--text);
-
-overflow-x:hidden;
-
+  font-family:'Inter',sans-serif;
+  background:
+    radial-gradient(circle at top right,#194b92 0%,transparent 35%),
+    radial-gradient(circle at bottom left,#10315c 0%,transparent 30%),
+    linear-gradient(135deg,#071320,#0b1c31,#08111f);
+  color:var(--text);
+  overflow-x:hidden;
 }
 
 a{
-
-text-decoration:none;
-
-color:inherit;
-
+  text-decoration:none;
+  color:inherit;
 }
 
 .container{
-
-width:min(1350px,92%);
-
-margin:auto;
-
+  width:min(1350px,92%);
+  margin:auto;
 }
 
 nav{
-
-position:fixed;
-
-top:20px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-width:min(1300px,94%);
-
-height:72px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:0 30px;
-
-background:rgba(12,24,43,.55);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:18px;
-
-z-index:999;
-
-box-shadow:0 10px 40px rgba(0,0,0,.30);
-
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(1300px,94%);
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 30px;
+  background:rgba(12,24,43,.55);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  z-index:999;
+  box-shadow:0 10px 40px rgba(0,0,0,.30);
 }
 
 .logo{
-
-font-size:20px;
-
-font-weight:800;
-
-letter-spacing:.5px;
-
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:.5px;
 }
 
 .logo span{
-
-color:#5bb7ff;
-
+  color:#5bb7ff;
 }
 
 .menu{
-
-display:flex;
-
-gap:28px;
-
-font-size:14px;
-
-font-weight:600;
-
+  display:flex;
+  gap:28px;
+  font-size:14px;
+  font-weight:600;
 }
 
 .menu a{
-
-opacity:.8;
-
-transition:.25s;
-
+  opacity:.8;
+  transition:.25s;
 }
 
 .menu a:hover{
-
-opacity:1;
-
-color:#7dc8ff;
-
+  opacity:1;
+  color:#7dc8ff;
 }
 
-.switchButton{
-
-padding:12px 20px;
-
-background:linear-gradient(135deg,#2196f3,#0d6efd);
-
-border-radius:999px;
-
-font-size:13px;
-
-font-weight:700;
-
-cursor:pointer;
-
-box-shadow:0 10px 30px rgba(0,140,255,.25);
-
-transition:.3s;
-
+.modeButton{
+  padding:12px 20px;
+  border:0;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+  background:rgba(255,255,255,.08);
+  color:var(--text);
+  transition:.3s;
 }
 
-.switchButton:hover{
+.modeButton:hover{
+  transform:translateY(-2px);
+}
 
-transform:translateY(-2px);
-
+.activeMode{
+  background:linear-gradient(135deg,#2196f3,#0d6efd);
+  box-shadow:0 10px 30px rgba(0,140,255,.25);
 }
 
 .hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding-top:120px;
+  position:relative;
+}
 
-min-height:100vh;
+.heroBackground{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+}
 
-display:flex;
+.aurora{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(50px);
+  opacity:.35;
+}
 
-align-items:center;
+.aurora1{
+  width:320px;
+  height:320px;
+  background:#3da5ff;
+  top:80px;
+  right:10%;
+}
 
-padding-top:120px;
+.aurora2{
+  width:260px;
+  height:260px;
+  background:#65c4ff;
+  bottom:10%;
+  left:8%;
+}
 
+.aurora3{
+  width:220px;
+  height:220px;
+  background:#41d18d;
+  top:30%;
+  left:35%;
 }
 
 .heroGrid{
-
-display:grid;
-
-grid-template-columns:1.5fr .9fr;
-
-gap:60px;
-
-align-items:center;
-
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:60px;
+  align-items:center;
+  position:relative;
+  z-index:1;
 }
 
-.kicker{
-
-display:inline-flex;
-
-gap:10px;
-
-align-items:center;
-
-padding:8px 16px;
-
-border-radius:999px;
-
-background:rgba(61,165,255,.12);
-
-border:1px solid rgba(61,165,255,.35);
-
-color:#8fd0ff;
-
-font-size:13px;
-
-font-weight:700;
-
-margin-bottom:24px;
-
+.heroBadge,.kicker{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  padding:8px 16px;
+  border-radius:999px;
+  background:rgba(61,165,255,.12);
+  border:1px solid rgba(61,165,255,.35);
+  color:#8fd0ff;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:24px;
 }
 
-.hero h1{
-
-font-size:68px;
-
-line-height:1.02;
-
-font-weight:800;
-
-margin-bottom:18px;
-
+.heroTitle{
+  font-size:68px;
+  line-height:1.02;
+  font-weight:800;
+  margin-bottom:18px;
 }
 
-.hero h1 span{
-
-background:linear-gradient(90deg,#73c8ff,#ffffff);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
+.heroTitle span{
+  background:linear-gradient(90deg,#73c8ff,#ffffff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.subtitle{
-
-font-size:24px;
-
-color:#8fc7ff;
-
-font-weight:600;
-
-margin-bottom:25px;
-
+.heroSubtitle{
+  font-size:24px;
+  color:#8fc7ff;
+  font-weight:600;
+  margin-bottom:25px;
 }
 
-.summary{
-
-font-size:18px;
-
-line-height:1.8;
-
-color:var(--muted);
-
-max-width:760px;
-
-margin-bottom:40px;
-
-}
-
-.contactBar{
-
-display:flex;
-
-flex-wrap:wrap;
-
-gap:18px;
-
-margin-bottom:50px;
-
-}
-
-.contactItem{
-
-width:58px;
-
-height:58px;
-
-border-radius:18px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:23px;
-
-background:rgba(255,255,255,.04);
-
-border:1px solid rgba(255,255,255,.08);
-
-transition:.35s;
-
-box-shadow:var(--shadow);
-
-}
-
-.contactItem:hover{
-
-transform:translateY(-8px);
-
-background:#1791ff;
-
+.heroSummary{
+  font-size:18px;
+  line-height:1.8;
+  color:var(--muted);
+  max-width:760px;
+  margin-bottom:40px;
 }
 
 .heroButtons{
-
-display:flex;
-
-gap:20px;
-
-flex-wrap:wrap;
-
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
-.primary{
-
-padding:18px 34px;
-
-border-radius:16px;
-
-background:linear-gradient(135deg,#1d9bf0,#0f6eff);
-
-font-weight:700;
-
-box-shadow:0 15px 35px rgba(0,130,255,.35);
-
+.primaryButton,.secondaryButton{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  padding:18px 34px;
+  border-radius:16px;
+  font-weight:700;
 }
 
-.secondary{
-
-padding:18px 34px;
-
-border-radius:16px;
-
-border:1px solid rgba(255,255,255,.15);
-
-background:rgba(255,255,255,.05);
-
-font-weight:700;
-
+.primaryButton{
+  background:linear-gradient(135deg,#1d9bf0,#0f6eff);
+  box-shadow:0 15px 35px rgba(0,130,255,.35);
 }
 
-.profileCard{
-
-background:var(--card);
-
-border:1px solid var(--border);
-
-border-radius:30px;
-
-padding:35px;
-
-backdrop-filter:blur(18px);
-
-box-shadow:var(--shadow);
-
-position:relative;
-
+.secondaryButton{
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.05);
 }
 
-.profileImage{
-
-width:270px;
-
-height:270px;
-
-margin:auto;
-
-border-radius:50%;
-
-padding:8px;
-
-background:linear-gradient(135deg,#3fa7ff,#6fd2ff,#184d8b);
-
-animation:spin 12s linear infinite;
-
+.contactIcons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
 }
 
-.profileImage img{
-
-width:100%;
-
-height:100%;
-
-border-radius:50%;
-
-object-fit:cover;
-
-border:8px solid #091626;
-
-animation:spinReverse 12s linear infinite;
-
+.contactIcons a{
+  width:58px;
+  height:58px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:23px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  transition:.35s;
+  box-shadow:var(--shadow);
 }
 
-@keyframes spin{
-
-to{
-
-transform:rotate(360deg);
-
+.contactIcons a:hover{
+  transform:translateY(-8px);
+  background:#1791ff;
 }
 
+.executivePanel{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:30px;
+  padding:35px;
+  backdrop-filter:blur(18px);
+  box-shadow:var(--shadow);
 }
 
-@keyframes spinReverse{
-
-to{
-
-transform:rotate(-360deg);
-
+.profileFrame{
+  width:270px;
+  height:270px;
+  margin:auto;
+  border-radius:50%;
+  padding:8px;
+  background:linear-gradient(135deg,#3fa7ff,#6fd2ff,#184d8b);
 }
 
+.profileFrame img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  border:8px solid #091626;
+  display:block;
 }
 
-.executiveCard{
-
-margin-top:30px;
-
-padding:22px;
-
-border-radius:18px;
-
-background:rgba(255,255,255,.03);
-
-border:1px solid rgba(255,255,255,.08);
-
+.executiveFloatingCard{
+  margin-top:30px;
+  padding:22px;
+  border-radius:18px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  text-align:center;
 }
 
-.executiveCard h3{
-
-margin-bottom:14px;
-
-font-size:20px;
-
+.floatingTitle{
+  margin-bottom:14px;
+  font-size:20px;
+  font-weight:700;
 }
 
-.executiveCard p{
-
-line-height:1.8;
-
-color:var(--muted);
-
+.trustedCompanies{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
 }
 
-.metrics{
-
-margin-top:40px;
-
-display:grid;
-
-grid-template-columns:repeat(6,1fr);
-
-gap:20px;
-
+.trustedCompanies h3{
+  font-size:34px;
+  margin-bottom:8px;
+  color:#72c6ff;
 }
 
-.metric{
-
-background:rgba(255,255,255,.05);
-
-padding:26px;
-
-border-radius:22px;
-
-border:1px solid rgba(255,255,255,.08);
-
-transition:.35s;
-
+.trustedCompanies span{
+  display:block;
+  color:var(--muted);
+  font-size:14px;
+  max-width:140px;
 }
 
-.metric:hover{
-
-transform:translateY(-10px);
-
-background:rgba(61,165,255,.12);
-
+.trustedSection{
+  margin-top:42px;
+  text-align:center;
 }
 
-.metric h2{
-
-font-size:42px;
-
-margin-bottom:12px;
-
-color:#72c6ff;
-
+.trustedLabel{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 16px;
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  color:#cfe7ff;
+  font-size:13px;
+  font-weight:700;
 }
 
-.metric p{
+.trustedCompany{
+  padding:14px 18px;
+  border-radius:14px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  min-width:120px;
+  text-align:center;
+  font-weight:700;
+}
 
-color:#bfcde0;
+.executiveMetrics{
+  margin-top:60px;
+}
 
-font-size:15px;
+.metricCard{
+  background:rgba(255,255,255,.05);
+  padding:26px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.08);
+  transition:.35s;
+}
 
-line-height:1.6;
+.metricCard:hover{
+  transform:translateY(-10px);
+  background:rgba(61,165,255,.12);
+}
 
+.metricNumber{
+  font-size:42px;
+  margin-bottom:12px;
+  color:#72c6ff;
+  font-weight:800;
+}
+
+.metricTitle{
+  color:#bfcde0;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.executiveStatement{
+  display:flex;
+  gap:18px;
+  margin-top:60px;
+  padding:26px;
+  border-radius:22px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.statementBar{
+  width:6px;
+  border-radius:999px;
+  background:linear-gradient(180deg,#3da5ff,#41d18d);
+}
+
+.executiveStatement h2{
+  margin-bottom:14px;
+  font-size:28px;
+}
+
+.executiveStatement p{
+  line-height:1.9;
+  color:var(--muted);
 }
 
 @media(max-width:1200px){
-
-.metrics{
-
-grid-template-columns:repeat(3,1fr);
-
-}
-
-.heroGrid{
-
-grid-template-columns:1fr;
-
-}
-
-.hero h1{
-
-font-size:52px;
-
-}
-
+  .heroGrid{
+    grid-template-columns:1fr;
+  }
+  .heroTitle{
+    font-size:52px;
+  }
 }
 
 @media(max-width:700px){
-
-.metrics{
-
-grid-template-columns:repeat(2,1fr);
-
+  .menu{
+    display:none;
+  }
+  .heroTitle{
+    font-size:42px;
+  }
 }
-
-.hero h1{
-
-font-size:42px;
-
-}
-
-.menu{
-
-display:none;
-
-}
-
-}
-
 </style>
-<!-- ========================================================= -->
-<!-- PORTFOLIO V3 - CHUNK 1 -->
-<!-- REPLACE YOUR CURRENT <nav> THROUGH THE END OF THE HERO -->
-<!-- ========================================================= -->
 
 <nav id="navbar">
-
-<div class="logo">
-JOSE <span>ZUNIGA</span>
-</div>
-
-<div class="menu">
-
-<a href="#executive">Executive</a>
-<a href="#journey">Journey</a>
-<a href="#impact">Impact</a>
-<a href="#technology">Technology</a>
-<a href="#training">Training</a>
-<a href="#contact">Contact</a>
-
-</div>
-
-<div style="display:flex;gap:12px;align-items:center;">
-
-<button class="modeButton recruiterMode">
-⚡ 20s View
-</button>
-
-<button class="modeButton executiveMode activeMode">
-Executive
-</button>
-
-<button class="modeButton technicalMode">
-Technical
-</button>
-
-</div>
-
+  <div class="logo">JOSE <span>ZUNIGA</span></div>
+  <div class="menu">
+    <a href="#executive">Executive</a>
+    <a href="#journey">Journey</a>
+    <a href="#impact">Impact</a>
+    <a href="#technology">Technology</a>
+    <a href="#training">Training</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div style="display:flex;gap:12px;align-items:center;">
+    <button class="modeButton recruiterMode">⚡ 20s View</button>
+    <button class="modeButton executiveMode activeMode">Executive</button>
+    <button class="modeButton technicalMode">Technical</button>
+  </div>
 </nav>
 
-
-
-
-
 <section class="hero" id="executive">
-
-<div class="heroBackground">
-
-<div class="aurora aurora1"></div>
-<div class="aurora aurora2"></div>
-<div class="aurora aurora3"></div>
-
-</div>
-
-<div class="container">
-
-<div class="heroGrid" style="display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:center;">
-
-<!-- ================================================= -->
-
-<div>
-
-<div class="heroBadge">
-
-<i class="fa-solid fa-circle-check"></i>
-
-OPEN TO GLOBAL LEADERSHIP OPPORTUNITIES
-
-</div>
-
-<h1 class="heroTitle">
-
-Turning Enterprise Strategy into
-
-<span>
-
-Engineering Execution
-
-</span>
-
-</h1>
-
-<p class="heroSubtitle">
-
-Technical Program Management • Enterprise Transformation • Cloud Modernization • AI Enablement • Engineering Leadership
-
-</p>
-
-<p class="heroSummary">
-
-I help enterprise organizations transform ambitious business strategy into measurable engineering execution by aligning executives, architects and global delivery teams around cloud modernization, AI adoption, operational excellence and large-scale technology transformation.
-
-</p>
-
-<div class="heroButtons">
-
-<a href="https://calendar.app.google/YegybKZoepgHuMCa8" target="_blank" class="primaryButton">
-
-<i class="fa-solid fa-calendar-days"></i>
-
-Schedule Meeting
-
-</a>
-
-<a href="resume.pdf" target="_blank" class="secondaryButton">
-
-<i class="fa-solid fa-file-pdf"></i>
-
-Download Resume
-
-</a>
-
-</div>
-
-<div class="contactIcons">
-
-<a href="mailto:josean.111@gmail.com">
-
-<i class="fa-solid fa-envelope"></i>
-
-</a>
-
-<a href="https://linkedin.com/in/jose-azuniga" target="_blank">
-
-<i class="fab fa-linkedin"></i>
-
-</a>
-
-<a href="resume.pdf" target="_blank">
-
-<i class="fa-solid fa-file-pdf"></i>
-
-</a>
-
-<a href="https://calendar.app.google/YegybKZoepgHuMCa8" target="_blank">
-
-<i class="fa-solid fa-calendar-check"></i>
-
-</a>
-
-<a href="https://wa.me/50688975841" target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
-
-</div>
-
-</div>
-
-<!-- ================================================= -->
-
-<div>
-
-<div class="executivePanel">
-
-<div class="profileFrame">
-
-<img src="Profile.jpeg">
-
-</div>
-
-<div class="executiveFloatingCard">
-
-<div class="floatingTitle">
-
-EXECUTIVE SNAPSHOT
-
-</div>
-
-<div class="trustedCompanies" style="display:flex;flex-wrap:wrap;justify-content:center;gap:25px;margin-top:25px;">
-
-<div>
-
-<h3>15+</h3>
-
-<span>Years Leading Enterprise Technology</span>
-
-</div>
-
-<div>
-
-<h3>65+</h3>
-
-<span>Largest Global Engineering Team</span>
-
-</div>
-
-<div>
-
-<h3>4</h3>
-
-<span>Fortune 500 Organizations</span>
-
-</div>
-
-<div>
-
-<h3>300+</h3>
-
-<span>Enterprise Technical Trainings</span>
-
-</div>
-
-<div>
-
-<h3>3</h3>
-
-<span>Graduate Degrees</span>
-
-</div>
-
-<div>
-
-<h3>Global</h3>
-
-<span>AMER • EMEA • APAC</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="trustedSection">
-
-<div class="trustedLabel">
-
-TRUSTED EXPERIENCE
-
-</div>
-
-<div class="trustedCompanies" style="display:flex;flex-wrap:wrap;justify-content:center;gap:25px;margin-top:25px;">
-
-<div class="trustedCompany">
-
-IBM
-
-</div>
-
-<div class="trustedCompany">
-
-Equifax
-
-</div>
-
-<div class="trustedCompany">
-
-Optiva
-
-</div>
-
-<div class="trustedCompany">
-
-HP
-
-</div>
-
-<div class="trustedCompany">
-
-iTree
-
-</div>
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="executiveMetrics" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:60px;">
-
-<div class="metricCard">
-
-<div class="metricNumber" data-count="15">
-
-15+
-
-</div>
-
-<div class="metricTitle">
-
-Years Delivering Enterprise Programs
-
-</div>
-
-</div>
-
-<div class="metricCard">
-
-<div class="metricNumber" data-count="65">
-
-65+
-
-</div>
-
-<div class="metricTitle">
-
-Largest Global Engineering Organization Managed
-
-</div>
-
-</div>
-
-<div class="metricCard">
-
-<div class="metricNumber">
-
-18+
-
-</div>
-
-<div class="metricTitle">
-
-Enterprise Platforms Modernized & Governed
-
-</div>
-
-</div>
-
-<div class="metricCard">
-
-<div class="metricNumber">
-
-300+
-
-</div>
-
-<div class="metricTitle">
-
-Global Technical Trainings & Certifications
-
-</div>
-
-</div>
-
-<div class="metricCard">
-
-<div class="metricNumber">
-
-Cloud
-
-</div>
-
-<div class="metricTitle">
-
-AWS • Azure • GCP • IBM Cloud
-
-</div>
-
-</div>
-
-<div class="metricCard">
-
-<div class="metricNumber">
-
-AI
-
-</div>
-
-<div class="metricTitle">
-
-Generative AI • Automation • Productivity
-
-</div>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="executiveStatement">
-
-<div class="statementBar"></div>
-
-<div>
-
-<h2>
-
-Executive Value Proposition
-
-</h2>
-
-<p>
-
-I bridge executive vision with engineering execution by leading enterprise programs that modernize cloud platforms, enable AI adoption, strengthen operational excellence and build high-performing global engineering organizations. My leadership combines deep technical expertise with business strategy, allowing executives to accelerate transformation while engineering teams deliver with clarity, quality and measurable impact.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+  <div class="heroBackground">
+    <div class="aurora aurora1"></div>
+    <div class="aurora aurora2"></div>
+    <div class="aurora aurora3"></div>
+  </div>
+
+  <div class="container">
+    <div class="heroGrid">
+      <div>
+        <div class="heroBadge">
+          <i class="fa-solid fa-circle-check"></i>
+          OPEN TO GLOBAL LEADERSHIP OPPORTUNITIES
+        </div>
+
+        <h1 class="heroTitle">
+          Turning Enterprise Strategy into
+          <span>Engineering Execution</span>
+        </h1>
+
+        <p class="heroSubtitle">
+          Technical Program Management • Enterprise Transformation • Cloud Modernization • AI Enablement • Engineering Leadership
+        </p>
+
+        <p class="heroSummary">
+          I help enterprise organizations transform ambitious business strategy into measurable engineering execution by aligning executives, architects and global delivery teams around cloud modernization, AI adoption, operational excellence and large-scale technology transformation.
+        </p>
+
+        <div class="heroButtons">
+          <a href="https://calendar.app.google/YegybKZoepgHuMCa8" target="_blank" class="primaryButton">
+            <i class="fa-solid fa-calendar-days"></i>
+            Schedule Meeting
+          </a>
+          <a href="resume.pdf" target="_blank" class="secondaryButton">
+            <i class="fa-solid fa-file-pdf"></i>
+            Download Resume
+          </a>
+        </div>
+
+        <div class="contactIcons">
+          <a href="mailto:josean.111@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://linkedin.com/in/jose-azuniga" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="resume.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
+          <a href="https://calendar.app.google/YegybKZoepgHuMCa8" target="_blank"><i class="fa-solid fa-calendar-check"></i></a>
+          <a href="https://wa.me/50688975841" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <div class="executivePanel">
+          <div class="profileFrame">
+            <img src="Profile.jpeg" alt="José Zuniga">
+          </div>
+
+          <div class="executiveFloatingCard">
+            <div class="floatingTitle">EXECUTIVE SNAPSHOT</div>
+            <div class="trustedCompanies" style="margin-top:25px;">
+              <div>
+                <h3>15+</h3>
+                <span>Years Leading Enterprise Technology</span>
+              </div>
+              <div>
+                <h3>65+</h3>
+                <span>Largest Global Engineering Team</span>
+              </div>
+              <div>
+                <h3>4</h3>
+                <span>Fortune 500 Organizations</span>
+              </div>
+              <div>
+                <h3>300+</h3>
+                <span>Enterprise Technical Trainings</span>
+              </div>
+              <div>
+                <h3>3</h3>
+                <span>Graduate Degrees</span>
+              </div>
+              <div>
+                <h3>Global</h3>
+                <span>AMER • EMEA • APAC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trustedSection">
+      <div class="trustedLabel">TRUSTED EXPERIENCE</div>
+      <div class="trustedCompanies" style="margin-top:25px;">
+        <div class="trustedCompany">IBM</div>
+        <div class="trustedCompany">Equifax</div>
+        <div class="trustedCompany">Optiva</div>
+        <div class="trustedCompany">HP</div>
+        <div class="trustedCompany">iTree</div>
+      </div>
+    </div>
+
+    <div class="executiveMetrics" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
+      <div class="metricCard">
+        <div class="metricNumber" data-count="15">15+</div>
+        <div class="metricTitle">Years Delivering Enterprise Programs</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricNumber" data-count="65">65+</div>
+        <div class="metricTitle">Largest Global Engineering Organization Managed</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricNumber">18+</div>
+        <div class="metricTitle">Enterprise Platforms Modernized & Governed</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricNumber">300+</div>
+        <div class="metricTitle">Global Technical Trainings & Certifications</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricNumber">Cloud</div>
+        <div class="metricTitle">AWS • Azure • GCP • IBM Cloud</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricNumber">AI</div>
+        <div class="metricTitle">Generative AI • Automation • Productivity</div>
+      </div>
+    </div>
+
+    <div class="executiveStatement">
+      <div class="statementBar"></div>
+      <div>
+        <h2>Executive Value Proposition</h2>
+        <p>
+          I bridge executive vision with engineering execution by leading enterprise programs that modernize cloud platforms, enable AI adoption, strengthen operational excellence and build high-performing global engineering organizations. My leadership combines deep technical expertise with business strategy, allowing executives to accelerate transformation while engineering teams deliver with clarity, quality and measurable impact.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ========================================================= -->
@@ -2987,602 +2585,334 @@ Enterprise Technology Leadership • Cloud • AI • Engineering Transformation
 <!-- ========================================================= -->
 
 <style>
-
-/* ====================================================== */
-/* PORTFOLIO V3 PREMIUM EFFECTS */
-/* ====================================================== */
-
 :root{
-
---accent:#59c8ff;
---accent2:#8f6dff;
---green:#61d095;
-
+  --accent:#59c8ff;
+  --accent2:#8f6dff;
+  --green:#61d095;
 }
 
 body{
-
-background:
-radial-gradient(circle at top,#0d223d 0%,#08111f 45%,#04070d 100%);
-
-overflow-x:hidden;
-
+  background:
+    radial-gradient(circle at top,#0d223d 0%,#08111f 45%,#04070d 100%);
+  overflow-x:hidden;
 }
 
 .hero{
-
-position:relative;
-overflow:hidden;
-
+  position:relative;
+  overflow:hidden;
 }
 
 .heroBackground{
-
-position:absolute;
-inset:0;
-overflow:hidden;
-pointer-events:none;
-
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
 }
 
 .aurora{
-
-position:absolute;
-
-width:700px;
-height:700px;
-
-filter:blur(140px);
-
-opacity:.18;
-
-border-radius:50%;
-
-animation:auroraMove 20s ease-in-out infinite;
-
+  position:absolute;
+  width:700px;
+  height:700px;
+  filter:blur(140px);
+  opacity:.18;
+  border-radius:50%;
+  animation:auroraMove 20s ease-in-out infinite;
 }
 
 .aurora1{
-
-background:#3ca8ff;
-
-top:-220px;
-left:-120px;
-
+  background:#3ca8ff;
+  top:-220px;
+  left:-120px;
 }
 
 .aurora2{
-
-background:#6d5bff;
-
-bottom:-280px;
-right:-180px;
-
-animation-delay:6s;
-
+  background:#6d5bff;
+  bottom:-280px;
+  right:-180px;
+  animation-delay:6s;
 }
 
 .aurora3{
-
-background:#35d1a1;
-
-top:40%;
-left:45%;
-
-animation-delay:12s;
-
+  background:#35d1a1;
+  top:40%;
+  left:45%;
+  animation-delay:12s;
 }
 
 @keyframes auroraMove{
-
-0%{
-
-transform:translate(0,0) scale(1);
-
-}
-
-50%{
-
-transform:translate(120px,-80px) scale(1.25);
-
-}
-
-100%{
-
-transform:translate(0,0) scale(1);
-
-}
-
+  0%{ transform:translate(0,0) scale(1); }
+  50%{ transform:translate(120px,-80px) scale(1.25); }
+  100%{ transform:translate(0,0) scale(1); }
 }
 
 .profileCard,
 .metricCard,
 .executiveStatement,
 .executiveFloatingCard{
-
-background:rgba(18,27,42,.72);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.08);
-
-box-shadow:
-
-0 15px 40px rgba(0,0,0,.35);
-
-transition:.35s;
-
+  background:rgba(18,27,42,.72);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 15px 40px rgba(0,0,0,.35);
+  transition:.35s;
+  border-radius:22px;
 }
 
 .profileCard:hover,
 .metricCard:hover{
-
-transform:translateY(-8px);
-
-border-color:rgba(90,200,255,.4);
-
-box-shadow:
-
-0 30px 60px rgba(0,0,0,.45);
-
+  transform:translateY(-8px);
+  border-color:rgba(90,200,255,.4);
+  box-shadow:0 30px 60px rgba(0,0,0,.45);
 }
 
 .contactIcons a{
-
-width:52px;
-height:52px;
-
-display:flex;
-
-align-items:center;
-justify-content:center;
-
-border-radius:50%;
-
-background:rgba(255,255,255,.05);
-
-transition:.35s;
-
-border:1px solid rgba(255,255,255,.06);
-
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:rgba(255,255,255,.05);
+  transition:.35s;
+  border:1px solid rgba(255,255,255,.06);
 }
 
 .contactIcons a:hover{
-
-transform:translateY(-6px) scale(1.08);
-
-background:#179bff;
-
-box-shadow:
-
-0 0 30px rgba(23,155,255,.45);
-
+  transform:translateY(-6px) scale(1.08);
+  background:#179bff;
+  box-shadow:0 0 30px rgba(23,155,255,.45);
 }
 
 .modeButton{
-
-padding:10px 18px;
-
-border-radius:50px;
-
-cursor:pointer;
-
-transition:.3s;
-
-border:1px solid rgba(255,255,255,.12);
-
-background:rgba(255,255,255,.05);
-
+  padding:10px 18px;
+  border-radius:50px;
+  cursor:pointer;
+  transition:.3s;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.05);
+  color:var(--text);
 }
 
 .modeButton:hover{
-
-transform:translateY(-3px);
-
+  transform:translateY(-3px);
 }
 
 .activeMode{
-
-background:linear-gradient(135deg,#199dff,#6d5bff);
-
+  background:linear-gradient(135deg,#199dff,#6d5bff);
 }
 
 .primaryButton{
-
-background:
-
-linear-gradient(135deg,#1698ff,#5c67ff);
-
-box-shadow:
-
-0 20px 35px rgba(0,110,255,.35);
-
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:18px 34px;
+  border-radius:16px;
+  color:#fff;
+  background:linear-gradient(135deg,#1698ff,#5c67ff);
+  box-shadow:0 20px 35px rgba(0,110,255,.35);
+  transition:.3s;
 }
 
 .primaryButton:hover{
-
-transform:translateY(-5px);
-
+  transform:translateY(-5px);
 }
 
 .secondaryButton{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:18px 34px;
+  border-radius:16px;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.04);
+  transition:.3s;
+}
 
-border:1px solid rgba(255,255,255,.1);
-
-background:rgba(255,255,255,.04);
-
+.secondaryButton:hover{
+  transform:translateY(-5px);
 }
 
 .trustedCompany{
-
-transition:.4s;
-
-opacity:.55;
-
-filter:grayscale(100%);
-
+  transition:.4s;
+  opacity:.55;
+  filter:grayscale(100%);
 }
 
 .trustedCompany:hover{
-
-opacity:1;
-
-transform:translateY(-6px);
-
-filter:none;
-
+  opacity:1;
+  transform:translateY(-6px);
+  filter:none;
 }
 
 .kicker{
-
-display:inline-flex;
-
-align-items:center;
-
-gap:8px;
-
-padding:7px 14px;
-
-border-radius:30px;
-
-background:rgba(89,200,255,.08);
-
-border:1px solid rgba(89,200,255,.15);
-
-font-size:13px;
-
-font-weight:600;
-
-letter-spacing:.8px;
-
-text-transform:uppercase;
-
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 14px;
+  border-radius:30px;
+  background:rgba(89,200,255,.08);
+  border:1px solid rgba(89,200,255,.15);
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.8px;
+  text-transform:uppercase;
 }
 
 .executiveClosing{
-
-position:relative;
-
-padding:90px;
-
-border-radius:35px;
-
-background:
-
-linear-gradient(135deg,
-
-rgba(25,80,160,.35),
-
-rgba(18,28,55,.9));
-
-overflow:hidden;
-
+  position:relative;
+  padding:90px;
+  border-radius:35px;
+  background:linear-gradient(135deg, rgba(25,80,160,.35), rgba(18,28,55,.9));
+  overflow:hidden;
 }
 
 .executiveGlow{
-
-position:absolute;
-
-width:800px;
-height:800px;
-
-border-radius:50%;
-
-background:#1698ff;
-
-filter:blur(220px);
-
-opacity:.12;
-
-top:-300px;
-left:50%;
-
-transform:translateX(-50%);
-
+  position:absolute;
+  width:800px;
+  height:800px;
+  border-radius:50%;
+  background:#1698ff;
+  filter:blur(220px);
+  opacity:.12;
+  top:-300px;
+  left:50%;
+  transform:translateX(-50%);
 }
 
 .contactCard{
-
-display:flex;
-
-align-items:center;
-
-gap:20px;
-
-padding:22px;
-
-border-radius:18px;
-
-background:rgba(255,255,255,.03);
-
-transition:.3s;
-
-border:1px solid rgba(255,255,255,.06);
-
-text-decoration:none;
-
-color:inherit;
-
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:22px;
+  border-radius:18px;
+  background:rgba(255,255,255,.03);
+  transition:.3s;
+  border:1px solid rgba(255,255,255,.06);
+  text-decoration:none;
+  color:inherit;
 }
 
 .contactCard:hover{
-
-transform:translateX(10px);
-
-border-color:#38a8ff;
-
-background:rgba(56,168,255,.08);
-
+  transform:translateX(10px);
+  border-color:#38a8ff;
+  background:rgba(56,168,255,.08);
 }
 
 .contactIcon{
-
-width:58px;
-height:58px;
-
-display:flex;
-
-align-items:center;
-justify-content:center;
-
-border-radius:16px;
-
-background:
-
-linear-gradient(135deg,#149cff,#6d5bff);
-
-font-size:22px;
-
+  width:58px;
+  height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:16px;
+  background:linear-gradient(135deg,#149cff,#6d5bff);
+  font-size:22px;
 }
 
 .executiveContactGrid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:18px;
-
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
 }
 
 @media(max-width:950px){
-
-.executiveContactGrid{
-
-grid-template-columns:1fr;
-
-}
-
+  .executiveContactGrid{
+    grid-template-columns:1fr;
+  }
 }
 
 .fadeReveal{
-
-opacity:0;
-
-transform:translateY(35px);
-
-transition:1s;
-
+  opacity:0;
+  transform:translateY(35px);
+  transition:1s;
 }
 
 .fadeReveal.visible{
-
-opacity:1;
-
-transform:none;
-
+  opacity:1;
+  transform:none;
 }
 
 img{
-    max-width:100%;
-    display:block;
+  max-width:100%;
+  display:block;
 }
-
 </style>
 
-
-
-
-
-
-
 <script>
-
-/* ====================================================== */
-/* Animated Counters */
-/* ====================================================== */
-
 document.querySelectorAll(".metricNumber").forEach(counter=>{
+  const original = counter.innerText.trim();
+  const numeric = parseInt(original.replace(/\D/g,''));
+  if (isNaN(numeric)) return;
 
-let finalValue=counter.innerText;
+  let current = 0;
+  const speed = Math.max(15, Math.floor(1800 / numeric));
 
-let numeric=parseInt(finalValue.replace(/\D/g,''));
-
-if(isNaN(numeric)) return;
-
-let current=0;
-
-let speed=Math.max(15,Math.floor(1800/numeric));
-
-let interval=setInterval(()=>{
-
-current++;
-
-counter.innerHTML=current+"+";
-
-if(current>=numeric){
-
-counter.innerHTML=finalValue;
-
-clearInterval(interval);
-
-}
-
-},speed);
-
+  const interval = setInterval(()=>{
+    current++;
+    counter.innerHTML = current + "+";
+    if(current >= numeric){
+      counter.innerHTML = original;
+      clearInterval(interval);
+    }
+  }, speed);
 });
 
-/* ====================================================== */
-/* Scroll Reveal */
-/* ====================================================== */
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("visible");
-
-}
-
-});
-
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
 },{threshold:.12});
 
-document.querySelectorAll(
-
-".profileCard,.metricCard,.executiveStatement,.executiveClosing"
-
-).forEach(el=>{
-
-el.classList.add("fadeReveal");
-
-observer.observe(el);
-
+document.querySelectorAll(".profileCard,.metricCard,.executiveStatement,.executiveClosing").forEach(el=>{
+  el.classList.add("fadeReveal");
+  observer.observe(el);
 });
-
-/* ====================================================== */
-/* Sticky Navbar */
-/* ====================================================== */
 
 window.addEventListener("scroll",()=>{
-
-const nav=document.getElementById("navbar");
-
-if(window.scrollY>80){
-
-nav.classList.add("scrolled");
-
-}else{
-
-nav.classList.remove("scrolled");
-
-}
-
+  const nav=document.getElementById("navbar");
+  if(!nav) return;
+  if(window.scrollY>80){
+    nav.classList.add("scrolled");
+  }else{
+    nav.classList.remove("scrolled");
+  }
 });
-
-/* ====================================================== */
-/* 20 SECOND MODE */
-/* ====================================================== */
 
 const recruiterButton=document.querySelector(".recruiterMode");
-
 if(recruiterButton){
-
-recruiterButton.onclick=function(){
-
-document.querySelectorAll(
-
-"#journey,#impact,#technology,#training"
-
-).forEach(section=>{
-
-section.style.display="none";
-
-});
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-};
-
+  recruiterButton.onclick=function(){
+    document.querySelectorAll("#journey,#impact,#technology,#training").forEach(section=>{
+      section.style.display="none";
+    });
+    window.scrollTo({top:0,behavior:"smooth"});
+  };
 }
-
-/* ====================================================== */
-/* EXECUTIVE MODE */
-/* ====================================================== */
 
 const executiveButton=document.querySelector(".executiveMode");
-
 if(executiveButton){
-
-executiveButton.onclick=function(){
-
-document.querySelectorAll(
-
-"#journey,#impact,#technology,#training"
-
-).forEach(section=>{
-
-section.style.display="block";
-
-});
-
-};
-
+  executiveButton.onclick=function(){
+    document.querySelectorAll("#journey,#impact,#technology,#training").forEach(section=>{
+      section.style.display="block";
+    });
+  };
 }
-
-/* ====================================================== */
-/* TECHNICAL MODE */
-/* (placeholder for V4 expansion) */
-/* ====================================================== */
 
 const technicalButton=document.querySelector(".technicalMode");
-
 if(technicalButton){
-
-technicalButton.onclick=function(){
-
-document.querySelectorAll(
-
-"#journey,#impact,#training"
-
-).forEach(section=>{
-
-section.style.display="none";
-
-});
-
-document.querySelector("#technology").style.display="block";
-
-window.scrollTo({
-
-top:document.querySelector("#technology").offsetTop-70,
-
-behavior:"smooth"
-
-});
-
-};
-
+  technicalButton.onclick=function(){
+    document.querySelectorAll("#journey,#impact,#training").forEach(section=>{
+      section.style.display="none";
+    });
+    const tech = document.querySelector("#technology");
+    if(tech){
+      tech.style.display="block";
+      window.scrollTo({top:tech.offsetTop-70,behavior:"smooth"});
+    }
+  };
 }
-
 </script>
 
 <!-- ========================================================= -->
