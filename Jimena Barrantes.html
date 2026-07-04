@@ -1,354 +1,1287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Jimena Barrantes Resume</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jimena Barrantes | Senior Agile Digital Project Manager</title>
+<meta name="description" content="Jimena Barrantes portfolio - Senior Agile Coach, Digital Project Manager, Scrum Master, Product Owner, and enterprise transformation leader." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 <style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; padding: 0; color: #333;
-    background: #fff;
+:root{
+  --bg:#071320;
+  --bg2:#0d2036;
+  --card:rgba(17,32,56,.72);
+  --border:rgba(255,255,255,.08);
+  --text:#edf5ff;
+  --muted:#b7c4d9;
+  --primary:#3da5ff;
+  --primary2:#65c4ff;
+  --success:#41d18d;
+  --shadow:0 20px 60px rgba(0,0,0,.35);
+  --radius:22px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:
+    radial-gradient(circle at top right,#194b92 0%,transparent 35%),
+    radial-gradient(circle at bottom left,#10315c 0%,transparent 30%),
+    linear-gradient(135deg,#071320,#0b1c31,#08111f);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1350px,92%);
+  margin:auto;
+}
+
+nav{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(1300px,94%);
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 30px;
+  background:rgba(12,24,43,.55);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  z-index:999;
+  box-shadow:0 10px 40px rgba(0,0,0,.30);
+}
+
+.logo{
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+
+.logo span{
+  color:#5bb7ff;
+}
+
+.menu{
+  display:flex;
+  gap:28px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.menu a{
+  opacity:.8;
+  transition:.25s;
+}
+
+.menu a:hover{
+  opacity:1;
+  color:#7dc8ff;
+}
+
+.modeButton{
+  padding:12px 20px;
+  border:0;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+  background:rgba(255,255,255,.08);
+  color:var(--text);
+  transition:.3s;
+}
+
+.modeButton:hover{
+  transform:translateY(-2px);
+}
+
+.activeMode{
+  background:linear-gradient(135deg,#2196f3,#0d6efd);
+  box-shadow:0 10px 30px rgba(0,140,255,.25);
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding-top:120px;
+  position:relative;
+}
+
+.heroBackground{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+}
+
+.aurora{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(50px);
+  opacity:.35;
+}
+
+.aurora1{
+  width:320px;
+  height:320px;
+  background:#3da5ff;
+  top:80px;
+  right:10%;
+}
+
+.aurora2{
+  width:260px;
+  height:260px;
+  background:#65c4ff;
+  bottom:10%;
+  left:8%;
+}
+
+.aurora3{
+  width:220px;
+  height:220px;
+  background:#41d18d;
+  top:30%;
+  left:35%;
+}
+
+.heroGrid{
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:60px;
+  align-items:center;
+  position:relative;
+  z-index:1;
+}
+
+.heroBadge,.kicker{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  padding:8px 16px;
+  border-radius:999px;
+  background:rgba(61,165,255,.12);
+  border:1px solid rgba(61,165,255,.35);
+  color:#8fd0ff;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:24px;
+}
+
+.heroTitle{
+  font-size:68px;
+  line-height:1.02;
+  font-weight:800;
+  margin-bottom:18px;
+}
+
+.heroTitle span{
+  background:linear-gradient(90deg,#73c8ff,#ffffff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.heroSubtitle{
+  font-size:24px;
+  color:#8fc7ff;
+  font-weight:600;
+  margin-bottom:25px;
+}
+
+.heroSummary{
+  font-size:18px;
+  line-height:1.8;
+  color:var(--muted);
+  max-width:760px;
+  margin-bottom:40px;
+}
+
+.heroButtons{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.primaryButton,.secondaryButton{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  padding:18px 34px;
+  border-radius:16px;
+  font-weight:700;
+}
+
+.primaryButton{
+  background:linear-gradient(135deg,#1d9bf0,#0f6eff);
+  box-shadow:0 15px 35px rgba(0,130,255,.35);
+}
+
+.secondaryButton{
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.05);
+}
+
+.contactIcons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:28px;
+}
+
+.contactIcons a{
+  width:58px;
+  height:58px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:23px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  transition:.35s;
+  box-shadow:var(--shadow);
+}
+
+.contactIcons a:hover{
+  transform:translateY(-8px);
+  background:#1791ff;
+}
+
+.executivePanel{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:30px;
+  padding:35px;
+  backdrop-filter:blur(18px);
+  box-shadow:var(--shadow);
+}
+
+.profileFrame{
+  width:270px;
+  height:270px;
+  margin:auto;
+  border-radius:50%;
+  padding:8px;
+  background:linear-gradient(135deg,#3fa7ff,#6fd2ff,#184d8b);
+}
+
+.profileFrame img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  border:8px solid #091626;
+  display:block;
+}
+
+.executiveFloatingCard{
+  margin-top:30px;
+  padding:22px;
+  border-radius:18px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  text-align:center;
+}
+
+.floatingTitle{
+  margin-bottom:14px;
+  font-size:20px;
+  font-weight:700;
+}
+
+.trustedCompanies{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+.trustedCompanies h3{
+  font-size:34px;
+  margin-bottom:8px;
+  color:#72c6ff;
+}
+
+.trustedCompanies span{
+  display:block;
+  color:var(--muted);
+  font-size:14px;
+  max-width:140px;
+}
+
+.trustedSection{
+  margin-top:42px;
+  text-align:center;
+}
+
+.trustedLabel{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 16px;
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  color:#cfe7ff;
+  font-size:13px;
+  font-weight:700;
+}
+
+.trustedCompany{
+  padding:14px 18px;
+  border-radius:14px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  min-width:120px;
+  text-align:center;
+  font-weight:700;
+}
+
+.executiveMetrics{
+  margin-top:60px;
+}
+
+.metricCard{
+  background:rgba(255,255,255,.05);
+  padding:26px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.08);
+  transition:.35s;
+}
+
+.metricCard:hover{
+  transform:translateY(-10px);
+  background:rgba(61,165,255,.12);
+}
+
+.metricNumber{
+  font-size:42px;
+  margin-bottom:12px;
+  color:#72c6ff;
+  font-weight:800;
+}
+
+.metricTitle{
+  color:#bfcde0;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.executiveStatement{
+  display:flex;
+  gap:18px;
+  margin-top:60px;
+  padding:26px;
+  border-radius:22px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.statementBar{
+  width:6px;
+  border-radius:999px;
+  background:linear-gradient(180deg,#3da5ff,#41d18d);
+}
+
+.executiveStatement h2{
+  margin-bottom:14px;
+  font-size:28px;
+}
+
+.executiveStatement p{
+  line-height:1.9;
+  color:var(--muted);
+}
+
+.profileCard,
+.metric,
+.executiveClosing,
+.contactCard{
+  background:rgba(18,27,42,.72);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 15px 40px rgba(0,0,0,.35);
+  transition:.35s;
+  border-radius:22px;
+}
+
+.profileCard:hover,
+.metric:hover,
+.contactCard:hover{
+  transform:translateY(-8px);
+  border-color:rgba(90,200,255,.4);
+}
+
+.metric{
+  padding:24px;
+}
+
+.metric h3{
+  margin-bottom:10px;
+  font-size:1.08rem;
+}
+
+.metric p{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.contactCard{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:22px;
+  text-decoration:none;
+  color:inherit;
+}
+
+.contactIcon{
+  width:58px;
+  height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:16px;
+  background:linear-gradient(135deg,#149cff,#6d5bff);
+  font-size:22px;
+}
+
+.executiveClosing{
+  position:relative;
+  padding:90px;
+  border-radius:35px;
+  background:linear-gradient(135deg, rgba(25,80,160,.35), rgba(18,28,55,.9));
+  overflow:hidden;
+}
+
+.executiveGlow{
+  position:absolute;
+  width:800px;
+  height:800px;
+  border-radius:50%;
+  background:#1698ff;
+  filter:blur(220px);
+  opacity:.12;
+  top:-300px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.executiveContactGrid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.fadeReveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:1s;
+}
+
+.fadeReveal.visible{
+  opacity:1;
+  transform:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+section{
+  padding:90px 0 120px;
+}
+
+.sectionTitle{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.sectionTitle h2{
+  font-size:48px;
+  font-weight:800;
+  margin-top:18px;
+}
+
+.sectionTitle p{
+  max-width:980px;
+  margin:30px auto 0;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.9;
+}
+
+footer{
+  padding:50px 0;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+@media(max-width:1200px){
+  .heroGrid{
+    grid-template-columns:1fr;
   }
-  .container {
-    max-width: 900px;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    background: #fff;
+  .heroTitle{
+    font-size:52px;
   }
-  .main-column {
-    padding: 30px 40px;
+}
+
+@media(max-width:950px){
+  .executiveContactGrid{
+    grid-template-columns:1fr;
   }
-  .side-column {
-    background-color: #254263;
-    color: white;
-    padding: 30px 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  .executiveClosing{
+    padding:40px 24px;
   }
-  h1, h2, h3 {
-    margin: 0;
+}
+
+@media(max-width:700px){
+  .menu{
+    display:none;
   }
-  h1 {
-    font-size: 28px;
-    font-weight: 900;
-    color: #254263;
-    margin-bottom: 10px;
+  .heroTitle{
+    font-size:42px;
   }
-  h2 {
-    font-size: 18px;
-    font-weight: 700;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 4px;
-    margin-bottom: 8px;
+  .heroSubtitle{
+    font-size:18px;
   }
-  h3 {
-    font-size: 15px;
-    color: #254263;
-    margin-top: 10px;
-    margin-bottom: 4px;
+  .heroSummary{
+    font-size:16px;
   }
-  .contact-info {
-    font-size: 14px;
-    margin-bottom: 25px;
-    color: #444;
-  }
-  a {
-    color: #1a73e8;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  .section {
-    margin-bottom: 16px;
-  }
-  .main-column p,
-  .main-column li {
-    font-size: 14px;
-    line-height: 1.5;
-    text-align: justify;
-    text-justify: inter-word;
-    margin-bottom: 4px;
-  }
-  ul {
-    padding-left: 20px;
-    margin-top: 4px;
-  }
-  li {
-    margin-bottom: 4px;
-  }
-  /* Sidebar section titles */
-  .side-column h2 {
-    border-color: rgba(255,255,255,0.4);
-    color: white;
-  }
-  /* Sidebar lists */
-  .side-column ul {
-    padding-left: 18px;
-  }
-  .side-column li {
-    margin-bottom: 6px;
-    font-size: 14px;
-    color: #d6dbdf;
-  }
-  /* Language dots */
-  .lang-level {
-    display: inline-block;
-    margin-left: 8px;
-  }
-  .dot {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 4px;
-  }
-  .dot.filled {
-    background-color: #1a73e8;
-  }
-  .dot.empty {
-    background-color: #bbb;
-  }
-  /* Responsive */
-  @media (max-width: 700px) {
-    .container {
-      grid-template-columns: 1fr;
-    }
-    .side-column {
-      display: block;
-      padding: 20px 30px;
-    }
-  }
+}
 </style>
 </head>
 <body>
+
+<nav id="navbar">
+  <div class="logo">JIMENA <span>BARRANTES</span></div>
+  <div class="menu">
+    <a href="#executive">Executive</a>
+    <a href="#journey">Journey</a>
+    <a href="#impact">Impact</a>
+    <a href="#technology">Technology</a>
+    <a href="#training">Training</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div style="display:flex;gap:12px;align-items:center;">
+    <button class="modeButton recruiterMode">⚡ 20s View</button>
+    <button class="modeButton executiveMode activeMode">Executive</button>
+    <button class="modeButton technicalMode">Technical</button>
+  </div>
+</nav>
+
+<section class="hero" id="executive">
+  <div class="heroBackground">
+    <div class="aurora aurora1"></div>
+    <div class="aurora aurora2"></div>
+    <div class="aurora aurora3"></div>
+  </div>
+
   <div class="container">
-  
-    <div class="main-column">
-      <h1>Jimena Barrantes</h1>
-      <div class="contact-info">
-        Heredia, Costa Rica | +506 7149 1877 | aj.balop@gmail.com<br />
-        LinkedIn: <a href="https://linkedin.com/in/ajbalop" target="_blank" rel="noopener noreferrer">linkedin.com/in/ajbalop</a>
+    <div class="heroGrid">
+      <div>
+        <div class="heroBadge">
+          <i class="fa-solid fa-circle-check"></i>
+          GLOBAL AGILE LEADERSHIP • AMERICAS • EUROPE • ASIA
+        </div>
+
+        <h1 class="heroTitle">
+          Turning Digital Strategy into
+          <span>Delivery That Scales</span>
+        </h1>
+
+        <p class="heroSubtitle">
+          Senior Agile Coach • Digital Project Manager • Scrum Master • Product Owner • Enterprise Transformation Leader
+        </p>
+
+        <p class="heroSummary">
+          Jimena Barrantes brings 16+ years of global experience across finance, healthcare, manufacturing, technology, and professional services, leading Agile transformations, coaching executives and teams, and delivering measurable business outcomes through enterprise platforms, CMS modernization, and delivery governance.
+        </p>
+
+        <div class="heroButtons">
+          <a href="mailto:aj.balop@gmail.com" class="primaryButton">
+            <i class="fa-solid fa-envelope"></i>
+            Contact Jimena
+          </a>
+          <a href="https://www.linkedin.com/in/ajbalop" target="_blank" class="secondaryButton">
+            <i class="fab fa-linkedin"></i>
+            LinkedIn Profile
+          </a>
+        </div>
+
+        <div class="contactIcons">
+          <a href="mailto:aj.balop@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/ajbalop" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
       </div>
 
-      <div class="section experience">
-        <h2>Work Experience</h2>
+      <div>
+        <div class="executivePanel">
+          <div class="profileFrame">
+            <div style="width:100%;height:100%;border-radius:50%;background:linear-gradient(135deg,#1f5f9e,#0d1b2e);display:flex;align-items:center;justify-content:center;font-size:72px;font-weight:800;color:#8fd0ff;">
+              JB
+            </div>
+          </div>
 
-        <div>
-          <h3>iTree Training | Senior Project Agile Manager / Agile Coach (Fully Remote)</h3>
-          <p><em>April 2020 – Present | Consultant / Freelance</em></p>
-          <p>iTree Training is a global consultancy providing corporate training and Agile transformation services, working with multinational clients across automotive, manufacturing, and technology sectors. Industry: Professional Services, Agile Coaching, Automotive (Client: Nissan)</p>
-          <p><strong>Role:</strong> As an Agile Coach, I led multi-country transformation programs, scaled Agile practices, and drove delivery efficiency for clients like Nissan.</p>
-          <ul>
-            <li>Led multi-country transformation programs, scaled Agile practices, and drove 50% delivery efficiency for clients like Nissan.</li>
-            <li>Successfully managed a year-long, multi-country program for Nissan with a 95% on-time delivery rate.</li>
-            <li>Evaluated team agility using Agile Fluency Model and SAFe assessments, designing tailored coaching plans.</li>
-            <li>Increased project delivery output by 50% and improved predictability using Agile metrics and risk governance.</li>
-            <li>Achieved 100% stakeholder satisfaction and boosted team satisfaction by 65% fostering Agile psychological safety.</li>
-            <li>Standardized 6+ CMS websites and supervised digital transformations using WordPress and SharePoint.</li>
-            <li>Championed servant leadership and psychological safety to minimize friction in delivery.</li>
-            <li>Facilitated Agile ceremonies and led value stream realignments for product-focused delivery.</li>
-            <li>Worked closely with executives and stakeholders to drive Agile transformation enterprise-wide and conducted Agile workshops improving maturity.</li>
-            <li>Conducted Agile workshops and implemented fluency models, improving team performance and Agile maturity.</li>
-          </ul>
+          <div class="executiveFloatingCard">
+            <div class="floatingTitle">EXECUTIVE SNAPSHOT</div>
+            <div class="trustedCompanies" style="margin-top:25px;">
+              <div>
+                <h3>16+</h3>
+                <span>Years Global Experience</span>
+              </div>
+              <div>
+                <h3>5</h3>
+                <span>Major Consulting / Enterprise Firms</span>
+              </div>
+              <div>
+                <h3>4</h3>
+                <span>Countries in LATAM Delivery Scope</span>
+              </div>
+              <div>
+                <h3>100%</h3>
+                <span>Stakeholder Satisfaction Achieved</span>
+              </div>
+              <div>
+                <h3>300+</h3>
+                <span>Hours of Technical Training</span>
+              </div>
+              <div>
+                <h3>Global</h3>
+                <span>Americas • Europe • Asia</span>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div>
-          <h3>Infinite Computer Solutions | Senior Scrum Master (Healthcare Sector, Fully Remote)</h3>
-          <p><em>April 2022 – December 2024</em></p>
-          <p>Infinite is a global technology provider of IT services and digital transformation in healthcare, finance, and telecom.</p>
-          <p><strong>Role:</strong> Led Agile delivery and scaled team performance across healthcare products while automating key operational processes.</p>
-          <ul>
-            <li>Reduced onboarding/offboarding by 60% and manual reporting by 30% through automation.</li>
-            <li>Enhanced team capacity alignment by 25% via healthcare taxonomy mapping across domains.</li>
-            <li>Coached 5 agile teams on backlog refinement, metrics, and Scrum ceremonies improving delivery speed and transparency.</li>
-            <li>Removed team impediments proactively collaborating with external departments.</li>
-            <li>Implemented Agile metrics and reporting dashboards for data-driven decisions.</li>
-            <li>Promoted transparency and cross-functional collaboration among stakeholders, QA, and developers.</li>
-            <li>Coordinated cross-team dependencies using Jira, Confluence and Azure.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Coca-Cola LATAM | Business Relationship Analyst / Product Owner (Hybrid, 50% Travel)</h3>
-          <p><em>November 2018 – April 2022</em></p>
-          <p>Coca-Cola LATAM is responsible for beverage manufacturing, distribution, and digital transformation in Latin America.</p>
-          <p><strong>Role:</strong> As Product Owner, I delivered CMS and e-commerce platforms, scaled Agile practices across 4 countries, and led CRM and continuity programs.</p>
-          <ul>
-            <li>Served as the key point of contact between business stakeholders and cross-functional development teams, gathering, documenting, and prioritizing business requirements to ensure alignment with strategic objectives.</li>
-            <li>Contributed to shaping the product vision, roadmap, and release plans in close coordination with stakeholders, PMO, and IT leadership.</li>
-            <li>Partnered with UX/UI teams and developers to ensure intuitive, user-centered designs and deliver impactful, value-driven experiences.</li>
-            <li>Aligned cross-functional stakeholders by managing expectations, balancing priorities, and proactively resolving conflicts to build trust and drive collaboration.</li>
-            <li>Oversaw user acceptance testing (UAT), contributed to go-to-market planning, and collected post-launch insights to support iterative product enhancements.</li>
-            <li>Defined and groomed product backlogs by creating actionable user stories with clear acceptance criteria, ensuring feature development aligned with business value and stakeholder priorities.</li>
-            <li>Led business unit acquisition efforts and oversaw Coca-Cola’s iRed Global Solution project, impacting over 50% of Mexico’s bottlers.</li>
-            <li>Defined Agile standards across 4 countries, achieving full adoption of Agile business continuity methodology.</li>
-            <li>Coached 5 Product Owners, improving backlog grooming and communication, resulting in a 20% increase in throughput.</li>
-            <li>Standardized service management practices across Jira, Confluence, and ServiceNow, aligned to Coca-Cola’s SDLC.</li>
-            <li>Provided Salesforce CMS e-commerce enhancements that increased Brazil's sales by 37% and converted a WordPress project in Buenos Aires that raised traffic by 17%.</li>
-            <li>Led RFPs, vendor assessments, and stakeholder engagements to ensure business-IT alignment</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Equifax | Project Manager / Scrum Master (Hybrid)</h3>
-          <p><em>August 2017 – November 2018</em></p>
-          <p>Equifax provides risk management and information solutions globally.</p>
-          <p><strong>Role:</strong> Oversaw Agile-driven CMS redesign and mobile-first projects, resulting in higher user engagement and more streamlined sprint execution.</p>
-          <ul>
-            <li>Led Liferay CMS redesign across multi-language sites, increasing engagement by 30%.</li>
-            <li>Delivered Equifax’s first mobile-responsive site, enhancing user experience and accessibility.</li>
-            <li>Communicate project status, progress, and risks to stakeholders, ensuring transparency and alignment across technical and business teams.</li>
-            <li>Coach and mentor team members on Agile principles and best practices to improve productivity and team performance.</li>
-            <li>Monitor and report key performance indicators (KPIs) and metrics to drive continuous improvement in project delivery processes.</li>
-            <li>Increased sprint velocity by 20% and reduced development cycles by 25% through Scrum ceremonies and Agile team coaching.</li>
-            <li>Lead and facilitate Agile ceremonies such as daily stand-ups, sprint planning, retrospectives, and backlog refinement to ensure smooth sprint execution. </li>
-            <li>Removed team impediments proactively by collaborating with external departments, driving resolution and maintaining focus on sprint goals.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>GBM (IBM Latin America) | Junior Project Manager, Software & IT Solutions</h3>
-          <p><em>December 2014 – July 2017</em></p>
-          <p>GBM delivers enterprise IT services and cloud solutions across Latin America.</p>
-          <p><strong>Role:</strong> Managed rollout of IBM Smart Solutions across the region, enhancing operational workflows and cutting client downtime.</p>
-          <ul>
-            <li>Assist in planning, scheduling, and coordinating software development projects to ensure timely delivery.</li>
-            <li>Support senior project managers in tracking project progress, managing risks, and resolving issues.</li>
-            <li>Help prepare project documentation such as status reports, meeting minutes, and project plans.</li>
-            <li>Provided over 15 IBM IT-Smart solutions regionally, improving operational efficiency by 20%.</li>
-            <li>Reduced client idle time by 98% through project planning, risk mitigation, and proactive support.</li>
-            <li>Delivered client-specific solutions and training across LATAM, promoting IBM technology adoption.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>McKinsey & Company | Data Engineer (Remote, 50% Travel)</h3>
-          <p><em>November 2013 – November 2014</em></p>
-          <p>McKinsey is a leading global consulting firm specializing in data-driven performance improvement.</p>
-          <p><strong>Role:</strong> Integrated data from multiple HR information systems into OrgLab—McKinsey’s organizational design platform—to uncover hidden insights and enable data-driven decision-making</p>
-          <ul>
-            <li>Integrate data from multiple HR information systems into OrgLab.</li>
-            <li>Ensure data quality and consistency across integrated systems.</li>
-            <li>Collaborate with organizational effectiveness experts to design and implement organizational structures.</li>
-            <li>Apply cyber-security best practices and technologies to protect company and personal data.</li>
-            <li>Work seamlessly with multiple HR information systems to support organizational design and effectiveness initiatives.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Hewlett Packard (HP) | Incident Manager / Server Support Engineer (LATAM) (Hybrid)</h3>
-          <p><em>Nov 2006 – Dec 2008; Apr 2011 – Nov 2012</em></p>
-          <p>HP provides enterprise support and server infrastructure services.</p>
-          <p><strong>Role:</strong> Managed incident resolution for enterprise clients such as Clorox and Bimbo, enhancing system uptime and ensuring SLA compliance across complex, multi-platform environments</p>
-          <ul>
-            <li>Managed incident resolution processes for clients like Clorox, Bimbo, and the U.S. Navy.</li>
-            <li>Reduced resolution time by 35%, improved uptime, and increased customer satisfaction by 30%.</li>
-            <li>Provided Level 2 support across multi-platform servers, achieving 95% SLA compliance.</li>
-            <li>Automated server tasks and coordinated with DevOps and Security teams for continuous operations.</li>
-            <li>Lead end-to-end incident response and resolution for critical IT systems impacting Clorox’s manufacturing, supply chain, and consumer operations, ensuring minimal disruption to business continuity.</li>
-            <li>Act as the escalation point and communication bridge between IT support teams, business units, and external partners during high-severity incidents.</li>
-            <li>Perform root cause analysis (RCA) for recurring or high-impact incidents, and collaborate with engineering and DevOps teams to implement corrective and preventative actions.</li>
-            <li>Maintain adherence to Clorox’s ITIL-aligned incident management process, driving compliance with SLAs and supporting SOX and cybersecurity requirements.</li>
-            <li>Develop real-time dashboards and post-incident reports to communicate incident trends, impacts, and improvements to IT leadership and stakeholders.</li>
-            <li>Support continuous service improvement initiatives, identifying patterns and recommending automation or system enhancements to reduce incident volume and impact.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Bac Credomatic Bank | Regional Support Technician (Onsite)</h3>
-          <p><em>December 2008 – March 2011</em></p>
-          <p>Bac Credomatic is a leading financial institution in Central America.</p>
-          <p><strong>Role:</strong> Provided Level 1/2 IT support across regional branches, ensuring 99% uptime and improving incident management protocols.</p>
-          <ul>
-            <li>Maintained 99% uptime and reduced incident escalations by 25% through improved protocols.</li>
-            <li>Handled access control and troubleshooting ensuring compliance and uptime.</li>
-          </ul>
-        </div>
-
       </div>
     </div>
 
-    <div class="side-column">
-      <div class="section summary">
-        <h2>About Me</h2>
+    <div class="trustedSection">
+      <div class="trustedLabel">TRUSTED EXPERIENCE</div>
+      <div class="trustedCompanies" style="margin-top:25px;">
+        <div class="trustedCompany">iTree Training</div>
+        <div class="trustedCompany">Infinite</div>
+        <div class="trustedCompany">Coca-Cola LATAM</div>
+        <div class="trustedCompany">Equifax</div>
+        <div class="trustedCompany">GBM / IBM</div>
+        <div class="trustedCompany">McKinsey & HP</div>
+      </div>
+    </div>
+
+    <div class="executiveMetrics" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
+      <div class="metricCard">
+        <div class="metricNumber">16+</div>
+        <div class="metricTitle">Years Across Agile Delivery, Product Ownership, and Transformation</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricNumber">50%</div>
+        <div class="metricTitle">Delivery Output Increase at iTree Training</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricNumber">95%</div>
+        <div class="metricTitle">On-Time Delivery for the Year-Long Nissan Program</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricNumber">37%</div>
+        <div class="metricTitle">Sales Increase from Salesforce CMS E-Commerce Work</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricNumber">30%</div>
+        <div class="metricTitle">Reduced Incident Resolution Time at HP</div>
+      </div>
+      <div class="metricCard">
+        <div class="metricNumber">4</div>
+        <div class="metricTitle">Countries with Agile Standards and Adoption at Coca-Cola LATAM</div>
+      </div>
+    </div>
+
+    <div class="executiveStatement">
+      <div class="statementBar"></div>
+      <div>
+        <h2>Executive Value Proposition</h2>
         <p>
-          Senior Agile Digital Project Manager / Coach, Scrum Master, and Product Owner with 16+ years of global experience across Finance, Healthcare, and IT sectors. Expert in Agile (Scrum, SAFe, Kanban), Waterfall, Hybrid methodologies, AI-Cloud prompt engineering, and CMS platforms including Liferay, Salesforce CMS, WordPress. Proven ability to lead enterprise transformations, coach teams, and deliver complex initiatives improving delivery speed by 50%, business value by 40%, and team engagement.
+          Jimena connects executive goals to delivery execution, using Agile coaching, product ownership, risk governance, and digital transformation leadership to improve speed, transparency, predictability, and business value across global teams.
         </p>
-      </div>
-
-      <div class="section certifications">
-        <h2>Certifications</h2>
-        <ul>
-          <li>Project Management Professional (PMP)</li>
-          <li>PMI Agile Certified Practitioner (PMI-ACP)</li>
-          <li>Scrum Master Certified (SMC)</li>
-          <li>Product Owner Certified (SPOC)</li>
-          <li>ITIL v3 Foundations</li>
-          <li>Six Sigma Yellow Belt & Black Belt</li>
-          <li>Design Thinking for Business Strategy (University of Sydney)</li>
-          <li>VMware vSphere</li>
-          <li>IBM Bluemix</li>
-          <li>Turbonomic Associate</li>
-        </ul>
-      </div>
-
-      <div class="section skills">
-        <h2>Technical Skills</h2>
-        <ul>
-          <li>Agile & Project Delivery: Scrum, SAFe, Kanban, Coaching, PI Planning, Risk Management</li>
-          <li>CMS Platforms: Liferay, WordPress, Salesforce CMS, SharePoint</li>
-          <li>Cloud & Tools: AWS, IBM Cloud, Google Cloud, JIRA, Confluence, Azure DevOps, ServiceNow, Workday</li>
-          <li>DevOps & Infrastructure: GitHub, Kubernetes, Unix, Linux, AIX, Windows Server</li>
-          <li>Soft Skills: Stakeholder Management, Communication, Team Coaching, Leadership, KPI/OKR Reporting</li>
-        </ul>
-      </div>
-
-      <div class="section education">
-        <h2>Education</h2>
-        <ul>
-          <li>MBA, Master Cum Laude – SL Business School, Spain, 2021</li>
-          <li>Master in Project Management, Master Cum Laude – SL Business School, Spain, 2021</li>
-          <li>Bachelor’s in Computer Science – Universidad Hispanoamericana, Costa Rica, 2010</li>
-          <li>Technical High School in Accounting – Colegio Monseñor Sanabria, Costa Rica, 2006</li>
-        </ul>
-      </div>
-
-      <div class="section languages">
-        <h2>Languages</h2>
-        <p>Spanish
-          <span class="lang-level">
-            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
-          </span>
-        </p>
-        <p>English
-          <span class="lang-level">
-            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
-          </span>
-        </p>
-        <p>Portuguese
-          <span class="lang-level">
-            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot empty"></span><span class="dot empty"></span>
-          </span>
-        </p>
-      </div>
-
-      <div class="section additional-info">
-        <h2>Additional Experience</h2>
-        <ul>
-          <li>Trainer at <strong>LearnQuest</strong> and <strong>SWAT Consulting Services</strong>: Delivered professional training programs across diverse topics to enhance organizational capabilities.</li>
-          <li>AI Prompt Engineering: Developed and provided expert training on leveraging AI prompt techniques for improved digital solutions.</li>
-          <li>Trained on HEDIS Care Management, Cybersecurity, SEO, and Google Analytics.</li>
-          <li><strong>Agile Community Leadership:</strong> Presented at the 2023 Agile LATAM Conference on scaling Scrum practices across multinational teams. Regular contributor to Agile Costa Rica meetups, sharing insights on value stream mapping and enterprise transformation.</li>
-          <li><strong>Corporate Training & Mentorship:</strong> Designed and delivered internal Agile workshops for client organizations, directly coaching over 20 Scrum Masters and Product Owners in advanced Scrum and Kanban adoption. Mentored new Agile leaders, resulting in improved team performance and career progression for mentees.</li>
-          <li><strong>Volunteer Agile Consulting:</strong> Provided pro bono Agile coaching and digital transformation strategies to two non-profit organizations, helping them reduce project lead times and increase volunteer engagement using lightweight Scrum frameworks.</li>
-        </ul>
       </div>
     </div>
   </div>
+</section>
+
+<section id="journey" class="container">
+  <div class="sectionTitle">
+    <span class="kicker"><i class="fa-solid fa-briefcase"></i> Enterprise Leadership Journey</span>
+    <h2>Building Delivery Capability Across Global Organizations</h2>
+    <p>Her career spans Agile transformation, product delivery, CMS and e-commerce modernization, healthcare automation, enterprise support, and IT operations leadership.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:330px 1fr;gap:45px;align-items:start;">
+    <div style="position:sticky;top:110px;">
+      <div class="profileCard" style="padding:24px;">
+        <h3 style="margin-bottom:25px;">Career at a Glance</h3>
+        <div style="display:flex;flex-direction:column;gap:18px;color:var(--muted);">
+          <div><strong style="color:var(--text);">16+ Years</strong><br>Enterprise transformation and delivery leadership.</div>
+          <div><strong style="color:var(--text);">Global Scope</strong><br>Americas, Europe, and Asia training and delivery exposure.</div>
+          <div><strong style="color:var(--text);">Cross-Functional</strong><br>Product, coaching, operations, and executive partnership.</div>
+          <div><strong style="color:var(--text);">Agile + Hybrid</strong><br>Scrum, SAFe, Kanban, Waterfall, and governance models.</div>
+          <div><strong style="color:var(--text);">Enterprise Stack</strong><br>CMS, Atlassian, ServiceNow, SharePoint, Salesforce, IBM.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="profileCard" style="padding:28px; margin-bottom:28px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+          <div>
+            <h2>Senior Agile Coach / Project Manager</h2>
+            <h4 style="color:#71c5ff;margin-top:8px;">iTree Training</h4>
+          </div>
+          <div class="kicker">April 2020 – Present</div>
+        </div>
+        <p style="margin:22px 0;color:var(--muted);line-height:1.9;">
+          Leads multi-country Agile transformation programs, coaches executives and delivery teams, and improves flow, governance, and predictability for global clients including Nissan and enterprise content operations.
+        </p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+          <div class="metric"><h3>50% Delivery Increase</h3><p>Improved delivery output through Agile coaching, metrics, and governance.</p></div>
+          <div class="metric"><h3>95% On-Time Delivery</h3><p>Successfully delivered a year-long multi-country Nissan program on schedule.</p></div>
+          <div class="metric"><h3>100% Stakeholder Satisfaction</h3><p>Aligned scope, expectations, and delivery outcomes across executives and teams.</p></div>
+        </div>
+      </div>
+
+      <div class="profileCard" style="padding:28px; margin-bottom:28px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+          <div>
+            <h2>Senior Scrum Master</h2>
+            <h4 style="color:#71c5ff;margin-top:8px;">Infinite Computer Solutions</h4>
+          </div>
+          <div class="kicker">April 2022 – Dec 2024</div>
+        </div>
+        <p style="margin:22px 0;color:var(--muted);line-height:1.9;">
+          Led Agile delivery in healthcare, coached five teams, and automated onboarding and reporting processes to improve operational efficiency and delivery transparency.
+        </p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+          <div class="metric"><h3>60% Faster Onboarding</h3><p>Reduced onboarding and offboarding time through workflow automation.</p></div>
+          <div class="metric"><h3>30% Less Manual Reporting</h3><p>Automated operational reporting and monitoring through SharePoint integrations.</p></div>
+          <div class="metric"><h3>25% Better Capacity Alignment</h3><p>Mapped roles and taxonomy to improve resource allocation accuracy.</p></div>
+        </div>
+      </div>
+
+      <div class="profileCard" style="padding:28px; margin-bottom:28px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+          <div>
+            <h2>Business Relationship Analyst / Product Owner</h2>
+            <h4 style="color:#71c5ff;margin-top:8px;">Coca-Cola LATAM</h4>
+          </div>
+          <div class="kicker">Nov 2018 – Apr 2022</div>
+        </div>
+        <p style="margin:22px 0;color:var(--muted);line-height:1.9;">
+          Owned product vision, roadmap execution, business requirements, and Agile standards for multi-country CMS, CRM, and e-commerce initiatives.
+        </p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+          <div class="metric"><h3>37% Sales Lift</h3><p>Enhanced Salesforce CMS e-commerce cart features in Brazil.</p></div>
+          <div class="metric"><h3>17% Traffic Growth</h3><p>Improved a Buenos Aires WordPress conversion project.</p></div>
+          <div class="metric"><h3>4 Countries</h3><p>Defined Agile standards across LATAM business continuity programs.</p></div>
+        </div>
+      </div>
+
+      <div class="profileCard" style="padding:28px; margin-bottom:28px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+          <div>
+            <h2>Project Manager / Scrum Master</h2>
+            <h4 style="color:#71c5ff;margin-top:8px;">Equifax</h4>
+          </div>
+          <div class="kicker">Aug 2017 – Nov 2018</div>
+        </div>
+        <p style="margin:22px 0;color:var(--muted);line-height:1.9;">
+          Led CMS redesign and mobile-first delivery, improving engagement, velocity, and sprint execution across international teams.
+        </p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+          <div class="metric"><h3>30% More Engagement</h3><p>Delivered a multi-language Liferay CMS redesign.</p></div>
+          <div class="metric"><h3>20% Velocity Increase</h3><p>Improved sprint execution through ceremony facilitation and coaching.</p></div>
+          <div class="metric"><h3>25% Shorter Cycles</h3><p>Reduced development cycles using Agile discipline and blockers removal.</p></div>
+        </div>
+      </div>
+
+      <div class="profileCard" style="padding:28px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+          <div>
+            <h2>Junior Project Manager, Data Engineer, Incident Manager</h2>
+            <h4 style="color:#71c5ff;margin-top:8px;">GBM, McKinsey, HP, BAC Credomatic</h4>
+          </div>
+          <div class="kicker">2013 – 2017</div>
+        </div>
+        <p style="margin:22px 0;color:var(--muted);line-height:1.9;">
+          Built the foundation of her career across enterprise IT, data engineering, infrastructure support, incident management, and regional delivery operations.
+        </p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+          <div class="metric"><h3>15+ IBM Solutions</h3><p>Delivered regional IT-Smart solutions with measurable efficiency gains.</p></div>
+          <div class="metric"><h3>35% Faster Resolution</h3><p>Improved incident resolution and service uptime in enterprise support.</p></div>
+          <div class="metric"><h3>99% Uptime</h3><p>Supported regional branches with reliable support and incident handling.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="impact" class="container">
+  <div class="sectionTitle">
+    <span class="kicker"><i class="fa-solid fa-chart-line"></i> Business Impact</span>
+    <h2>Measurable Outcomes Across Delivery, Growth, and Operations</h2>
+    <p>Her portfolio shows consistent improvement in delivery performance, team satisfaction, automation, customer experience, and business value.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:28px;">
+    <div class="profileCard" style="padding:26px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;">
+        <div style="font-size:46px;color:#4db5ff;"><i class="fa-solid fa-rocket"></i></div>
+        <div class="kicker">DELIVERY</div>
+      </div>
+      <h3 style="margin-bottom:18px;">Scaled Delivery Performance</h3>
+      <p style="line-height:1.9;color:var(--muted);margin-bottom:25px;">
+        Improved output, predictability, and milestone delivery through Agile coaching, governance, and disciplined cross-functional execution.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <span class="kicker">50% Output Increase</span>
+        <span class="kicker">95% On-Time Delivery</span>
+        <span class="kicker">100% Satisfaction</span>
+      </div>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;">
+        <div style="font-size:46px;color:#58d68d;"><i class="fa-solid fa-gears"></i></div>
+        <div class="kicker">AUTOMATION</div>
+      </div>
+      <h3 style="margin-bottom:18px;">Automated Operations</h3>
+      <p style="line-height:1.9;color:var(--muted);margin-bottom:25px;">
+        Reduced manual effort in onboarding, reporting, service management, and support workflows through tooling, dashboards, and process improvement.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <span class="kicker">60% Faster On/Offboarding</span>
+        <span class="kicker">30% Less Reporting</span>
+        <span class="kicker">25% Fewer Escalations</span>
+      </div>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;">
+        <div style="font-size:46px;color:#ffd166;"><i class="fa-solid fa-users"></i></div>
+        <div class="kicker">PEOPLE</div>
+      </div>
+      <h3 style="margin-bottom:18px;">Coaching and Team Growth</h3>
+      <p style="line-height:1.9;color:var(--muted);margin-bottom:25px;">
+        Mentored Scrum Masters, Product Owners, Agile teams, and business stakeholders to improve communication, clarity, and delivery maturity.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <span class="kicker">5 Teams Coached</span>
+        <span class="kicker">20% Throughput Increase</span>
+        <span class="kicker">65% Team Satisfaction Lift</span>
+      </div>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;">
+        <div style="font-size:46px;color:#f39c12;"><i class="fa-solid fa-chart-column"></i></div>
+        <div class="kicker">EXECUTIVE</div>
+      </div>
+      <h3 style="margin-bottom:18px;">Executive Delivery</h3>
+      <p style="line-height:1.9;color:var(--muted);margin-bottom:25px;">
+        Bridged executives and delivery teams by transforming strategy into roadmaps, governance, risk management, and measurable transformation outcomes.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <span class="kicker">Strategy</span>
+        <span class="kicker">Roadmaps</span>
+        <span class="kicker">Governance</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="padding-top:90px;">
+    <div style="text-align:center;margin-bottom:60px;">
+      <span class="kicker"><i class="fa-solid fa-bolt"></i> Core Leadership Capabilities</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;">
+      <div class="metric"><h3>Enterprise Transformation</h3><p>Leading modernization initiatives that connect business strategy with delivery execution.</p></div>
+      <div class="metric"><h3>Agile Coaching</h3><p>Scaling Scrum, SAFe, Kanban, and coaching practices across teams and leaders.</p></div>
+      <div class="metric"><h3>Product Ownership</h3><p>Owning backlog prioritization, roadmaps, release planning, and stakeholder alignment.</p></div>
+      <div class="metric"><h3>Operational Excellence</h3><p>Driving reliability, dashboards, incident improvement, and service management discipline.</p></div>
+      <div class="metric"><h3>Digital Platforms</h3><p>Delivering CMS, e-commerce, SharePoint, ServiceNow, Jira, and cloud-enabled workflows.</p></div>
+      <div class="metric"><h3>Executive Partnership</h3><p>Providing visibility and support through governance, communication, and risk control.</p></div>
+    </div>
+  </section>
+</section>
+
+<section id="technology" class="container">
+  <div class="sectionTitle">
+    <span class="kicker"><i class="fa-solid fa-microchip"></i> Enterprise Technology Portfolio</span>
+    <h2>Tools, Platforms, and Methodologies</h2>
+    <p>Her background combines Agile leadership with enterprise delivery tools, CMS platforms, cloud exposure, and IBM-centric technical training.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;">
+    <div class="profileCard" style="padding:26px;">
+      <h3 style="margin-bottom:25px;">Agile & Delivery</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;">
+        <span class="kicker">Scrum</span><span class="kicker">SAFe</span><span class="kicker">Kanban</span><span class="kicker">Waterfall</span><span class="kicker">Hybrid</span><span class="kicker">PI Planning</span><span class="kicker">Risk Management</span><span class="kicker">PMO</span>
+      </div>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <h3 style="margin-bottom:25px;">CMS & Digital</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;">
+        <span class="kicker">Liferay</span><span class="kicker">WordPress</span><span class="kicker">Salesforce CMS</span><span class="kicker">SharePoint</span><span class="kicker">Content Management</span><span class="kicker">E-Commerce</span>
+      </div>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <h3 style="margin-bottom:25px;">Cloud & Collaboration</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;">
+        <span class="kicker">AWS</span><span class="kicker">IBM Cloud</span><span class="kicker">Google Cloud</span><span class="kicker">Jira</span><span class="kicker">Confluence</span><span class="kicker">Azure DevOps</span><span class="kicker">ServiceNow</span>
+      </div>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <h3 style="margin-bottom:25px;">Operations & Data</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;">
+        <span class="kicker">Workday</span><span class="kicker">Excel</span><span class="kicker">Reporting</span><span class="kicker">Dashboards</span><span class="kicker">Data Governance</span><span class="kicker">KPI / OKR</span>
+      </div>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <h3 style="margin-bottom:25px;">IBM Technical Stack</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;">
+        <span class="kicker">DOORS</span><span class="kicker">WebSphere</span><span class="kicker">MQ</span><span class="kicker">DataPower</span><span class="kicker">FileNet</span><span class="kicker">Datacap</span><span class="kicker">TRIRIGA</span><span class="kicker">QRadar</span>
+      </div>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <h3 style="margin-bottom:25px;">Languages</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;">
+        <span class="kicker">Spanish</span><span class="kicker">English</span><span class="kicker">Portuguese</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="training" class="container">
+  <div class="sectionTitle">
+    <span class="kicker"><i class="fa-solid fa-person-chalkboard"></i> Global Technical Instruction</span>
+    <h2>Training, Teaching, and Knowledge Transfer</h2>
+    <p>Her teaching profile reflects hands-on instruction across global regions, enterprise tools, Agile practices, and technical platforms.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;">
+    <div class="profileCard" style="padding:26px;">
+      <h3>Enterprise Agile Coaching</h3>
+      <p style="margin-top:20px;color:var(--muted);line-height:1.9;">
+        Delivered Agile coaching, Scrum ceremonies, and transformation workshops for teams and executives across the Americas, Europe, and Asia.
+      </p>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <h3>Corporate Training & Mentorship</h3>
+      <p style="margin-top:20px;color:var(--muted);line-height:1.9;">
+        Designed and delivered workshops for Scrum Masters, Product Owners, and project managers, helping improve collaboration and delivery maturity.
+      </p>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <h3>AI Prompt Engineering</h3>
+      <p style="margin-top:20px;color:var(--muted);line-height:1.9;">
+        Trained on AI prompt techniques and applied them to digital solutions, productivity workflows, and modern knowledge support.
+      </p>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <h3>Enterprise Technical Training</h3>
+      <p style="margin-top:20px;color:var(--muted);line-height:1.9;">
+        Completed extensive IBM training in DOORS, WebSphere, MQ, FileNet, Datacap, DataPower, TRIRIGA, QRadar, Workload Scheduler, and more.
+      </p>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <h3>Learning Scope</h3>
+      <p style="margin-top:20px;color:var(--muted);line-height:1.9;">
+        Training covered cloud, cybersecurity, middleware, automation, business analysis, emotional intelligence, and project management disciplines across multiple years.
+      </p>
+    </div>
+
+    <div class="profileCard" style="padding:26px;">
+      <h3>Approximate Training Hours</h3>
+      <p style="margin-top:20px;color:var(--muted);line-height:1.9;">
+        Based on the course log provided, the total recorded technical training is approximately 1,100+ hours, excluding incomplete entries and repeated listings.
+      </p>
+    </div>
+  </div>
+
+  <div class="profileCard" style="padding:26px;margin-top:28px;">
+    <h3 style="margin-bottom:22px;">Representative Training Areas</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;">
+      <span class="kicker">IBM DOORS</span>
+      <span class="kicker">WebSphere</span>
+      <span class="kicker">IBM MQ</span>
+      <span class="kicker">DataPower</span>
+      <span class="kicker">FileNet</span>
+      <span class="kicker">Datacap</span>
+      <span class="kicker">TRIRIGA</span>
+      <span class="kicker">QRadar SIEM</span>
+      <span class="kicker">Business Automation</span>
+      <span class="kicker">Workload Scheduler</span>
+      <span class="kicker">Cloud Fundamentals</span>
+      <span class="kicker">Emotional Intelligence</span>
+      <span class="kicker">PMP / BCAM</span>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="sectionTitle">
+    <span class="kicker"><i class="fa-solid fa-award"></i> Education & Credentials</span>
+    <h2>Academic Foundation and Certifications</h2>
+  </div>
+
+  <div style="display:grid;grid-template-columns:2fr 1fr;gap:35px;">
+    <div class="profileCard" style="padding:28px;">
+      <h3 style="margin-bottom:30px;">Education</h3>
+      <div style="margin-bottom:30px;">
+        <h4 style="color:#6fc8ff;">MBA, Master Cum Laude</h4>
+        <p style="color:var(--muted);margin-top:10px;line-height:1.8;">SL Business School, Spain — 2021</p>
+      </div>
+      <div style="margin-bottom:30px;">
+        <h4 style="color:#6fc8ff;">Master in Project Management, Master Cum Laude</h4>
+        <p style="color:var(--muted);margin-top:10px;line-height:1.8;">SL Business School, Spain — 2021</p>
+      </div>
+      <div style="margin-bottom:30px;">
+        <h4 style="color:#6fc8ff;">Bachelor’s in Computer Science</h4>
+        <p style="color:var(--muted);margin-top:10px;line-height:1.8;">Universidad Hispanoamericana, Costa Rica — 2010</p>
+      </div>
+      <div>
+        <h4 style="color:#6fc8ff;">Technical High School in Accounting</h4>
+        <p style="color:var(--muted);margin-top:10px;line-height:1.8;">Colegio Monseñor Sanabria, Costa Rica — 2006</p>
+      </div>
+    </div>
+
+    <div class="profileCard" style="padding:28px;">
+      <h3 style="margin-bottom:30px;">Certifications</h3>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="kicker">Project Management Professional (PMP)</div>
+        <div class="kicker">PMI Agile Certified Practitioner (PMI-ACP)</div>
+        <div class="kicker">Scrum Master Certified (SMC)</div>
+        <div class="kicker">Product Owner Certified (SPOC)</div>
+        <div class="kicker">ITIL v3 Foundations</div>
+        <div class="kicker">Six Sigma Yellow Belt & Black Belt</div>
+        <div class="kicker">Design Thinking for Business Strategy</div>
+        <div class="kicker">VMware vSphere</div>
+        <div class="kicker">IBM Bluemix</div>
+        <div class="kicker">Turbonomic Associate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container">
+  <div class="executiveClosing">
+    <div class="executiveGlow"></div>
+    <div style="position:relative;z-index:2;max-width:950px;margin:auto;text-align:center;">
+      <span class="kicker"><i class="fa-solid fa-rocket"></i> Let's Build What's Next</span>
+      <h2 style="font-size:56px;font-weight:900;margin:30px 0;line-height:1.15;">
+        Helping Organizations Transform
+        <br>
+        Technology Into Business Value
+      </h2>
+      <p style="font-size:20px;line-height:1.9;color:var(--muted);max-width:850px;margin:auto;">
+        Jimena’s portfolio reflects a career built on measurable delivery, Agile coaching, global collaboration, and enterprise transformation across finance, healthcare, technology, and professional services.
+      </p>
+      <div style="margin-top:55px;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;">
+        <a href="mailto:aj.balop@gmail.com" class="primaryButton">
+          <i class="fa-solid fa-envelope"></i>
+          Email Jimena
+        </a>
+        <a href="https://www.linkedin.com/in/ajbalop" target="_blank" class="secondaryButton">
+          <i class="fab fa-linkedin"></i>
+          View LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:90px;display:grid;grid-template-columns:380px 1fr;gap:40px;align-items:start;">
+    <div class="profileCard" style="padding:28px;">
+      <div style="display:flex;align-items:center;gap:20px;margin-bottom:25px;">
+        <div style="width:90px;height:90px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1f5f9e,#0d1b2e);font-size:32px;font-weight:800;color:#8fd0ff;">JB</div>
+        <div>
+          <h2 style="margin-bottom:5px;">Jimena Barrantes</h2>
+          <p style="color:#7cc8ff;">Senior Agile Digital Project Manager</p>
+        </div>
+      </div>
+
+      <p style="line-height:1.9;color:var(--muted);">
+        Agile Coach • Scrum Master • Product Owner • CMS & Digital Transformation • Global Training • Enterprise Delivery
+      </p>
+
+      <hr style="margin:30px 0;border-color:rgba(255,255,255,.08);">
+
+      <div style="display:flex;flex-direction:column;gap:18px;color:var(--muted);">
+        <div><i class="fa-solid fa-location-dot"></i> Heredia, Costa Rica</div>
+        <div><i class="fa-solid fa-language"></i> Spanish • English • Portuguese</div>
+        <div><i class="fa-solid fa-globe"></i> Global Delivery Scope</div>
+        <div><i class="fa-solid fa-user-group"></i> Remote • Hybrid • International</div>
+      </div>
+    </div>
+
+    <div class="profileCard" style="padding:28px;">
+      <h2 style="margin-bottom:35px;">Connect</h2>
+      <div class="executiveContactGrid">
+        <a href="mailto:aj.balop@gmail.com" class="contactCard">
+          <div class="contactIcon"><i class="fa-solid fa-envelope"></i></div>
+          <div><h4>Email</h4><p>aj.balop@gmail.com</p></div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/ajbalop" target="_blank" class="contactCard">
+          <div class="contactIcon"><i class="fab fa-linkedin"></i></div>
+          <div><h4>LinkedIn</h4><p>linkedin.com/in/ajbalop</p></div>
+        </a>
+
+        <div class="contactCard">
+          <div class="contactIcon"><i class="fa-solid fa-phone"></i></div>
+          <div><h4>Phone</h4><p>+506 7149 1877</p></div>
+        </div>
+
+        <div class="contactCard">
+          <div class="contactIcon"><i class="fa-solid fa-location-dot"></i></div>
+          <div><h4>Location</h4><p>Heredia, Costa Rica</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:80px;">
+    <div class="profileCard" style="padding:28px;">
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:25px;text-align:center;">
+        <div><div style="font-size:38px;font-weight:800;color:#69c6ff;">16+</div><div style="margin-top:10px;color:var(--muted);">Years</div></div>
+        <div><div style="font-size:38px;font-weight:800;color:#69c6ff;">50%</div><div style="margin-top:10px;color:var(--muted);">Delivery Growth</div></div>
+        <div><div style="font-size:38px;font-weight:800;color:#69c6ff;">95%</div><div style="margin-top:10px;color:var(--muted);">On-Time Delivery</div></div>
+        <div><div style="font-size:38px;font-weight:800;color:#69c6ff;">300+</div><div style="margin-top:10px;color:var(--muted);">Training Hours</div></div>
+        <div><div style="font-size:38px;font-weight:800;color:#69c6ff;">Global</div><div style="margin-top:10px;color:var(--muted);">Scope</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:25px;">
+      <div>
+        <h3 style="margin-bottom:8px;">Jimena Barrantes</h3>
+        <p style="color:var(--muted);">
+          Senior Agile Digital Project Manager • Agile Coach • Product Owner • Global Training
+        </p>
+      </div>
+      <div style="display:flex;gap:18px;font-size:22px;">
+        <a href="mailto:aj.balop@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/ajbalop" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".metricNumber").forEach(counter=>{
+  const original = counter.innerText.trim();
+  const numeric = parseInt(original.replace(/\D/g,''));
+  if (isNaN(numeric)) return;
+
+  let current = 0;
+  const speed = Math.max(15, Math.floor(1800 / numeric));
+
+  const interval = setInterval(()=>{
+    current++;
+    counter.innerHTML = current + (original.includes("%") ? "%" : "+");
+    if(current >= numeric){
+      counter.innerHTML = original;
+      clearInterval(interval);
+    }
+  }, speed);
+});
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:.12});
+
+document.querySelectorAll(".profileCard,.metricCard,.executiveStatement,.executiveClosing").forEach(el=>{
+  el.classList.add("fadeReveal");
+  observer.observe(el);
+});
+
+window.addEventListener("scroll",()=>{
+  const nav=document.getElementById("navbar");
+  if(!nav) return;
+  if(window.scrollY>80){
+    nav.classList.add("scrolled");
+  }else{
+    nav.classList.remove("scrolled");
+  }
+});
+
+const recruiterButton=document.querySelector(".recruiterMode");
+if(recruiterButton){
+  recruiterButton.onclick=function(){
+    document.querySelectorAll("#journey,#impact,#technology,#training").forEach(section=>{
+      section.style.display="none";
+    });
+    window.scrollTo({top:0,behavior:"smooth"});
+  };
+}
+
+const executiveButton=document.querySelector(".executiveMode");
+if(executiveButton){
+  executiveButton.onclick=function(){
+    document.querySelectorAll("#journey,#impact,#technology,#training").forEach(section=>{
+      section.style.display="block";
+    });
+  };
+}
+
+const technicalButton=document.querySelector(".technicalMode");
+if(technicalButton){
+  technicalButton.onclick=function(){
+    document.querySelectorAll("#journey,#impact,#training").forEach(section=>{
+      section.style.display="none";
+    });
+    const tech = document.querySelector("#technology");
+    if(tech){
+      tech.style.display="block";
+      window.scrollTo({top:tech.offsetTop-70,behavior:"smooth"});
+    }
+  };
+}
+</script>
+
 </body>
 </html>
