@@ -1,2920 +1,638 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-mode="quick">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Jose Zuniga | Enterprise Technology Leader</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jose Zuniga | Senior Technical Program Manager</title>
+<meta name="description" content="Senior Technical Program Manager with 18+ years in enterprise technology. Cloud transformation, DevOps, SRE, Python and Jira API automation, Agile delivery and AI enablement. Based in Costa Rica.">
+<meta name="author" content="Jose Zuniga">
+<meta property="og:title" content="Jose Zuniga | Senior Technical Program Manager">
+<meta property="og:description" content="Enterprise delivery leader who also writes the code: cloud, DevOps, SRE, automation and AI enablement. 80% less manual reporting, 30% faster MTTR, 3,000+ training hours.">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="Profile.jpeg">
+<meta name="theme-color" content="#07121f">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-<style>
-:root{
-  --bg:#071320;
-  --bg2:#0d2036;
-  --card:rgba(17,32,56,.70);
-  --border:rgba(255,255,255,.08);
-  --text:#edf5ff;
-  --muted:#b7c4d9;
-  --primary:#3da5ff;
-  --primary2:#65c4ff;
-  --success:#41d18d;
-  --shadow:0 20px 60px rgba(0,0,0,.35);
-  --radius:22px;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:'Inter',sans-serif;
-  background:
-    radial-gradient(circle at top right,#194b92 0%,transparent 35%),
-    radial-gradient(circle at bottom left,#10315c 0%,transparent 30%),
-    linear-gradient(135deg,#071320,#0b1c31,#08111f);
-  color:var(--text);
-  overflow-x:hidden;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-.container{
-  width:min(1350px,92%);
-  margin:auto;
-}
-
-nav{
-  position:fixed;
-  top:20px;
-  left:50%;
-  transform:translateX(-50%);
-  width:min(1300px,94%);
-  height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 30px;
-  background:rgba(12,24,43,.55);
-  backdrop-filter:blur(18px);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:18px;
-  z-index:999;
-  box-shadow:0 10px 40px rgba(0,0,0,.30);
-}
-
-.logo{
-  font-size:20px;
-  font-weight:800;
-  letter-spacing:.5px;
-}
-
-.logo span{
-  color:#5bb7ff;
-}
-
-.menu{
-  display:flex;
-  gap:28px;
-  font-size:14px;
-  font-weight:600;
-}
-
-.menu a{
-  opacity:.8;
-  transition:.25s;
-}
-
-.menu a:hover{
-  opacity:1;
-  color:#7dc8ff;
-}
-
-.modeButton{
-  padding:12px 20px;
-  border:0;
-  border-radius:999px;
-  font-size:13px;
-  font-weight:700;
-  cursor:pointer;
-  background:rgba(255,255,255,.08);
-  color:var(--text);
-  transition:.3s;
-}
-
-.modeButton:hover{
-  transform:translateY(-2px);
-}
-
-.activeMode{
-  background:linear-gradient(135deg,#2196f3,#0d6efd);
-  box-shadow:0 10px 30px rgba(0,140,255,.25);
-}
-
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  padding-top:120px;
-  position:relative;
-}
-
-.heroBackground{
-  position:absolute;
-  inset:0;
-  overflow:hidden;
-  pointer-events:none;
-}
-
-.aurora{
-  position:absolute;
-  border-radius:50%;
-  filter:blur(50px);
-  opacity:.35;
-}
-
-.aurora1{
-  width:320px;
-  height:320px;
-  background:#3da5ff;
-  top:80px;
-  right:10%;
-}
-
-.aurora2{
-  width:260px;
-  height:260px;
-  background:#65c4ff;
-  bottom:10%;
-  left:8%;
-}
-
-.aurora3{
-  width:220px;
-  height:220px;
-  background:#41d18d;
-  top:30%;
-  left:35%;
-}
-
-.heroGrid{
-  display:grid;
-  grid-template-columns:1.3fr .7fr;
-  gap:60px;
-  align-items:center;
-  position:relative;
-  z-index:1;
-}
-
-.heroBadge,.kicker{
-  display:inline-flex;
-  gap:10px;
-  align-items:center;
-  padding:8px 16px;
-  border-radius:999px;
-  background:rgba(61,165,255,.12);
-  border:1px solid rgba(61,165,255,.35);
-  color:#8fd0ff;
-  font-size:13px;
-  font-weight:700;
-  margin-bottom:24px;
-}
-
-.heroTitle{
-  font-size:68px;
-  line-height:1.02;
-  font-weight:800;
-  margin-bottom:18px;
-}
-
-.heroTitle span{
-  background:linear-gradient(90deg,#73c8ff,#ffffff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.heroSubtitle{
-  font-size:24px;
-  color:#8fc7ff;
-  font-weight:600;
-  margin-bottom:25px;
-}
-
-.heroSummary{
-  font-size:18px;
-  line-height:1.8;
-  color:var(--muted);
-  max-width:760px;
-  margin-bottom:40px;
-}
-
-.heroButtons{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.primaryButton,.secondaryButton{
-  display:inline-flex;
-  gap:10px;
-  align-items:center;
-  padding:18px 34px;
-  border-radius:16px;
-  font-weight:700;
-}
-
-.primaryButton{
-  background:linear-gradient(135deg,#1d9bf0,#0f6eff);
-  box-shadow:0 15px 35px rgba(0,130,255,.35);
-}
-
-.secondaryButton{
-  border:1px solid rgba(255,255,255,.15);
-  background:rgba(255,255,255,.05);
-}
-
-.contactIcons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:18px;
-  margin-top:28px;
-}
-
-.contactIcons a{
-  width:58px;
-  height:58px;
-  border-radius:18px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:23px;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.08);
-  transition:.35s;
-  box-shadow:var(--shadow);
-}
-
-.contactIcons a:hover{
-  transform:translateY(-8px);
-  background:#1791ff;
-}
-
-.executivePanel{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:30px;
-  padding:35px;
-  backdrop-filter:blur(18px);
-  box-shadow:var(--shadow);
-}
-
-.profileFrame{
-  width:270px;
-  height:270px;
-  margin:auto;
-  border-radius:50%;
-  padding:8px;
-  background:linear-gradient(135deg,#3fa7ff,#6fd2ff,#184d8b);
-}
-
-.profileFrame img{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  object-fit:cover;
-  border:8px solid #091626;
-  display:block;
-}
-
-.executiveFloatingCard{
-  margin-top:30px;
-  padding:22px;
-  border-radius:18px;
-  background:rgba(255,255,255,.03);
-  border:1px solid rgba(255,255,255,.08);
-  text-align:center;
-}
-
-.floatingTitle{
-  margin-bottom:14px;
-  font-size:20px;
-  font-weight:700;
-}
-
-.trustedCompanies{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:25px;
-}
-
-.trustedCompanies h3{
-  font-size:34px;
-  margin-bottom:8px;
-  color:#72c6ff;
-}
-
-.trustedCompanies span{
-  display:block;
-  color:var(--muted);
-  font-size:14px;
-  max-width:140px;
-}
-
-.trustedSection{
-  margin-top:42px;
-  text-align:center;
-}
-
-.trustedLabel{
-  display:inline-flex;
-  align-items:center;
-  padding:8px 16px;
-  border-radius:999px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.08);
-  color:#cfe7ff;
-  font-size:13px;
-  font-weight:700;
-}
-
-.trustedCompany{
-  padding:14px 18px;
-  border-radius:14px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-  min-width:120px;
-  text-align:center;
-  font-weight:700;
-}
-
-.executiveMetrics{
-  margin-top:60px;
-}
-
-.metricCard{
-  background:rgba(255,255,255,.05);
-  padding:26px;
-  border-radius:22px;
-  border:1px solid rgba(255,255,255,.08);
-  transition:.35s;
-}
-
-.metricCard:hover{
-  transform:translateY(-10px);
-  background:rgba(61,165,255,.12);
-}
-
-.metricNumber{
-  font-size:42px;
-  margin-bottom:12px;
-  color:#72c6ff;
-  font-weight:800;
-}
-
-.metricTitle{
-  color:#bfcde0;
-  font-size:15px;
-  line-height:1.6;
-}
-
-.executiveStatement{
-  display:flex;
-  gap:18px;
-  margin-top:60px;
-  padding:26px;
-  border-radius:22px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-}
-
-.statementBar{
-  width:6px;
-  border-radius:999px;
-  background:linear-gradient(180deg,#3da5ff,#41d18d);
-}
-
-.executiveStatement h2{
-  margin-bottom:14px;
-  font-size:28px;
-}
-
-.executiveStatement p{
-  line-height:1.9;
-  color:var(--muted);
-}
-
-@media(max-width:1200px){
-  .heroGrid{
-    grid-template-columns:1fr;
-  }
-  .heroTitle{
-    font-size:52px;
-  }
-}
-
-@media(max-width:700px){
-  .menu{
-    display:none;
-  }
-  .heroTitle{
-    font-size:42px;
-  }
-}
-</style>
-
-<nav id="navbar">
-  <div class="logo">JOSE <span>ZUNIGA</span></div>
-  <div class="menu">
-    <a href="#executive">Executive</a>
-    <a href="#journey">Journey</a>
-    <a href="#impact">Impact</a>
-    <a href="#technology">Technology</a>
-    <a href="#training">Training</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <div style="display:flex;gap:12px;align-items:center;">
-    <button class="modeButton recruiterMode">⚡ 20s View</button>
-    <button class="modeButton executiveMode activeMode">Executive</button>
-    <button class="modeButton technicalMode">Technical</button>
-  </div>
-</nav>
-
-<section class="hero" id="executive">
-  <div class="heroBackground">
-    <div class="aurora aurora1"></div>
-    <div class="aurora aurora2"></div>
-    <div class="aurora aurora3"></div>
-  </div>
-
-  <div class="container">
-    <div class="heroGrid">
-      <div>
-        <div class="heroBadge">
-          <i class="fa-solid fa-circle-check"></i>
-          OPEN TO GLOBAL LEADERSHIP OPPORTUNITIES
-        </div>
-
-        <h1 class="heroTitle">
-          Turning Enterprise Strategy into
-          <span>Engineering Execution</span>
-        </h1>
-
-        <p class="heroSubtitle">
-          Technical Program Management • Enterprise Transformation • Cloud Modernization • AI Enablement • Engineering Leadership
-        </p>
-
-        <p class="heroSummary">
-          I help enterprise organizations transform ambitious business strategy into measurable engineering execution by aligning executives, architects and global delivery teams around cloud modernization, AI adoption, operational excellence and large-scale technology transformation.
-        </p>
-
-        <div class="heroButtons">
-          <a href="https://calendar.app.google/YegybKZoepgHuMCa8" target="_blank" class="primaryButton">
-            <i class="fa-solid fa-calendar-days"></i>
-            Schedule Meeting
-          </a>
-          <a href="Jose Zuniga Resume.pdf" target="_blank" class="secondaryButton">
-            <i class="fa-solid fa-file-pdf"></i>
-            Download Resume
-          </a>
-        </div>
-
-        <div class="contactIcons">
-          <a href="mailto:josean.111@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-          <a href="https://linkedin.com/in/jose-azuniga" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="Jose Zuniga Resume.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
-          <a href="https://calendar.app.google/YegybKZoepgHuMCa8" target="_blank"><i class="fa-solid fa-calendar-check"></i></a>
-          <a href="https://wa.me/50688975841" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        </div>
-      </div>
-
-      <div>
-        <div class="executivePanel">
-          <div class="profileFrame">
-            <img src="Profile.jpeg" alt="José Zuniga">
-          </div>
-
-          <div class="executiveFloatingCard">
-            <div class="floatingTitle">EXECUTIVE SNAPSHOT</div>
-            <div class="trustedCompanies" style="margin-top:25px;">
-              <div>
-                <h3>15+</h3>
-                <span>Years Leading Enterprise Technology</span>
-              </div>
-              <div>
-                <h3>65+</h3>
-                <span>Largest Global Engineering Team</span>
-              </div>
-              <div>
-                <h3>4</h3>
-                <span>Fortune 500 Organizations</span>
-              </div>
-              <div>
-                <h3>300+</h3>
-                <span>Enterprise Technical Trainings</span>
-              </div>
-              <div>
-                <h3>3</h3>
-                <span>Graduate Degrees</span>
-              </div>
-              <div>
-                <h3>Global</h3>
-                <span>AMER • EMEA • APAC</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="trustedSection">
-      <div class="trustedLabel">TRUSTED EXPERIENCE</div>
-      <div class="trustedCompanies" style="margin-top:25px;">
-        <div class="trustedCompany">IBM</div>
-        <div class="trustedCompany">Equifax</div>
-        <div class="trustedCompany">Optiva</div>
-        <div class="trustedCompany">HP</div>
-        <div class="trustedCompany">iTree</div>
-      </div>
-    </div>
-
-    <div class="executiveMetrics" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
-      <div class="metricCard">
-        <div class="metricNumber" data-count="15">15+</div>
-        <div class="metricTitle">Years Delivering Enterprise Programs</div>
-      </div>
-      <div class="metricCard">
-        <div class="metricNumber" data-count="65">65+</div>
-        <div class="metricTitle">Largest Global Engineering Organization Managed</div>
-      </div>
-      <div class="metricCard">
-        <div class="metricNumber">18+</div>
-        <div class="metricTitle">Enterprise Platforms Modernized & Governed</div>
-      </div>
-      <div class="metricCard">
-        <div class="metricNumber">300+</div>
-        <div class="metricTitle">Global Technical Trainings & Certifications</div>
-      </div>
-      <div class="metricCard">
-        <div class="metricNumber">Cloud</div>
-        <div class="metricTitle">AWS • Azure • GCP • IBM Cloud</div>
-      </div>
-      <div class="metricCard">
-        <div class="metricNumber">AI</div>
-        <div class="metricTitle">Generative AI • Automation • Productivity</div>
-      </div>
-    </div>
-
-    <div class="executiveStatement">
-      <div class="statementBar"></div>
-      <div>
-        <h2>Executive Value Proposition</h2>
-        <p>
-          I bridge executive vision with engineering execution by leading enterprise programs that modernize cloud platforms, enable AI adoption, strengthen operational excellence and build high-performing global engineering organizations. My leadership combines deep technical expertise with business strategy, allowing executives to accelerate transformation while engineering teams deliver with clarity, quality and measurable impact.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================================= -->
-<!-- END V3 CHUNK 1 -->
-<!-- ========================================================= -->
-<!-- ========================================================= -->
-<!-- PORTFOLIO V3 - CHUNK 2 -->
-<!-- REPLACE "WHY ORGANIZATIONS HIRE ME" +
-     "ORGANIZATIONS I'VE HELPED TRANSFORM" +
-     "CAREER TIMELINE"
--->
-<!-- ========================================================= -->
-
-<section id="journey" class="container" style="padding:80px 0 120px;">
-
-<div style="text-align:center;margin-bottom:70px;">
-
-<span class="kicker">
-
-<i class="fa-solid fa-briefcase"></i>
-
-Enterprise Leadership Journey
-
-</span>
-
-<h2 style="font-size:48px;font-weight:800;margin-top:18px;">
-
-Building High Performing Engineering Organizations
-
-</h2>
-
-<p style="max-width:950px;margin:28px auto 0;color:var(--muted);font-size:18px;line-height:1.9;">
-
-My career has consistently evolved beyond technical execution into enterprise leadership—building engineering organizations, modernizing technology platforms, introducing AI-driven innovation, and enabling executives to deliver strategic transformation through technology.
-
-</p>
-
-</div>
-
-
-
-
-
-<!-- ================================================= -->
-
-<div style="display:grid;grid-template-columns:330px 1fr;gap:45px;align-items:start;">
-
-<div style="position:sticky;top:110px;">
-
-<div class="profileCard">
-
-<h3 style="margin-bottom:25px;">
-
-Career at a Glance
-
-</h3>
-
-<div style="display:flex;flex-direction:column;gap:18px;">
-
-<div>
-
-<strong>15+ Years</strong><br>
-<span style="color:var(--muted);">
-Enterprise Technology Leadership
-</span>
-
-</div>
-
-<div>
-
-<strong>65 Engineers</strong><br>
-<span style="color:var(--muted);">
-Largest Organization Managed
-</span>
-
-</div>
-
-<div>
-
-<strong>18+ Platforms</strong><br>
-<span style="color:var(--muted);">
-Enterprise Tools & Products
-</span>
-
-</div>
-
-<div>
-
-<strong>Fortune 500</strong><br>
-<span style="color:var(--muted);">
-IBM • HP • Equifax
-</span>
-
-</div>
-
-<div>
-
-<strong>Global</strong><br>
-<span style="color:var(--muted);">
-AMER • EMEA • APAC
-</span>
-
-</div>
-
-<div>
-
-<strong>Cloud + AI</strong><br>
-<span style="color:var(--muted);">
-Transformation Programs
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div>
-
-<!-- ================================================= -->
-
-<div class="profileCard" style="margin-bottom:35px;">
-
-<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
-
-<div>
-
-<h2>
-
-Senior Program Agile Manager
-
-</h2>
-
-<h4 style="color:#71c5ff;margin-top:8px;">
-
-iTree Training
-
-</h4>
-
-</div>
-
-<div class="kicker">
-
-Current
-
-</div>
-
-</div>
-
-<p style="margin:28px 0;color:var(--muted);line-height:1.9;">
-
-Own enterprise product strategy while acting as Product Owner, Program Manager and Engineering Leader. Translate customer vision into prioritized roadmaps, lead a globally distributed engineering organization, drive AI adoption, oversee delivery execution, financial planning, people leadership and executive alignment.
-
-</p>
-
-<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px;">
-
-<div class="metric">
-
-<h3>65+</h3>
-
-<p>Global engineers across multiple regions.</p>
-
-</div>
-
-<div class="metric">
-
-<h3>Executive Leadership</h3>
-
-<p>Product strategy, roadmap, budgeting, performance management and organizational growth.</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-
-
-<!-- ================================================= -->
-
-<div class="profileCard" style="margin-bottom:35px;">
-
-<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
-
-<div>
-
-<h2>
-
-Site Reliability Engineer
-
-</h2>
-
-<h4 style="color:#71c5ff;margin-top:8px;">
-
-IBM
-
-</h4>
-
-</div>
-
-<div class="kicker">
-
-Enterprise SaaS
-
-</div>
-
-</div>
-
-<p style="margin:28px 0;color:var(--muted);line-height:1.9;">
-
-Delivered full-stack Site Reliability Engineering across enterprise SaaS platforms including observability, monitoring, Kubernetes administration, Docker deployments, incident management, postmortems, cybersecurity operations, Watson AI initiatives, enterprise release management and production modernization.
-
-</p>
-
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;">
-
-<span class="kicker">SRE</span>
-<span class="kicker">Kubernetes</span>
-<span class="kicker">Docker</span>
-<span class="kicker">Watson AI</span>
-<span class="kicker">Cybersecurity</span>
-<span class="kicker">Observability</span>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<!-- ================================================= -->
-
-<div class="profileCard" style="margin-bottom:35px;">
-
-<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
-
-<div>
-
-<h2>
-
-Engineering Project Manager
-
-</h2>
-
-<h4 style="color:#71c5ff;margin-top:8px;">
-
-Optiva
-
-</h4>
-
-</div>
-
-<div class="kicker">
-
-Global Telecommunications
-
-</div>
-
-</div>
-
-<p style="margin:28px 0;color:var(--muted);line-height:1.9;">
-
-Directed engineering execution across globally distributed support organizations while improving platform architecture, provisioning capabilities and operational excellence. Coordinated 24x7 engineering teams spanning North America, India, Africa and Asia while introducing AI-powered support automation and enterprise knowledge management.
-
-</p>
-
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;">
-
-<span class="kicker">45 Engineers</span>
-<span class="kicker">Kanban</span>
-<span class="kicker">Architecture</span>
-<span class="kicker">AI Chatbot</span>
-<span class="kicker">Knowledge Base</span>
-<span class="kicker">24x7 Operations</span>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-<!-- ================================================= -->
-
-<div class="profileCard" style="margin-bottom:35px;">
-
-<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
-
-<div>
-
-<h2>
-
-Engineering Project Manager
-
-</h2>
-
-<h4 style="color:#71c5ff;margin-top:8px;">
-
-Equifax
-
-</h4>
-
-</div>
-
-<div class="kicker">
-
-Cloud Transformation
-
-</div>
-
-</div>
-
-<p style="margin:28px 0;color:var(--muted);line-height:1.9;">
-
-Led department-wide engineering modernization initiatives including CI/CD implementation, Agile transformation, engineering bootcamps, cloud migration strategy, enterprise monitoring, performance management and engineering leadership while supporting over eighteen enterprise development platforms.
-
-</p>
-
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;">
-
-<span class="kicker">AWS</span>
-<span class="kicker">GCP</span>
-<span class="kicker">CI/CD</span>
-<span class="kicker">Jenkins</span>
-<span class="kicker">Datadog</span>
-<span class="kicker">Grafana</span>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<!-- ================================================= -->
-
-<div class="profileCard" style="margin-bottom:35px;">
-
-<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
-
-<div>
-
-<h2>
-
-Senior Technical Project Manager
-
-</h2>
-
-<h4 style="color:#71c5ff;margin-top:8px;">
-
-Equifax
-
-</h4>
-
-</div>
-
-<div class="kicker">
-
-Enterprise Platforms
-
-</div>
-
-</div>
-
-<p style="margin:28px 0;color:var(--muted);line-height:1.9;">
-
-Expanded organizational responsibility from engineering delivery into enterprise platform ownership. Directed multidisciplinary teams responsible for development, administration, upgrades, integrations and customization across Atlassian, Oracle and HP enterprise ecosystems.
-
-</p>
-
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;">
-
-<span class="kicker">12 Engineers</span>
-<span class="kicker">Jira</span>
-<span class="kicker">Confluence</span>
-<span class="kicker">Bitbucket</span>
-<span class="kicker">Oracle</span>
-<span class="kicker">HP PPM</span>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-<!-- ================================================= -->
-
-<div class="profileCard" style="margin-bottom:35px;">
-
-<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
-
-<div>
-
-<h2>
-
-Technical Support Team Lead
-
-</h2>
-
-<h4 style="color:#71c5ff;margin-top:8px;">
-
-Equifax
-
-</h4>
-
-</div>
-
-<div class="kicker">
-
-Organization Builder
-
-</div>
-
-</div>
-
-<p style="margin:28px 0;color:var(--muted);line-height:1.9;">
-
-Built an engineering support organization from the ground up by recruiting, mentoring and coaching junior engineers while standardizing knowledge management, introducing automation, improving customer experience and accelerating technical onboarding.
-
-</p>
-
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;">
-
-<span class="kicker">Hiring</span>
-<span class="kicker">Mentoring</span>
-<span class="kicker">Knowledge Base</span>
-<span class="kicker">Automation</span>
-<span class="kicker">Training</span>
-<span class="kicker">Leadership</span>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<!-- ================================================= -->
-
-<div class="profileCard">
-
-<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
-
-<div>
-
-<h2>
-
-Software Support Engineer → Team Lead
-
-</h2>
-
-<h4 style="color:#71c5ff;margin-top:8px;">
-
-HP
-
-</h4>
-
-</div>
-
-<div class="kicker">
-
-Career Foundation
-
-</div>
-
-</div>
-
-<p style="margin:28px 0;color:var(--muted);line-height:1.9;">
-
-Progressed from technical support into leadership by improving release management, creating enterprise testing environments, establishing knowledge management standards and leading continuous improvement initiatives that became organizational best practices.
-
-</p>
-
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;">
-
-<span class="kicker">Support</span>
-<span class="kicker">L2 Engineer</span>
-<span class="kicker">Team Lead</span>
-<span class="kicker">Knowledge Base</span>
-<span class="kicker">Training</span>
-<span class="kicker">Quality</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================================================= -->
-<!-- END V3 CHUNK 2 -->
-<!-- ========================================================= -->
-<!-- ========================================================= -->
-<!-- PORTFOLIO V3 - CHUNK 3 -->
-<!-- REPLACE THE CURRENT "FEATURED IMPACT" SECTION -->
-<!-- ========================================================= -->
-
-<section id="impact" class="container" style="padding:80px 0 120px;">
-
-<div style="text-align:center;margin-bottom:70px;">
-
-<span class="kicker">
-
-<i class="fa-solid fa-chart-line"></i>
-
-Business Impact
-
-</span>
-
-<h2 style="font-size:48px;font-weight:800;margin-top:18px;">
-
-Enterprise Transformation Delivered
-
-</h2>
-
-<p style="max-width:950px;margin:28px auto 0;color:var(--muted);font-size:18px;line-height:1.9;">
-
-Technology creates value only when it changes business outcomes. Throughout my career I have focused on simplifying engineering execution, enabling organizational transformation, and delivering measurable improvements across enterprise operations.
-
-</p>
-
-</div>
-
-
-
-
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:28px;">
-
-<!-- ================================================= -->
-
-<div class="profileCard">
-
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;">
-
-<div style="font-size:46px;color:#4db5ff;">
-
-<i class="fa-solid fa-robot"></i>
-
-</div>
-
-<div class="kicker">
-
-AI ENABLEMENT
-
-</div>
-
-</div>
-
-<h3 style="margin-bottom:18px;">
-
-Artificial Intelligence Adoption
-
-</h3>
-
-<p style="line-height:1.9;color:var(--muted);margin-bottom:25px;">
-
-Introduced AI initiatives across engineering organizations including ChatGPT, Watson AI, Copilot, knowledge assistants and workflow automation to improve engineering productivity, customer support and executive decision making.
-
-</p>
-
-<div style="display:flex;flex-wrap:wrap;gap:10px;">
-
-<span class="kicker">ChatGPT</span>
-<span class="kicker">Copilot</span>
-<span class="kicker">Watson AI</span>
-<span class="kicker">Automation</span>
-
-</div>
-
-</div>
-
-
-
-
-
-<!-- ================================================= -->
-
-<div class="profileCard">
-
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;">
-
-<div style="font-size:46px;color:#58d68d;">
-
-<i class="fa-solid fa-cloud-arrow-up"></i>
-
-</div>
-
-<div class="kicker">
-
-CLOUD
-
-</div>
-
-</div>
-
-<h3 style="margin-bottom:18px;">
-
-Cloud Modernization
-
-</h3>
-
-<p style="line-height:1.9;color:var(--muted);margin-bottom:25px;">
-
-Led cloud adoption initiatives spanning AWS, Azure, Google Cloud and IBM Cloud while modernizing CI/CD pipelines, deployment strategies and enterprise infrastructure without disrupting business operations.
-
-</p>
-
-<div style="display:flex;flex-wrap:wrap;gap:10px;">
-
-<span class="kicker">AWS</span>
-<span class="kicker">Azure</span>
-<span class="kicker">Google Cloud</span>
-<span class="kicker">IBM Cloud</span>
-
-</div>
-
-</div>
-
-
-
-
-
-<!-- ================================================= -->
-
-<div class="profileCard">
-
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;">
-
-<div style="font-size:46px;color:#ffd166;">
-
-<i class="fa-solid fa-users"></i>
-
-</div>
-
-<div class="kicker">
-
-PEOPLE
-
-</div>
-
-</div>
-
-<h3 style="margin-bottom:18px;">
-
-Engineering Leadership
-
-</h3>
-
-<p style="line-height:1.9;color:var(--muted);margin-bottom:25px;">
-
-Built, mentored and managed engineering organizations from newly hired graduates to globally distributed teams of more than 65 professionals while driving performance, coaching and organizational growth.
-
-</p>
-
-<div style="display:flex;flex-wrap:wrap;gap:10px;">
-
-<span class="kicker">Hiring</span>
-<span class="kicker">1-on-1s</span>
-<span class="kicker">Performance</span>
-<span class="kicker">Coaching</span>
-
-</div>
-
-</div>
-
-
-
-
-
-<!-- ================================================= -->
-
-<div class="profileCard">
-
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;">
-
-<div style="font-size:46px;color:#f39c12;">
-
-<i class="fa-solid fa-gears"></i>
-
-</div>
-
-<div class="kicker">
-
-ENGINEERING
-
-</div>
-
-</div>
-
-<h3 style="margin-bottom:18px;">
-
-Engineering Excellence
-
-</h3>
-
-<p style="line-height:1.9;color:var(--muted);margin-bottom:25px;">
-
-Standardized engineering delivery through Agile adoption, CI/CD modernization, release governance, operational excellence, platform reliability and enterprise development best practices.
-
-</p>
-
-<div style="display:flex;flex-wrap:wrap;gap:10px;">
-
-<span class="kicker">CI/CD</span>
-<span class="kicker">DevOps</span>
-<span class="kicker">Agile</span>
-<span class="kicker">Governance</span>
-
-</div>
-
-</div>
-
-
-
-
-
-<!-- ================================================= -->
-
-<div class="profileCard">
-
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;">
-
-<div style="font-size:46px;color:#8e7dff;">
-
-<i class="fa-solid fa-person-chalkboard"></i>
-
-</div>
-
-<div class="kicker">
-
-GLOBAL INSTRUCTION
-
-</div>
-
-</div>
-
-<h3 style="margin-bottom:18px;">
-
-Global Technical Instruction
-
-</h3>
-
-<p style="line-height:1.9;color:var(--muted);margin-bottom:25px;">
-
-Designed enterprise technical training, Agile academies, onboarding programs, bootcamps and coaching initiatives that accelerated engineering readiness and organizational capability across multiple departments.
-
-</p>
-
-<div style="display:flex;flex-wrap:wrap;gap:10px;">
-
-<span class="kicker">Bootcamps</span>
-<span class="kicker">Scrum</span>
-<span class="kicker">Leadership</span>
-<span class="kicker">Mentoring</span>
-
-</div>
-
-</div>
-
-
-
-
-
-<!-- ================================================= -->
-
-<div class="profileCard">
-
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;">
-
-<div style="font-size:46px;color:#ff7b7b;">
-
-<i class="fa-solid fa-chart-column"></i>
-
-</div>
-
-<div class="kicker">
-
-EXECUTIVE
-
-</div>
-
-</div>
-
-<h3 style="margin-bottom:18px;">
-
-Executive Delivery
-
-</h3>
-
-<p style="line-height:1.9;color:var(--muted);margin-bottom:25px;">
-
-Bridged executives and engineering organizations by transforming business strategy into prioritized roadmaps, delivery governance, financial planning, executive reporting and measurable transformation outcomes.
-
-</p>
-
-<div style="display:flex;flex-wrap:wrap;gap:10px;">
-
-<span class="kicker">Strategy</span>
-<span class="kicker">Roadmaps</span>
-<span class="kicker">Executive Reporting</span>
-<span class="kicker">Finance</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<section style="padding-top:90px;">
-
-<div style="text-align:center;margin-bottom:60px;">
-
-<span class="kicker">
-
-<i class="fa-solid fa-bolt"></i>
-
-Core Leadership Capabilities
-
-</span>
-
-</div>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;">
-
-<div class="metric">
-
-<h3>Enterprise Transformation</h3>
-
-<p>Leading modernization initiatives that connect executive strategy with engineering execution.</p>
-
-</div>
-
-<div class="metric">
-
-<h3>Cloud & Platform Engineering</h3>
-
-<p>Modernizing enterprise infrastructure, delivery pipelines and operational reliability.</p>
-
-</div>
-
-<div class="metric">
-
-<h3>AI & Automation</h3>
-
-<p>Improving engineering productivity through Generative AI, automation and intelligent workflows.</p>
-
-</div>
-
-<div class="metric">
-
-<h3>People Leadership</h3>
-
-<p>Building high-performing organizations through coaching, mentoring and leadership development.</p>
-
-</div>
-
-<div class="metric">
-
-<h3>Operational Excellence</h3>
-
-<p>Driving reliability, governance, observability and continuous improvement across enterprise platforms.</p>
-
-</div>
-
-<div class="metric">
-
-<h3>Executive Partnership</h3>
-
-<p>Providing strategic visibility through governance, portfolio management and executive communication.</p>
-
-</div>
-
-</div>
-
-</section>
-
-</section>
-
-<!-- ========================================================= -->
-<!-- END V3 CHUNK 3 -->
-<!-- ========================================================= -->
-<!-- ========================================================= -->
-<!-- PORTFOLIO V3 - CHUNK 4 -->
-<!-- REPLACE THE CURRENT "TECHNOLOGY / SKILLS" +
-     "TRAINING" +
-     "CERTIFICATIONS" SECTIONS -->
-<!-- ========================================================= -->
-
-<section id="technology" class="container" style="padding:90px 0 120px;">
-
-<div style="text-align:center;margin-bottom:70px;">
-
-<span class="kicker">
-
-<i class="fa-solid fa-microchip"></i>
-
-Enterprise Technology Portfolio
-
-</span>
-
-<h2 style="font-size:48px;font-weight:800;margin-top:18px;">
-
-Technology Leadership Across the Enterprise Stack
-
-</h2>
-
-<p style="max-width:980px;margin:30px auto 0;color:var(--muted);font-size:18px;line-height:1.9;">
-
-My experience spans executive leadership, enterprise architecture, cloud engineering, DevOps, AI enablement, platform modernization and operational excellence. Rather than specializing in a single technology, I specialize in connecting them into scalable business solutions.
-
-</p>
-
-</div>
-
-
-
-
-
-
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;">
-
-
-<!-- ================================================= -->
-
-<div class="profileCard">
-
-<h3 style="margin-bottom:25px;">
-
-☁ Cloud Platforms
-
-</h3>
-
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-
-<span class="kicker">AWS</span>
-<span class="kicker">Azure</span>
-<span class="kicker">Google Cloud</span>
-<span class="kicker">IBM Cloud</span>
-<span class="kicker">Hybrid Cloud</span>
-<span class="kicker">Cloud Migration</span>
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="profileCard">
-
-<h3 style="margin-bottom:25px;">
-
-⚙ DevOps & Platform Engineering
-
-</h3>
-
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-
-<span class="kicker">Docker</span>
-<span class="kicker">Kubernetes</span>
-<span class="kicker">Terraform</span>
-<span class="kicker">Ansible</span>
-<span class="kicker">Jenkins</span>
-<span class="kicker">GitHub</span>
-<span class="kicker">CI/CD</span>
-<span class="kicker">Git</span>
-
-</div>
-
-</div>
-
-
-
-
-
-
-<div class="profileCard">
-
-<h3 style="margin-bottom:25px;">
-
-📊 Observability & Reliability
-
-</h3>
-
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-
-<span class="kicker">Datadog</span>
-<span class="kicker">Grafana</span>
-<span class="kicker">New Relic</span>
-<span class="kicker">Prometheus</span>
-<span class="kicker">Monitoring</span>
-<span class="kicker">Incident Management</span>
-<span class="kicker">Root Cause Analysis</span>
-
-</div>
-
-</div>
-
-
-
-
-
-
-<div class="profileCard">
-
-<h3 style="margin-bottom:25px;">
-
-🤖 Artificial Intelligence
-
-</h3>
-
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-
-<span class="kicker">ChatGPT</span>
-<span class="kicker">Copilot</span>
-<span class="kicker">Watson AI</span>
-<span class="kicker">Azure OpenAI</span>
-<span class="kicker">Prompt Engineering</span>
-<span class="kicker">AI Automation</span>
-<span class="kicker">Knowledge Assistants</span>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="profileCard">
-
-<h3 style="margin-bottom:25px;">
-
-💻 Enterprise Development
-
-</h3>
-
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-
-<span class="kicker">Python</span>
-<span class="kicker">Java</span>
-<span class="kicker">JavaScript</span>
-<span class="kicker">REST APIs</span>
-<span class="kicker">SQL</span>
-<span class="kicker">Oracle</span>
-<span class="kicker">Linux</span>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="profileCard">
-
-<h3 style="margin-bottom:25px;">
-
-🏢 Enterprise Platforms
-
-</h3>
-
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-
-<span class="kicker">Jira</span>
-<span class="kicker">Confluence</span>
-<span class="kicker">Bitbucket</span>
-<span class="kicker">Crowd</span>
-<span class="kicker">FishEye</span>
-<span class="kicker">SVN</span>
-<span class="kicker">HP PPM</span>
-<span class="kicker">Workday</span>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="profileCard">
-
-<h3 style="margin-bottom:25px;">
-
-📈 Executive Leadership
-
-</h3>
-
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-
-<span class="kicker">Portfolio Management</span>
-<span class="kicker">Product Ownership</span>
-<span class="kicker">Financial Planning</span>
-<span class="kicker">Executive Reporting</span>
-<span class="kicker">Roadmaps</span>
-<span class="kicker">Governance</span>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="profileCard">
-
-<h3 style="margin-bottom:25px;">
-
-🚀 Delivery Leadership
-
-</h3>
-
-<div style="display:flex;flex-wrap:wrap;gap:12px;">
-
-<span class="kicker">Agile</span>
-<span class="kicker">Scrum</span>
-<span class="kicker">Kanban</span>
-<span class="kicker">SAFe</span>
-<span class="kicker">PMO</span>
-<span class="kicker">Risk Management</span>
-<span class="kicker">Stakeholder Management</span>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-
-
-
-
-<section id="training" class="container" style="padding-bottom:120px;">
-
-<div style="text-align:center;margin-bottom:70px;">
-
-<span class="kicker">
-
-<i class="fa-solid fa-person-chalkboard"></i>
-
-Global Technical Instruction
-
-</span>
-
-<h2 style="font-size:48px;font-weight:800;margin-top:18px;">
-
-Building Engineering Capability at Scale
-
-</h2>
-
-<p style="max-width:980px;margin:30px auto 0;color:var(--muted);font-size:18px;line-height:1.9;">
-
-Teaching has been a core part of my leadership philosophy. Throughout my career I have built onboarding programs, Agile academies, technical bootcamps and engineering coaching initiatives that accelerated productivity while strengthening engineering culture across enterprise organizations.
-
-</p>
-
-</div>
-
-
-
-
-
-
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;">
-
-
-<div class="profileCard">
-
-<h3>
-
-Enterprise Agile Coaching
-
-</h3>
-
-<p style="margin-top:20px;color:var(--muted);line-height:1.9;">
-
-Delivered Scrum, Agile and engineering best-practice workshops for multiple engineering organizations, helping teams adopt modern delivery frameworks and improve execution quality.
-
-</p>
-
-</div>
-
-
-
-
-
-<div class="profileCard">
-
-<h3>
-
-Engineering Bootcamps
-
-</h3>
-
-<p style="margin-top:20px;color:var(--muted);line-height:1.9;">
-
-Designed structured onboarding experiences that reduced ramp-up time while improving consistency across newly hired engineers entering enterprise delivery organizations.
-
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="profileCard">
-
-<h3>
-
-Technical Mentorship
-
-</h3>
-
-<p style="margin-top:20px;color:var(--muted);line-height:1.9;">
-
-Mentored engineers throughout their careers through coaching, one-on-one development plans, leadership guidance and technical growth initiatives.
-
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="profileCard">
-
-<h3>
-
-Knowledge Management
-
-</h3>
-
-<p style="margin-top:20px;color:var(--muted);line-height:1.9;">
-
-Created enterprise knowledge bases, documentation standards and AI-powered support assistants that improved knowledge sharing and reduced operational dependency on individuals.
-
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="profileCard">
-
-<h3>
-
-Enterprise Technical Training
-
-</h3>
-
-<p style="margin-top:20px;color:var(--muted);line-height:1.9;">
-
-Completed more than 300 enterprise technical courses across cloud computing, AI, cybersecurity, DevOps, middleware, leadership, project management and enterprise software.
-
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="profileCard">
-
-<h3>
-
-Leadership Development
-
-</h3>
-
-<p style="margin-top:20px;color:var(--muted);line-height:1.9;">
-
-Developed future engineering leaders through continuous coaching, performance management, goal setting, career planning and organizational leadership.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-
-
-
-
-<section class="container" style="padding-bottom:120px;">
-
-<div style="text-align:center;margin-bottom:70px;">
-
-<span class="kicker">
-
-<i class="fa-solid fa-award"></i>
-
-Education & Credentials
-
-</span>
-
-<h2 style="font-size:48px;font-weight:800;margin-top:18px;">
-
-Academic Foundation & Professional Certifications
-
-</h2>
-
-</div>
-
-
-
-
-
-
-
-<div style="display:grid;grid-template-columns:2fr 1fr;gap:35px;">
-
-<div class="profileCard">
-
-<h3 style="margin-bottom:30px;">
-
-Education
-
-</h3>
-
-<div style="margin-bottom:30px;">
-
-<h4 style="color:#6fc8ff;">
-
-Master of Business Administration (MBA)
-
-</h4>
-
-<p style="color:var(--muted);margin-top:10px;line-height:1.8;">
-
-Business Strategy • Executive Leadership • Organizational Management • Finance
-
-</p>
-
-</div>
-
-<div style="margin-bottom:30px;">
-
-<h4 style="color:#6fc8ff;">
-
-Master's Degree in Project Management
-
-</h4>
-
-<p style="color:var(--muted);margin-top:10px;line-height:1.8;">
-
-Portfolio Management • PMO • Enterprise Delivery • Governance • Risk
-
-</p>
-
-</div>
-
-<div>
-
-<h4 style="color:#6fc8ff;">
-
-Bachelor's Degree in Computer Science
-
-</h4>
-
-<p style="color:var(--muted);margin-top:10px;line-height:1.8;">
-
-Software Engineering • Systems Design • Enterprise Applications
-
-</p>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="profileCard">
-
-<h3 style="margin-bottom:30px;">
-
-Professional Certifications
-
-</h3>
-
-<div style="display:flex;flex-direction:column;gap:14px;">
-
-<div class="kicker">PMI-ACP</div>
-
-<div class="kicker">Certified Scrum Master</div>
-
-<div class="kicker">SAFe Practitioner</div>
-
-<div class="kicker">AWS Cloud Practitioner</div>
-
-<div class="kicker">300+ Enterprise Technical Courses</div>
-
-<div class="kicker">Continuous Executive Education</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================================================= -->
-<!-- END V3 CHUNK 4 -->
-<!-- ========================================================= -->
-<!-- ========================================================= -->
-<!-- PORTFOLIO V3 - CHUNK 5 -->
-<!-- REPLACE THE CURRENT CONTACT / FINAL CTA / FOOTER -->
-<!-- ========================================================= -->
-
-<section id="contact" class="container" style="padding:100px 0 140px;">
-
-<div class="executiveClosing">
-
-<div class="executiveGlow"></div>
-
-<div style="position:relative;z-index:2;max-width:950px;margin:auto;text-align:center;">
-
-<span class="kicker">
-
-<i class="fa-solid fa-rocket"></i>
-
-Let's Build What's Next
-
-</span>
-
-<h2 style="font-size:56px;font-weight:900;margin:30px 0;line-height:1.15;">
-
-Helping Organizations Transform
-<br>
-Technology Into Business Value
-
-</h2>
-
-<p style="font-size:20px;line-height:1.9;color:var(--muted);max-width:850px;margin:auto;">
-
-Whether leading enterprise transformation programs, modernizing engineering organizations, accelerating cloud adoption, enabling AI initiatives or building high-performing global teams, my focus remains the same—delivering measurable business outcomes through exceptional engineering execution.
-
-</p>
-
-<div style="margin-top:55px;display:flex;justify-content:center;flex-wrap:wrap;gap:20px;">
-
-<a href="https://calendar.app.google/YegybKZoepgHuMCa8"
-target="_blank"
-class="primaryButton">
-
-<i class="fa-solid fa-calendar-days"></i>
-
-Schedule Executive Conversation
-
-</a>
-
-<a href="Jose Zuniga Resume.pdf"
-target="_blank"
-class="secondaryButton">
-
-<i class="fa-solid fa-file-pdf"></i>
-
-Download Executive Resume
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div style="margin-top:90px;display:grid;grid-template-columns:380px 1fr;gap:40px;align-items:start;">
-
-<!-- ===================================================== -->
-
-<div class="profileCard">
-
-<div style="display:flex;align-items:center;gap:20px;margin-bottom:25px;">
-
-<img src="Profile.jpeg"
-style="width:90px;height:90px;border-radius:50%;object-fit:cover;">
-
-<div>
-
-<h2 style="margin-bottom:5px;">
-
-Jose Zuniga
-
-</h2>
-
-<p style="color:#7cc8ff;">
-
-Enterprise Technology Leader
-
-</p>
-
-</div>
-
-</div>
-
-<p style="line-height:1.9;color:var(--muted);">
-
-Technical Program Manager • Engineering Leader • Product Owner • Cloud Transformation • AI Enablement • Executive Delivery
-
-</p>
-
-<hr style="margin:30px 0;border-color:rgba(255,255,255,.08);">
-
-<div style="display:flex;flex-direction:column;gap:18px;">
-
-<div>
-
-<i class="fa-solid fa-location-dot"></i>
-
-Costa Rica
-
-</div>
-
-<div>
-
-<i class="fa-solid fa-language"></i>
-
-Spanish • English • Portuguese
-
-</div>
-
-<div>
-
-<i class="fa-solid fa-globe"></i>
-
-Available Worldwide
-
-</div>
-
-<div>
-
-<i class="fa-solid fa-user-group"></i>
-
-Remote • Hybrid • Relocation
-
-</div>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<!-- ===================================================== -->
-
-<div class="profileCard">
-
-<h2 style="margin-bottom:35px;">
-
-Connect
-
-</h2>
-
-<div class="executiveContactGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;">
-
-<a href="mailto:josean.111@gmail.com"
-class="contactCard">
-
-<div class="contactIcon">
-
-<i class="fa-solid fa-envelope"></i>
-
-</div>
-
-<div>
-
-<h4>Email</h4>
-
-<p>
-
-josean.111@gmail.com
-
-</p>
-
-</div>
-
-</a>
-
-
-
-
-
-<a href="https://linkedin.com/in/jose-azuniga"
-target="_blank"
-class="contactCard">
-
-<div class="contactIcon">
-
-<i class="fab fa-linkedin"></i>
-
-</div>
-
-<div>
-
-<h4>LinkedIn</h4>
-
-<p>
-
-Professional Profile
-
-</p>
-
-</div>
-
-</a>
-
-
-
-
-
-<a href="Jose Zuniga Resume.pdf"
-target="_blank"
-class="contactCard">
-
-<div class="contactIcon">
-
-<i class="fa-solid fa-file-pdf"></i>
-
-</div>
-
-<div>
-
-<h4>Resume</h4>
-
-<p>
-
-Download PDF
-
-</p>
-
-</div>
-
-</a>
-
-
-
-
-
-<a href="https://calendar.app.google/YegybKZoepgHuMCa8"
-target="_blank"
-class="contactCard">
-
-<div class="contactIcon">
-
-<i class="fa-solid fa-calendar-check"></i>
-
-</div>
-
-<div>
-
-<h4>Schedule</h4>
-
-<p>
-
-Book a Meeting
-
-</p>
-
-</div>
-
-</a>
-
-
-
-
-
-<a href="https://wa.me/50688975841"
-target="_blank"
-class="contactCard">
-
-<div class="contactIcon">
-
-<i class="fab fa-whatsapp"></i>
-
-</div>
-
-<div>
-
-<h4>WhatsApp</h4>
-
-<p>
-
-Quick Conversation
-
-</p>
-
-</div>
-
-</a>
-
-
-
-
-
-<a href="https://github.com/josean111"
-target="_blank"
-class="contactCard">
-
-<div class="contactIcon">
-
-<i class="fab fa-github"></i>
-
-</div>
-
-<div>
-
-<h4>GitHub</h4>
-
-<p>
-
-Projects & Automation
-
-</p>
-
-</div>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div style="margin-top:80px;">
-
-<div class="profileCard">
-
-<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:25px;text-align:center;">
-
-<div>
-
-<div style="font-size:38px;font-weight:800;color:#69c6ff;">
-
-15+
-
-</div>
-
-<div style="margin-top:10px;color:var(--muted);">
-
-Years
-
-</div>
-
-</div>
-
-<div>
-
-<div style="font-size:38px;font-weight:800;color:#69c6ff;">
-
-65+
-
-</div>
-
-<div style="margin-top:10px;color:var(--muted);">
-
-Engineers Led
-
-</div>
-
-</div>
-
-<div>
-
-<div style="font-size:38px;font-weight:800;color:#69c6ff;">
-
-18+
-
-</div>
-
-<div style="margin-top:10px;color:var(--muted);">
-
-Enterprise Platforms
-
-</div>
-
-</div>
-
-<div>
-
-<div style="font-size:38px;font-weight:800;color:#69c6ff;">
-
-300+
-
-</div>
-
-<div style="margin-top:10px;color:var(--muted);">
-
-Technical Trainings
-
-</div>
-
-</div>
-
-<div>
-
-<div style="font-size:38px;font-weight:800;color:#69c6ff;">
-
-Global
-
-</div>
-
-<div style="margin-top:10px;color:var(--muted);">
-
-Leadership
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-
-
-<footer style="padding:50px 0;border-top:1px solid rgba(255,255,255,.08);">
-
-<div class="container">
-
-<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:25px;">
-
-<div>
-
-<h3 style="margin-bottom:8px;">
-
-Jose Zuniga
-
-</h3>
-
-<p style="color:var(--muted);">
-
-Enterprise Technology Leadership • Cloud • AI • Engineering Transformation
-
-</p>
-
-</div>
-
-<div style="display:flex;gap:18px;font-size:22px;">
-
-<a href="mailto:josean.111@gmail.com">
-
-<i class="fa-solid fa-envelope"></i>
-
-</a>
-
-<a href="https://linkedin.com/in/jose-azuniga" target="_blank">
-
-<i class="fab fa-linkedin"></i>
-
-</a>
-
-<a href="Jose Zuniga Resume.pdf" target="_blank">
-
-<i class="fa-solid fa-file-pdf"></i>
-
-</a>
-
-<a href="https://calendar.app.google/YegybKZoepgHuMCa8" target="_blank">
-
-<i class="fa-solid fa-calendar-days"></i>
-
-</a>
-
-<a href="https://wa.me/50688975841" target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
-
-<a href="https://github.com/josean111" target="_blank">
-
-<i class="fab fa-github"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</footer>
-
-<!-- ========================================================= -->
-<!-- END V3 CHUNK 5 -->
-<!-- ========================================================= -->
-
-<!-- ========================================================= -->
-<!-- PORTFOLIO V3 - CHUNK 6 -->
-<!-- ADD THIS BEFORE </body> -->
-<!-- (New CSS + Animations + JavaScript) -->
-<!-- ========================================================= -->
-
-<style>
-:root{
-  --accent:#59c8ff;
-  --accent2:#8f6dff;
-  --green:#61d095;
-}
-
-body{
-  background:
-    radial-gradient(circle at top,#0d223d 0%,#08111f 45%,#04070d 100%);
-  overflow-x:hidden;
-}
-
-.hero{
-  position:relative;
-  overflow:hidden;
-}
-
-.heroBackground{
-  position:absolute;
-  inset:0;
-  overflow:hidden;
-  pointer-events:none;
-}
-
-.aurora{
-  position:absolute;
-  width:700px;
-  height:700px;
-  filter:blur(140px);
-  opacity:.18;
-  border-radius:50%;
-  animation:auroraMove 20s ease-in-out infinite;
-}
-
-.aurora1{
-  background:#3ca8ff;
-  top:-220px;
-  left:-120px;
-}
-
-.aurora2{
-  background:#6d5bff;
-  bottom:-280px;
-  right:-180px;
-  animation-delay:6s;
-}
-
-.aurora3{
-  background:#35d1a1;
-  top:40%;
-  left:45%;
-  animation-delay:12s;
-}
-
-@keyframes auroraMove{
-  0%{ transform:translate(0,0) scale(1); }
-  50%{ transform:translate(120px,-80px) scale(1.25); }
-  100%{ transform:translate(0,0) scale(1); }
-}
-
-.profileCard,
-.metricCard,
-.executiveStatement,
-.executiveFloatingCard{
-  background:rgba(18,27,42,.72);
-  backdrop-filter:blur(18px);
-  border:1px solid rgba(255,255,255,.08);
-  box-shadow:0 15px 40px rgba(0,0,0,.35);
-  transition:.35s;
-  border-radius:22px;
-}
-
-.profileCard:hover,
-.metricCard:hover{
-  transform:translateY(-8px);
-  border-color:rgba(90,200,255,.4);
-  box-shadow:0 30px 60px rgba(0,0,0,.45);
-}
-
-.contactIcons a{
-  width:52px;
-  height:52px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background:rgba(255,255,255,.05);
-  transition:.35s;
-  border:1px solid rgba(255,255,255,.06);
-}
-
-.contactIcons a:hover{
-  transform:translateY(-6px) scale(1.08);
-  background:#179bff;
-  box-shadow:0 0 30px rgba(23,155,255,.45);
-}
-
-.modeButton{
-  padding:10px 18px;
-  border-radius:50px;
-  cursor:pointer;
-  transition:.3s;
-  border:1px solid rgba(255,255,255,.12);
-  background:rgba(255,255,255,.05);
-  color:var(--text);
-}
-
-.modeButton:hover{
-  transform:translateY(-3px);
-}
-
-.activeMode{
-  background:linear-gradient(135deg,#199dff,#6d5bff);
-}
-
-.primaryButton{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:18px 34px;
-  border-radius:16px;
-  color:#fff;
-  background:linear-gradient(135deg,#1698ff,#5c67ff);
-  box-shadow:0 20px 35px rgba(0,110,255,.35);
-  transition:.3s;
-}
-
-.primaryButton:hover{
-  transform:translateY(-5px);
-}
-
-.secondaryButton{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:18px 34px;
-  border-radius:16px;
-  color:#fff;
-  border:1px solid rgba(255,255,255,.1);
-  background:rgba(255,255,255,.04);
-  transition:.3s;
-}
-
-.secondaryButton:hover{
-  transform:translateY(-5px);
-}
-
-.trustedCompany{
-  transition:.4s;
-  opacity:.55;
-  filter:grayscale(100%);
-}
-
-.trustedCompany:hover{
-  opacity:1;
-  transform:translateY(-6px);
-  filter:none;
-}
-
-.kicker{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:7px 14px;
-  border-radius:30px;
-  background:rgba(89,200,255,.08);
-  border:1px solid rgba(89,200,255,.15);
-  font-size:13px;
-  font-weight:600;
-  letter-spacing:.8px;
-  text-transform:uppercase;
-}
-
-.executiveClosing{
-  position:relative;
-  padding:90px;
-  border-radius:35px;
-  background:linear-gradient(135deg, rgba(25,80,160,.35), rgba(18,28,55,.9));
-  overflow:hidden;
-}
-
-.executiveGlow{
-  position:absolute;
-  width:800px;
-  height:800px;
-  border-radius:50%;
-  background:#1698ff;
-  filter:blur(220px);
-  opacity:.12;
-  top:-300px;
-  left:50%;
-  transform:translateX(-50%);
-}
-
-.contactCard{
-  display:flex;
-  align-items:center;
-  gap:20px;
-  padding:22px;
-  border-radius:18px;
-  background:rgba(255,255,255,.03);
-  transition:.3s;
-  border:1px solid rgba(255,255,255,.06);
-  text-decoration:none;
-  color:inherit;
-}
-
-.contactCard:hover{
-  transform:translateX(10px);
-  border-color:#38a8ff;
-  background:rgba(56,168,255,.08);
-}
-
-.contactIcon{
-  width:58px;
-  height:58px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:16px;
-  background:linear-gradient(135deg,#149cff,#6d5bff);
-  font-size:22px;
-}
-
-.executiveContactGrid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
-
-@media(max-width:950px){
-  .executiveContactGrid{
-    grid-template-columns:1fr;
-  }
-}
-
-.fadeReveal{
-  opacity:0;
-  transform:translateY(35px);
-  transition:1s;
-}
-
-.fadeReveal.visible{
-  opacity:1;
-  transform:none;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-</style>
-
-<script>
-document.querySelectorAll(".metricNumber").forEach(counter=>{
-  const original = counter.innerText.trim();
-  const numeric = parseInt(original.replace(/\D/g,''));
-  if (isNaN(numeric)) return;
-
-  let current = 0;
-  const speed = Math.max(15, Math.floor(1800 / numeric));
-
-  const interval = setInterval(()=>{
-    current++;
-    counter.innerHTML = current + "+";
-    if(current >= numeric){
-      counter.innerHTML = original;
-      clearInterval(interval);
-    }
-  }, speed);
-});
-
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-},{threshold:.12});
-
-document.querySelectorAll(".profileCard,.metricCard,.executiveStatement,.executiveClosing").forEach(el=>{
-  el.classList.add("fadeReveal");
-  observer.observe(el);
-});
-
-window.addEventListener("scroll",()=>{
-  const nav=document.getElementById("navbar");
-  if(!nav) return;
-  if(window.scrollY>80){
-    nav.classList.add("scrolled");
-  }else{
-    nav.classList.remove("scrolled");
-  }
-});
-
-const recruiterButton=document.querySelector(".recruiterMode");
-if(recruiterButton){
-  recruiterButton.onclick=function(){
-    document.querySelectorAll("#journey,#impact,#technology,#training").forEach(section=>{
-      section.style.display="none";
-    });
-    window.scrollTo({top:0,behavior:"smooth"});
-  };
-}
-
-const executiveButton=document.querySelector(".executiveMode");
-if(executiveButton){
-  executiveButton.onclick=function(){
-    document.querySelectorAll("#journey,#impact,#technology,#training").forEach(section=>{
-      section.style.display="block";
-    });
-  };
-}
-
-const technicalButton=document.querySelector(".technicalMode");
-if(technicalButton){
-  technicalButton.onclick=function(){
-    document.querySelectorAll("#journey,#impact,#training").forEach(section=>{
-      section.style.display="none";
-    });
-    const tech = document.querySelector("#technology");
-    if(tech){
-      tech.style.display="block";
-      window.scrollTo({top:tech.offsetTop-70,behavior:"smooth"});
-    }
-  };
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jose Zuniga",
+  "jobTitle": "Senior Technical Program Manager",
+  "email": "mailto:josean.111@gmail.com",
+  "telephone": "+506 8897-5841",
+  "address": { "@type": "PostalAddress", "addressCountry": "CR" },
+  "sameAs": ["https://www.linkedin.com/in/jose-azuniga", "https://github.com/josean111"],
+  "knowsAbout": ["Technical Program Management", "Cloud Transformation", "DevOps", "Site Reliability Engineering", "Python", "Jira API Automation", "Agile Delivery", "AI Enablement"]
 }
 </script>
 
-<!-- ========================================================= -->
-<!-- END PORTFOLIO V3 -->
-<!-- ========================================================= -->
+<style>
+:root{
+  --bg:#07121f; --bg2:#0b1c31; --panel:#0f2238; --panel2:#132a45;
+  --line:rgba(255,255,255,.09); --text:#eef5ff; --muted:#a9b9cf; --soft:#7e91ab;
+  --accent:#4cc2ff; --accent2:#7c8cff; --good:#3ddc97; --warn:#ffcf5c;
+  --radius:18px; --shadow:0 18px 50px rgba(0,0,0,.35);
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  font-family:var(--font);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;
+  background:
+    radial-gradient(900px 500px at 85% -10%,rgba(76,194,255,.16),transparent 60%),
+    radial-gradient(700px 500px at -10% 30%,rgba(124,140,255,.13),transparent 60%),
+    linear-gradient(180deg,#07121f,#091a2d 55%,#07121f);
+  background-attachment:fixed;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+ul{list-style:none}
+.wrap{width:min(1120px,92%);margin:0 auto}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:8px 14px;border-radius:8px;z-index:1000}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* ---------- top bar ---------- */
+.top{position:sticky;top:0;z-index:50;background:rgba(7,18,31,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:18px;height:64px}
+.brand{font-weight:800;letter-spacing:.4px;font-size:18px}
+.brand b{color:var(--accent)}
+.nav{display:flex;gap:4px;margin-left:8px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-size:13px;font-weight:600;color:var(--muted);padding:8px 12px;border-radius:999px;white-space:nowrap;transition:.2s}
+.nav a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.spacer{flex:1}
+.switch{display:flex;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:999px;padding:4px;gap:2px}
+.switch button{
+  font:inherit;font-size:13px;font-weight:700;border:0;cursor:pointer;color:var(--muted);
+  background:transparent;padding:8px 16px;border-radius:999px;transition:.25s;white-space:nowrap
+}
+.switch button[aria-pressed="true"]{color:#04121f;background:linear-gradient(135deg,var(--accent),#8fe0ff);box-shadow:0 6px 18px rgba(76,194,255,.35)}
+.switch button:not([aria-pressed="true"]):hover{color:#fff}
+
+/* mode visibility */
+[data-mode="quick"] .full-only{display:none !important}
+[data-mode="full"] .quick-only{display:none !important}
+
+/* ---------- hero ---------- */
+.hero{padding:56px 0 36px}
+.heroGrid{display:grid;grid-template-columns:1.35fr .65fr;gap:48px;align-items:center}
+.svg{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;vertical-align:-.18em}
+.pill .svg{color:var(--accent)}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:#bfe8ff;background:rgba(76,194,255,.1);border:1px solid rgba(76,194,255,.28);padding:7px 14px;border-radius:999px;margin-bottom:20px}
+h1{font-size:clamp(40px,6.4vw,72px);line-height:1.02;font-weight:800;letter-spacing:-1.5px}
+h1 span{background:linear-gradient(90deg,#7fd3ff,#fff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.role{font-size:clamp(19px,2.4vw,26px);font-weight:700;color:var(--accent);margin:12px 0 16px}
+.lead{font-size:clamp(16px,1.6vw,19px);color:var(--muted);max-width:640px}
+.lead b{color:#fff;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 26px}
+.chip{font-size:12.5px;font-weight:600;color:#d6e6fa;background:rgba(255,255,255,.06);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn .svg{width:1.15em;height:1.15em}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;padding:14px 22px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.05);transition:.25s;cursor:pointer;font-family:inherit;color:#fff}
+.btn:hover{transform:translateY(-3px);border-color:rgba(76,194,255,.5)}
+.btn.primary{background:linear-gradient(135deg,#1d9bf0,#5b6cff);border-color:transparent;box-shadow:0 14px 30px rgba(40,120,255,.35)}
+.btn.ghost{background:transparent}
+
+.photoCard{background:linear-gradient(160deg,rgba(19,42,69,.9),rgba(11,28,49,.9));border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow);text-align:center}
+.photo{width:210px;height:210px;margin:0 auto 18px;border-radius:50%;padding:6px;background:linear-gradient(135deg,var(--accent),var(--accent2),#1b4f8f);position:relative}
+.photo img,.photo .initials{width:100%;height:100%;border-radius:50%;object-fit:cover;border:6px solid #0a1a2e}
+.initials{display:none;place-items:center;font-size:56px;font-weight:800;background:#0f2238;color:var(--accent)}
+.photoCard h2{font-size:19px}
+.photoCard p{font-size:13.5px;color:var(--muted);margin-top:2px}
+.where{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:var(--muted)}
+.where .svg{color:var(--accent);margin-right:6px}
+.companies{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.companies small{display:block;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--soft);margin-bottom:10px;font-weight:700}
+.companies div{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.companies span{font-weight:700;font-size:13px;padding:6px 12px;border-radius:10px;background:rgba(255,255,255,.06)}
+
+/* ---------- sections ---------- */
+section{padding:34px 0}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+h2.title{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.6px;line-height:1.15;margin-bottom:10px}
+.sub{color:var(--muted);max-width:760px;margin-bottom:26px}
+.grid{display:grid;gap:16px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:linear-gradient(180deg,rgba(19,42,69,.7),rgba(13,30,52,.7));border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:.3s}
+.card:hover{border-color:rgba(76,194,255,.35);transform:translateY(-3px)}
+.metric .num{font-size:clamp(34px,4.4vw,48px);font-weight:800;line-height:1;background:linear-gradient(90deg,#8fe0ff,#3ddc97);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.metric .lbl{font-weight:700;margin-top:10px}
+.metric .ctx{font-size:13px;color:var(--muted);margin-top:4px}
+.hint{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:linear-gradient(135deg,rgba(76,194,255,.1),rgba(124,140,255,.1));border:1px solid rgba(76,194,255,.25);border-radius:var(--radius);padding:20px 24px;margin-top:8px}
+.hint p{color:#d6e6fa;font-weight:500}
+.hint b{color:#fff}
+
+/* quick contact strip */
+.contactStrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.cLink{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line);transition:.25s}
+.cLink:hover{transform:translateY(-3px);border-color:var(--accent);background:rgba(76,194,255,.08)}
+.cLink .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#1498ff,#6d5bff);flex:none}
+.cLink .ic .svg{width:20px;height:20px;color:#fff}
+.cLink small{display:block;font-size:11.5px;color:var(--soft);text-transform:uppercase;letter-spacing:1px;font-weight:700}
+.cLink span{font-weight:600;font-size:14.5px;word-break:break-word}
+
+/* about + depth */
+.aboutGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+.aboutGrid p{color:var(--muted);margin-bottom:14px}
+.aboutGrid p b{color:#fff;font-weight:600}
+.depth li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.depth li:last-child{border-bottom:0}
+.depth li b{color:var(--good);white-space:nowrap}
+.depth h3{font-size:16px;margin-bottom:6px}
+.depth small{display:block;color:var(--soft);font-size:12px;margin-top:10px}
+
+/* strengths */
+.strength .svg{width:26px;height:26px;color:var(--accent);margin-bottom:12px;display:block}
+.strength h3{font-size:16.5px;margin-bottom:6px}
+.strength p{font-size:14px;color:var(--muted)}
+
+/* impact */
+.impact .num{font-size:32px;font-weight:800;color:var(--good);line-height:1}
+.impact h3{font-size:15px;margin:8px 0 4px}
+.impact p{font-size:13.5px;color:var(--muted)}
+.impact .where2{display:inline-block;margin-top:10px;font-size:11.5px;font-weight:700;color:#bfe8ff;background:rgba(76,194,255,.1);border-radius:999px;padding:3px 10px}
+
+/* timeline */
+.timeline{position:relative;display:grid;gap:18px}
+.timeline:before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--accent),rgba(76,194,255,.05))}
+.job{position:relative;padding-left:44px}
+.job:before{content:"";position:absolute;left:3px;top:26px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.job.current:before{background:var(--good);border-color:var(--good);box-shadow:0 0 0 6px rgba(61,220,151,.18)}
+.jobHead{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.jobHead h3{font-size:19px}
+.when{font-size:13px;font-weight:700;color:var(--accent);white-space:nowrap}
+.org{color:var(--muted);font-size:14.5px;margin-bottom:12px}
+.org b{color:#fff}
+.job ul{display:grid;gap:8px}
+.job li{position:relative;padding-left:20px;font-size:14.5px;color:#d3e0f2}
+.job li:before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--accent)}
+.job li strong{color:#fff}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.tag{font-size:12px;font-weight:600;color:#cfe3f8;background:rgba(255,255,255,.06);padding:4px 10px;border-radius:8px}
+.tag.learn{background:transparent;border:1px dashed rgba(76,194,255,.55);color:#bfe8ff}
+.badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:rgba(61,220,151,.15);color:var(--good);margin-left:8px;vertical-align:middle}
+
+/* skills */
+.skill h3{font-size:15.5px;margin-bottom:4px}
+.skill .yrs{font-size:12px;font-weight:700;color:var(--good);margin-bottom:10px;display:block}
+.skill .tags{margin-top:8px}
+
+/* education */
+.eduItem{padding:14px 0;border-bottom:1px solid var(--line)}
+.eduItem:last-child{border-bottom:0}
+.eduItem h3{font-size:16px}
+.eduItem p{font-size:13.5px;color:var(--muted)}
+.eduItem .yr{float:right;font-size:12.5px;font-weight:700;color:var(--accent)}
+.certs li{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.certs li:last-child{border-bottom:0}
+.certs li b{color:var(--accent);white-space:nowrap}
+.cardTitle{font-size:13px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);margin-bottom:8px}
+
+/* closing */
+.closing{margin-top:20px;border-radius:30px;padding:46px;text-align:center;background:linear-gradient(135deg,rgba(25,80,160,.4),rgba(15,30,56,.92));border:1px solid rgba(76,194,255,.22);position:relative;overflow:hidden}
+.closing h2{font-size:clamp(24px,3.4vw,36px);font-weight:800;margin-bottom:10px}
+.closing p{color:var(--muted);max-width:620px;margin:0 auto 22px}
+.closing .btns{justify-content:center}
+footer{padding:30px 0 50px;text-align:center;color:var(--soft);font-size:13px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+/* responsive */
+@media(max-width:980px){
+  .heroGrid{grid-template-columns:1fr;gap:30px}
+  .photoCard{max-width:420px}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .aboutGrid{grid-template-columns:1fr}
+  .nav{display:none}
+}
+@media(max-width:620px){
+  .g4,.g3,.g2{grid-template-columns:1fr}
+  .g4.metrics{grid-template-columns:repeat(2,1fr)}
+  .top .wrap{height:58px}
+  .switch button{padding:8px 12px;font-size:12px}
+  .hero{padding-top:36px}
+  .closing{padding:30px 20px}
+  .job{padding-left:36px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+  .rv{opacity:1;transform:none}
+}
+@media print{
+  :root{--bg:#fff}
+  body{background:#fff;color:#111}
+  .top,.hint,.btns,.quick-only{display:none !important}
+  .full-only{display:block !important}
+  .card,.cLink,.photoCard{background:#fff;border-color:#ccc;color:#111}
+  .lead,.sub,.org,.job li,.strength p,.impact p,.metric .ctx,.aboutGrid p{color:#222}
+  h1 span,.metric .num{-webkit-text-fill-color:#0b5ea8;background:none}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Jose Zuniga, top of page">J<b>Z</b></a>
+    <nav class="nav full-only" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#impact">Impact</a>
+      <a href="#experience">Experience</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="spacer"></span>
+    <div class="switch" role="group" aria-label="Choose how much detail to show">
+      <button type="button" id="btnQuick" aria-pressed="true">Quick view</button>
+      <button type="button" id="btnFull" aria-pressed="false">Full detail</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- =============== HERO (both modes) =============== -->
+<section class="hero" id="top">
+  <div class="wrap heroGrid">
+    <div>
+      <span class="pill"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Global teams across AMER, EMEA and APAC</span>
+      <h1>Jose <span>Zuniga</span></h1>
+      <p class="role">Senior Technical Program Manager</p>
+      <p class="lead"><b>Delivery leader who also writes the code.</b> I run enterprise cloud, DevOps, SRE and automation programs, and I build the Python and Jira API tooling that makes delivery measurable.</p>
+      <div class="chips" aria-label="Focus areas">
+        <span class="chip">Cloud &amp; DevOps</span>
+        <span class="chip">SRE</span>
+        <span class="chip">Python</span>
+        <span class="chip">Jira API Automation</span>
+        <span class="chip">Kubernetes</span>
+        <span class="chip">AWS</span>
+        <span class="chip">Azure</span>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="mailto:josean.111@gmail.com"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email me</a>
+        <a class="btn" href="https://calendar.app.google/YegybKZoepgHuMCa8" target="_blank" rel="noopener"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg> Book a meeting</a>
+        <a class="btn" href="Jose_Zuniga_CV.pdf" target="_blank" rel="noopener"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Resume (PDF)</a>
+      </div>
+    </div>
+
+    <aside class="photoCard" aria-label="Profile">
+      <div class="photo">
+        <img src="Profile.jpeg" alt="Portrait of Jose Zuniga" width="198" height="198" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="initials" aria-hidden="true">JZ</div>
+      </div>
+      <h2>Jose Zuniga</h2>
+      <p>18+ years in enterprise technology</p>
+      <div class="where"><span><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Costa Rica</span><span><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>English &middot; Spanish</span></div>
+      <div class="companies">
+        <small>Experience at</small>
+        <div><span>IBM</span><span>Equifax</span><span>Optiva</span><span>HP</span><span>iTree</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- =============== SNAPSHOT (both modes) =============== -->
+<section aria-labelledby="snapTitle">
+  <div class="wrap">
+    <p class="eyebrow">Results in 5 seconds</p>
+    <h2 class="title" id="snapTitle">Measured impact, not just responsibilities</h2>
+    <div class="grid g4 metrics">
+      <div class="card metric rv"><div class="num">80%</div><div class="lbl">Less manual reporting</div><div class="ctx">40+ hours saved per month with Python and Jira REST API automation</div></div>
+      <div class="card metric rv"><div class="num">30%</div><div class="lbl">Faster incident recovery</div><div class="ctx">MTTR improvement as an IBM Site Reliability Engineer</div></div>
+      <div class="card metric rv"><div class="num">35%</div><div class="lbl">Fewer failed deployments</div><div class="ctx">Release and CI/CD improvements at Equifax</div></div>
+      <div class="card metric rv"><div class="num">3,000+</div><div class="lbl">Training hours taught</div><div class="ctx">Instructor-led enterprise training across AMER, EMEA and APAC</div></div>
+    </div>
+
+    <div class="hint quick-only" style="margin-top:22px">
+      <p><b>Want the full story?</b> Switch to Full detail for every role, result, skill and credential.</p>
+      <button type="button" class="btn primary" id="hintFull"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg> Show full detail</button>
+    </div>
+  </div>
+</section>
+
+<!-- =============== CONTACT STRIP (both modes) =============== -->
+<section id="contact" aria-labelledby="contactTitle">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2 class="title" id="contactTitle">Let&rsquo;s talk</h2>
+    <div class="contactStrip">
+      <a class="cLink" href="mailto:josean.111@gmail.com"><span class="ic"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><div><small>Email</small><span>josean.111@gmail.com</span></div></a>
+      <a class="cLink" href="https://www.linkedin.com/in/jose-azuniga" target="_blank" rel="noopener"><span class="ic"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span><div><small>LinkedIn</small><span>linkedin.com/in/jose-azuniga</span></div></a>
+      <a class="cLink" href="https://github.com/josean111" target="_blank" rel="noopener"><span class="ic"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span><div><small>GitHub</small><span>github.com/josean111</span></div></a>
+      <a class="cLink" href="https://wa.me/50688975841" target="_blank" rel="noopener"><span class="ic"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span><div><small>WhatsApp / Phone</small><span>+506 8897-5841</span></div></a>
+      <a class="cLink" href="https://calendar.app.google/YegybKZoepgHuMCa8" target="_blank" rel="noopener"><span class="ic"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg></span><div><small>Schedule</small><span>Book a meeting</span></div></a>
+      <a class="cLink" href="Jose_Zuniga_CV.pdf" target="_blank" rel="noopener"><span class="ic"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><div><small>Resume</small><span>Download PDF</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FULL DETAIL ONLY =============== -->
+
+<section id="about" class="full-only" aria-labelledby="aboutTitle">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <h2 class="title" id="aboutTitle">Program leadership with real engineering depth</h2>
+    <div class="aboutGrid">
+      <div class="card rv">
+        <p>I am a Senior Technical Program Manager with <b>18+ years in enterprise technology</b> and <b>15+ years leading technical programs and projects</b> across enterprise software delivery, cloud transformation, infrastructure modernization and Agile engineering organizations at IBM, Equifax, Optiva and HP.</p>
+        <p>What sets me apart from a conventional program manager is hands-on engineering: <b>8+ years of programming</b> (Python, Java, JavaScript, SQL), REST API integration and Python/Jira API automation, plus <b>7&ndash;8 years of DevOps and cloud work</b> and <b>3.5+ years as a Site Reliability Engineer</b> at IBM.</p>
+        <p>I partner with executives, architects and engineering, QA, data and operations teams to turn business requirements into predictable, production-ready delivery, and I back it with executive dashboards that make progress visible.</p>
+        <p>Alongside delivery, I have taught <b>3,000+ hours</b> of instructor-led technical training across AMER, EMEA and APAC, and I am expanding into AI enablement and full-stack development.</p>
+      </div>
+      <div class="card depth rv">
+        <h3>Where my depth is</h3>
+        <ul>
+          <li><span>Technical program &amp; project leadership</span><b>15+ yrs</b></li>
+          <li><span>Programming (Python, Java, JS, SQL)</span><b>8+ yrs</b></li>
+          <li><span>DevOps, CI/CD &amp; cloud</span><b>7&ndash;8 yrs</b></li>
+          <li><span>Site Reliability Engineering</span><b>3.5+ yrs</b></li>
+          <li><span>Technical instruction</span><b>3,000+ hrs</b></li>
+        </ul>
+        <small>Years are approximate and stated as direct experience in each area.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="full-only" aria-labelledby="strTitle">
+  <div class="wrap">
+    <p class="eyebrow">Strengths</p>
+    <h2 class="title" id="strTitle">What I bring to a team</h2>
+    <div class="grid g3">
+      <div class="card strength rv"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg><h3>Technical program leadership</h3><p>Planning, dependencies, risk and executive communication for complex, multi-team delivery.</p></div>
+      <div class="card strength rv"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg><h3>Cloud transformation</h3><p>AWS, Azure, GCP and IBM Cloud delivery, migration, governance and containerization work.</p></div>
+      <div class="card strength rv"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg><h3>DevOps &amp; CI/CD</h3><p>Release management and deployment automation that cut failures and improve consistency.</p></div>
+      <div class="card strength rv"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><h3>SRE &amp; incident management</h3><p>Observability, root cause analysis and escalation workflows that shorten recovery time.</p></div>
+      <div class="card strength rv"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg><h3>Automation &amp; APIs</h3><p>Python, Java and REST/Jira API tooling that removes manual work and exposes delivery health.</p></div>
+      <div class="card strength rv"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg><h3>Agile delivery</h3><p>Scrum, Kanban and SAFe practices that improve predictability without adding friction.</p></div>
+      <div class="card strength rv"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><h3>AI enablement</h3><p>Chatbot and AI-enabled workflow initiatives, with AI tools used for engineering productivity.</p></div>
+      <div class="card strength rv"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><h3>Executive reporting</h3><p>Dashboards and reporting platforms that turn operational data into decisions.</p></div>
+      <div class="card strength rv"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><h3>Technical training</h3><p>Hands-on labs and curriculum for engineering and operations teams worldwide.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="impact" class="full-only" aria-labelledby="impTitle">
+  <div class="wrap">
+    <p class="eyebrow">Impact</p>
+    <h2 class="title" id="impTitle">Results across my career</h2>
+    <p class="sub">Every number below comes from my delivered work. The tag shows where it happened.</p>
+    <div class="grid g4">
+      <div class="card impact rv"><div class="num">80%</div><h3>Reporting effort cut</h3><p>Python and Jira REST API automation; 40+ hours per month saved.</p><span class="where2">iTree &middot; Equifax</span></div>
+      <div class="card impact rv"><div class="num">70%</div><h3>Less manual operational effort</h3><p>Operational workflows automated with Python and REST APIs.</p><span class="where2">IBM</span></div>
+      <div class="card impact rv"><div class="num">60%</div><h3>Manual reporting reduced</h3><p>Operational reporting automated.</p><span class="where2">Equifax</span></div>
+      <div class="card impact rv"><div class="num">40%</div><h3>Better incident detection</h3><p>Observability with Datadog, Prometheus, ELK and cloud-native monitoring.</p><span class="where2">IBM</span></div>
+      <div class="card impact rv"><div class="num">30%</div><h3>MTTR improvement</h3><p>High-severity incidents coordinated across global engineering organizations.</p><span class="where2">IBM</span></div>
+      <div class="card impact rv"><div class="num">25%</div><h3>Fewer repeat incidents</h3><p>Recurring-incident analysis and root cause reviews.</p><span class="where2">IBM</span></div>
+      <div class="card impact rv"><div class="num">35%</div><h3>Fewer failed deployments</h3><p>Release and CI/CD improvements.</p><span class="where2">Equifax</span></div>
+      <div class="card impact rv"><div class="num">25%</div><h3>Better release consistency</h3><p>Release process and CI/CD standardization.</p><span class="where2">Equifax</span></div>
+      <div class="card impact rv"><div class="num">65&rarr;85%</div><h3>Sprint predictability</h3><p>Operational risk integrated into delivery planning.</p><span class="where2">Optiva</span></div>
+      <div class="card impact rv"><div class="num">65&rarr;85%</div><h3>On-time delivery</h3><p>Agile implementation.</p><span class="where2">Equifax</span></div>
+      <div class="card impact rv"><div class="num">70&rarr;90%</div><h3>Milestone visibility</h3><p>Standardized delivery reporting and executive dashboards.</p><span class="where2">iTree</span></div>
+      <div class="card impact rv"><div class="num">25%</div><h3>Faster ticket resolution</h3><p>Support operations improved through automation.</p><span class="where2">Equifax</span></div>
+      <div class="card impact rv"><div class="num">35</div><h3>SaaS deployments owned</h3><p>About 20 customers; scripted patching cycles completed within about a month.</p><span class="where2">IBM</span></div>
+      <div class="card impact rv"><div class="num">30%+</div><h3>Fewer support tickets</h3><p>Support chatbot across 8+ applications; about 1&ndash;1.5 FTE saved.</p><span class="where2">Equifax</span></div>
+      <div class="card impact rv"><div class="num">80</div><h3>People coordinated</h3><p>Across 2 main programs and 4&ndash;5 web and tooling projects.</p><span class="where2">iTree</span></div>
+      <div class="card impact rv"><div class="num">700+</div><h3>Learners trained (est.)</h3><p>160 course deliveries across AMER, EMEA and APAC.</p><span class="where2">Instructor</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="full-only" aria-labelledby="expTitle">
+  <div class="wrap">
+    <p class="eyebrow">Experience</p>
+    <h2 class="title" id="expTitle">Career timeline</h2>
+    <p class="sub">Most recent first. Dates are month and year.</p>
+    <div class="timeline">
+
+      <article class="job current card rv">
+        <div class="jobHead"><h3>Senior Technical Program Manager / Product Owner <span class="badge">Current</span></h3><span class="when">Sep 2024 &ndash; Present</span></div>
+        <p class="org"><b>iTree Training</b> &middot; Remote</p>
+        <ul>
+          <li>Direct end-to-end delivery of <strong>2 main programs</strong> (4&ndash;5 web and tooling projects) on AWS and Azure, coordinating about <strong>80 people</strong> across engineering, QA, infrastructure, product and business.</li>
+          <li>Built Python and Jira REST API automation that reduced manual reporting effort by <strong>80%</strong>, saving <strong>40+ hours per month</strong> of operational work.</li>
+          <li>Created <strong>2 executive dashboards</strong> (one per program, each read by 4&ndash;8 executives) tracking delivery health, MTTR, recurring issues and operational performance; lifted milestone visibility from <strong>70% to 90%</strong>.</li>
+          <li>Designed incident management workflows for both programs covering detection, escalation, communication, root cause analysis and post-mortem reviews.</li>
+          <li>Coordinate <strong>4 pipelines</strong> across 2 platforms and <strong>10+ integrations</strong> built on GitHub, GitLab, Jenkins, Bamboo, SonarQube, Terraform, CloudFormation, Docker and Kubernetes; contribute to API integration strategy and AI-enabled workflow initiatives.</li>
+          <li>Keep cross-functional teams on track to deliver production-ready implementations while managing risks, timelines, milestones and dependencies.</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Jira REST API</span><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Jenkins</span><span class="tag">Terraform</span><span class="tag">Kubernetes</span><span class="tag">Incident Management</span><span class="tag">Executive Reporting</span></div>
+      </article>
+
+      <article class="job card rv">
+        <div class="jobHead"><h3>Site Reliability Engineer (Technical Delivery, Automation &amp; Incident Management)</h3><span class="when">Mar 2021 &ndash; Sep 2024</span></div>
+        <p class="org"><b>IBM</b> &middot; Remote &middot; 3 years 7 months</p>
+        <ul>
+          <li>Managed high-severity production incidents across global engineering organizations, improving MTTR by <strong>30%</strong>.</li>
+          <li>Deployed observability using Datadog, Prometheus, ELK and cloud-native monitoring, improving incident detection by <strong>40%</strong>.</li>
+          <li>Drove recurring-incident analysis and root cause reviews, reducing repeat incidents by <strong>25%</strong>.</li>
+          <li>Automated operational workflows with Python and REST APIs, cutting manual operational effort by <strong>70%</strong>.</li>
+          <li>Owned deployment and patching for about <strong>35 enterprise SaaS deployments</strong> serving about <strong>20 customers</strong>, scripting most steps and completing a few per day, so each patching cycle finished within about a month around customer availability.</li>
+          <li>Handled incidents and escalations for those deployments (about <strong>2 tickets per customer per week</strong>, roughly 40 weekly) on 3 cloud environments (AWS, Azure, IBM Cloud) running microservices on Kubernetes, including issues that affected every customer at once.</li>
+        </ul>
+        <div class="tags"><span class="tag">SRE</span><span class="tag">Kubernetes</span><span class="tag">Datadog</span><span class="tag">Prometheus</span><span class="tag">ELK</span><span class="tag">Python</span><span class="tag">REST APIs</span><span class="tag">Root Cause Analysis</span></div>
+      </article>
+
+      <article class="job card rv">
+        <div class="jobHead"><h3>Scrum Master / Engineering Project Manager</h3><span class="when">Sep 2019 &ndash; Mar 2021</span></div>
+        <p class="org"><b>Optiva</b> &middot; Remote &middot; Telecommunications platforms</p>
+        <ul>
+          <li>Oversaw multiple concurrent engineering initiatives for highly available telecommunications platforms, coordinating <strong>60+ engineering, QA and operations staff</strong> across the Americas, Asia, Europe and Africa through software implementation lifecycles.</li>
+          <li>Raised sprint predictability from <strong>65% to 85%</strong> by integrating operational risk management into delivery planning.</li>
+          <li>Delivered <strong>15+ API integrations</strong> between telecommunications platforms and customer-facing systems, partnering with architects on solution planning; led executive communications during production incidents and delivery reviews.</li>
+        </ul>
+        <div class="tags"><span class="tag">Scrum</span><span class="tag">Agile</span><span class="tag">API Integration</span><span class="tag">Risk Management</span><span class="tag">Jira</span></div>
+      </article>
+
+      <article class="job card rv">
+        <div class="jobHead"><h3>Engineering Project Manager</h3><span class="when">Nov 2015 &ndash; Sep 2019</span></div>
+        <p class="org"><b>Equifax</b> &middot; Costa Rica</p>
+        <ul>
+          <li>Directed cloud modernization, CI/CD transformation and automation for <strong>12 enterprise applications</strong> (including the full Atlassian suite) on <strong>36+ servers</strong> with 4&ndash;5 teams, including AWS cloud migration and cloud governance.</li>
+          <li>Cut failed deployments by <strong>35%</strong> and improved release consistency by <strong>25%</strong> through release and CI/CD improvements.</li>
+          <li>Engineered API automation using Python, JavaScript, SQL and Jira APIs, reducing reporting effort by <strong>80%</strong>; created executive reporting platforms that improved delivery visibility.</li>
+          <li>Contributed to a support chatbot covering <strong>8+ applications</strong> that cut tickets by <strong>30%+</strong> and saved about <strong>1&ndash;1.5 FTE</strong> of support effort, plus enterprise microservices and AI-enabled automation work.</li>
+        </ul>
+        <div class="tags"><span class="tag">AWS</span><span class="tag">CI/CD</span><span class="tag">Atlassian suite</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span><span class="tag">Jira APIs</span><span class="tag">Chatbot</span></div>
+      </article>
+
+      <article class="job card rv">
+        <div class="jobHead"><h3>Technical Project Manager</h3><span class="when">Mar 2012 &ndash; Nov 2015</span></div>
+        <p class="org"><b>Equifax</b> &middot; Costa Rica</p>
+        <ul>
+          <li>Executed infrastructure modernization for mission-critical systems and raised on-time delivery from <strong>65% to 85%</strong> through Agile implementation.</li>
+          <li>Streamlined operational reporting through automation, cutting manual effort by <strong>60%</strong>; coordinated REST API integrations and advanced modernization of monoliths toward service-oriented architectures.</li>
+        </ul>
+        <div class="tags"><span class="tag">Infrastructure</span><span class="tag">Agile</span><span class="tag">REST APIs</span><span class="tag">SOA</span></div>
+      </article>
+
+      <article class="job card rv">
+        <div class="jobHead"><h3>Technical Support Team Lead</h3><span class="when">Oct 2010 &ndash; Mar 2012</span></div>
+        <p class="org"><b>Equifax</b> &middot; Costa Rica</p>
+        <ul>
+          <li>Led a <strong>7-person team</strong> (support engineers and developers handling upgrades, maintenance and patching) in a 24/7 production environment, managing escalations on <strong>100&ndash;150 tickets</strong>; cut resolution time by <strong>25%</strong> through automation and light Jira customization.</li>
+        </ul>
+      </article>
+
+      <article class="job card rv">
+        <div class="jobHead"><h3>Technical Support Engineer</h3><span class="when">Jul 2008 &ndash; Oct 2010</span></div>
+        <p class="org"><b>HP</b> &middot; Costa Rica</p>
+        <ul>
+          <li>Handled <strong>2&ndash;3 application tickets per day</strong> for global customers (about 80% of ticket volume), mostly across the Americas in English and Spanish, with Asia and Europe covered on early-morning and late-night shifts.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="teaching" class="full-only" aria-labelledby="teachTitle">
+  <div class="wrap">
+    <p class="eyebrow">Technical instruction</p>
+    <h2 class="title" id="teachTitle">Global technical instructor</h2>
+    <article class="job current card rv" style="padding-left:22px">
+      <div class="jobHead"><h3>Global Technical Instructor / Enterprise Engineering Trainer <span class="badge">Ongoing</span></h3><span class="when">Jan 2021 &ndash; Present</span></div>
+      <p class="org"><b>Independent contract</b> via enterprise learning partners LearnQuest and Netec, for clients including IBM and Walmart &middot; Remote</p>
+      <ul>
+        <li>Taught <strong>3,000+ hours</strong> of instructor-led enterprise technical training across <strong>160 course deliveries</strong> in AMER, EMEA and APAC, alongside full-time roles.</li>
+        <li>Trained an estimated <strong>700+ learners</strong>: typically 1&ndash;3 per IBM course, groups of 15&ndash;25 at Walmart, and 10+ per course for other vendors.</li>
+        <li>Covered IBM middleware and integration (MQ, App Connect, DataPower, Sterling), data and analytics (Db2, DataStage, Cognos, Planning Analytics), security (Guardium, QRadar), observability (Instana), IBM i, VMware, AWS and CompTIA A+.</li>
+        <li>Built one hands-on lab per course across <strong>100+ courses</strong> simulating production deployments, incidents and troubleshooting.</li>
+        <li>Developed structured curriculum supporting enterprise engineering enablement and operational readiness.</li>
+      </ul>
+      <div class="tags"><span class="tag">IBM MQ</span><span class="tag">Db2</span><span class="tag">App Connect</span><span class="tag">DataPower</span><span class="tag">Guardium</span><span class="tag">QRadar</span><span class="tag">Instana</span><span class="tag">IBM i</span><span class="tag">VMware</span><span class="tag">AWS</span><span class="tag">CompTIA A+</span></div>
+    </article>
+  </div>
+</section>
+
+<section id="skills" class="full-only" aria-labelledby="skillTitle">
+  <div class="wrap">
+    <p class="eyebrow">Technical skills</p>
+    <h2 class="title" id="skillTitle">Tools and technologies</h2>
+    <div class="grid g3">
+      <div class="card skill rv"><h3>Programming &amp; Scripting</h3><span class="yrs">8+ years</span><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">SQL</span><span class="tag">Groovy</span><span class="tag">Shell scripting</span><span class="tag">Backend development</span></div></div>
+      <div class="card skill rv"><h3>APIs &amp; Integration</h3><span class="yrs">Hands-on</span><div class="tags"><span class="tag">REST APIs</span><span class="tag">Jira REST APIs</span><span class="tag">API integration</span><span class="tag">JSON</span><span class="tag">Webhooks</span><span class="tag">GraphQL</span><span class="tag">Postman</span><span class="tag">API Gateway</span></div></div>
+      <div class="card skill rv"><h3>Automation &amp; Productivity</h3><span class="yrs">Hands-on</span><div class="tags"><span class="tag">Python + Jira API automation</span><span class="tag">Jira automation</span><span class="tag">ScriptRunner</span><span class="tag">Reporting automation</span><span class="tag">Workflow automation</span><span class="tag">Executive dashboards</span></div></div>
+      <div class="card skill rv"><h3>Cloud &amp; Containers</h3><span class="yrs">Delivery and hands-on</span><div class="tags"><span class="tag">AWS</span><span class="tag">Microsoft Azure</span><span class="tag">Google Cloud</span><span class="tag">IBM Cloud</span><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Amazon EKS</span><span class="tag">Terraform</span><span class="tag">CloudFormation</span><span class="tag">Microservices</span></div></div>
+      <div class="card skill rv"><h3>DevOps &amp; CI/CD</h3><span class="yrs">7&ndash;8 years</span><div class="tags"><span class="tag">CI/CD pipelines</span><span class="tag">Jenkins</span><span class="tag">GitHub</span><span class="tag">GitLab</span><span class="tag">Bitbucket</span><span class="tag">Bamboo</span><span class="tag">SonarQube</span><span class="tag">Chef</span><span class="tag">Ansible</span><span class="tag">Release management</span><span class="tag">Deployment automation</span></div></div>
+      <div class="card skill rv"><h3>SRE &amp; Observability</h3><span class="yrs">3.5+ years direct SRE</span><div class="tags"><span class="tag">Incident management</span><span class="tag">Root cause analysis</span><span class="tag">MTTR improvement</span><span class="tag">Datadog</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">ELK</span><span class="tag">Dynatrace</span><span class="tag">New Relic</span><span class="tag">CloudWatch</span><span class="tag">Azure Monitor</span><span class="tag">PagerDuty</span><span class="tag">ServiceNow</span></div></div>
+      <div class="card skill rv"><h3>Data &amp; Big Data</h3><span class="yrs">Working knowledge</span><div class="tags"><span class="tag">SQL</span><span class="tag">ETL</span><span class="tag">Data pipelines</span><span class="tag">Data warehousing</span><span class="tag">Looker</span><span class="tag">Oracle</span><span class="tag">PostgreSQL</span><span class="tag">SQL Server</span><span class="tag">MySQL</span><span class="tag">Apache Spark</span><span class="tag">Databricks</span></div></div>
+      <div class="card skill rv"><h3>Agile &amp; Delivery Tools</h3><span class="yrs">Core strength</span><div class="tags"><span class="tag">Scrum</span><span class="tag">Kanban</span><span class="tag">SAFe</span><span class="tag">Jira (Cloud, Server, Data Center)</span><span class="tag">Jira Align</span><span class="tag">Advanced Roadmaps</span><span class="tag">Confluence</span></div></div>
+      <div class="card skill rv"><h3>AI Tools</h3><span class="yrs">Applied</span><div class="tags"><span class="tag">ChatGPT</span><span class="tag">Azure OpenAI</span><span class="tag">GitHub Copilot</span><span class="tag">Amazon CodeWhisperer</span><span class="tag">Atlassian Rovo</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="full-only" aria-labelledby="eduTitle">
+  <div class="wrap">
+    <p class="eyebrow">Education &amp; credentials</p>
+    <h2 class="title" id="eduTitle">Academic foundation and certifications</h2>
+    <div class="grid g2">
+      <div class="card rv">
+        <p class="cardTitle">Education</p>
+        <div class="eduItem"><span class="yr">2026</span><h3>Full Stack Developer Program</h3><p>Lyfter</p></div>
+        <div class="eduItem"><span class="yr">2020 &ndash; 2021</span><h3>Master of Business Administration (MBA)</h3><p>Master Cum Laude, M&aacute;laga, Spain &middot; 90+ score, academic recognition</p></div>
+        <div class="eduItem"><span class="yr">2020 &ndash; 2021</span><h3>Master of Project Management</h3><p>Master Cum Laude, M&aacute;laga, Spain &middot; 90+ score, academic recognition</p></div>
+        <div class="eduItem"><span class="yr">2007 &ndash; 2010</span><h3>Bachelor of Computer Science</h3><p>ULACIT, Costa Rica</p></div>
+      </div>
+      <div>
+        <div class="card rv">
+          <p class="cardTitle">Certifications</p>
+          <ul class="certs">
+            <li><span>Python Developer</span><b>2026</b></li>
+            <li><span>Certified ScrumMaster (CSM)</span><b>2026</b></li>
+            <li><span>Scrum Product Owner Certified (SPOC)</span><b>2026</b></li>
+            <li><span>AWS Certified Cloud Practitioner</span><b>2024</b></li>
+            <li><span>Kubernetes Fundamentals</span><b>2024</b></li>
+            <li><span>SAFe Practitioner</span><b>2017</b></li>
+          </ul>
+        </div>
+        <div class="card rv" style="margin-top:16px">
+          <p class="cardTitle">Languages</p>
+          <ul class="certs">
+            <li><span>English</span><b>C2 &middot; Professional fluency</b></li>
+            <li><span>Spanish</span><b>Native</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="full-only" aria-label="Closing call to action">
+  <div class="wrap">
+    <div class="closing rv">
+      <h2>Let&rsquo;s build something reliable</h2>
+      <p>Complex cloud, DevOps, SRE and automation programs are where I add the most value: I can lead the delivery and I understand the code, the pipelines and the incidents behind it.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:josean.111@gmail.com"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email me</a>
+        <a class="btn" href="https://calendar.app.google/YegybKZoepgHuMCa8" target="_blank" rel="noopener"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg> Book a meeting</a>
+        <a class="btn" href="https://www.linkedin.com/in/jose-azuniga" target="_blank" rel="noopener"><svg class="svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="yr">2026</span> Jose Zuniga &middot; Senior Technical Program Manager &middot; Costa Rica</div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var bQ=document.getElementById('btnQuick'), bF=document.getElementById('btnFull');
+
+  function setMode(mode,opts){
+    opts=opts||{};
+    root.setAttribute('data-mode',mode);
+    bQ.setAttribute('aria-pressed',mode==='quick');
+    bF.setAttribute('aria-pressed',mode==='full');
+    try{
+      var u=location.pathname+location.search+(mode==='full'?'#full':'');
+      history.replaceState(null,'',u);
+    }catch(e){}
+    if(!opts.silent) window.scrollTo({top:0,behavior:'smooth'});
+    observe();
+  }
+
+  bQ.addEventListener('click',function(){setMode('quick')});
+  bF.addEventListener('click',function(){setMode('full')});
+  var hint=document.getElementById('hintFull');
+  if(hint) hint.addEventListener('click',function(){setMode('full')});
+
+  // Default is quick view. A link ending in #full opens the detailed version.
+  if(location.hash==='#full'){ setMode('full',{silent:true}); }
+
+  // Scroll reveal
+  var io=null;
+  function observe(){
+    var els=document.querySelectorAll('.rv:not(.in)');
+    if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+    if(!io){ io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    },{threshold:.12}); }
+    els.forEach(function(e){ io.observe(e); });
+  }
+  observe();
+
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
